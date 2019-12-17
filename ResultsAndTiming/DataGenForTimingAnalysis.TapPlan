@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestPlan type="OpenTap.TestPlan" Name="DataGenForTimingAnalysis.TapPlan" Locked="False">
+  <Steps>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.TimeActivityStep" Version="9.0" Id="13bf67b4-cc66-4ece-9c38-269a7fc4e5ce">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <MyDut Source="OpenTap.DutSettings">TimeDut</MyDut>
+      <MyInstrument Source="OpenTap.InstrumentSettings">TimeInst</MyInstrument>
+      <Name>Time1</Name>
+      <PostPlanRunTimeMeanSecs>0.1</PostPlanRunTimeMeanSecs>
+      <PrePlanRunTimeMeanSecs>0.1</PrePlanRunTimeMeanSecs>
+      <ResultName>TimeActivity</ResultName>
+      <RunTimeMeanSecs>0.1</RunTimeMeanSecs>
+      <RunTimeStdDevSecs>0</RunTimeStdDevSecs>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.TimeActivityStep" Version="9.0" Id="5603a303-1a69-4cd5-8847-c6ecb4fe6808">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <MyDut Source="OpenTap.DutSettings">TimeDut</MyDut>
+      <MyInstrument Source="OpenTap.InstrumentSettings">TimeInst</MyInstrument>
+      <Name>Time2</Name>
+      <PostPlanRunTimeMeanSecs>0.2</PostPlanRunTimeMeanSecs>
+      <PrePlanRunTimeMeanSecs>0.2</PrePlanRunTimeMeanSecs>
+      <ResultName>TimeActivity</ResultName>
+      <RunTimeMeanSecs>0.2</RunTimeMeanSecs>
+      <RunTimeStdDevSecs>0</RunTimeStdDevSecs>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.TimeActivityStep" Version="9.0" Id="fc8e10db-c7c7-4ce4-90b3-8eda0fa88964">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <MyDut Source="OpenTap.DutSettings">TimeDut</MyDut>
+      <MyInstrument Source="OpenTap.InstrumentSettings">TimeInst</MyInstrument>
+      <Name>Time3</Name>
+      <PostPlanRunTimeMeanSecs>0.3</PostPlanRunTimeMeanSecs>
+      <PrePlanRunTimeMeanSecs>0.3</PrePlanRunTimeMeanSecs>
+      <ResultName>TimeActivity</ResultName>
+      <RunTimeMeanSecs>0.3</RunTimeMeanSecs>
+      <RunTimeStdDevSecs>0.1</RunTimeStdDevSecs>
+    </TestStep>
+  </Steps>
+  <Package.Dependencies>
+    <Package Name="Demonstration" Version="9.0" />
+    <Package Name="OpenTAP" Version="9.0" />
+  </Package.Dependencies>
+</TestPlan>

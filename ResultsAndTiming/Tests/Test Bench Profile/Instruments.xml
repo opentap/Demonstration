@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<InstrumentSettings type="OpenTap.InstrumentSettings">
+  <TemperatureChamber type="OpenTap.Plugins.Demo.Battery.TemperatureChamber" Source="">
+    <Name>TEMP</Name>
+  </TemperatureChamber>
+  <TimeInst type="OpenTap.Plugins.Demo.ResultsAndTiming.TimeInst" Source="">
+    <ActionTimeSecs>0.01</ActionTimeSecs>
+    <CloseTimeSecs>0.1</CloseTimeSecs>
+    <Name>TimeInst</Name>
+    <OpenTimeSecs>0.1</OpenTimeSecs>
+  </TimeInst>
+  <PowerAnalyzer type="OpenTap.Plugins.Demo.Battery.PowerAnalyzer" Source="">
+    <CellSizeFactor>0.005</CellSizeFactor>
+    <Name>PSU</Name>
+  </PowerAnalyzer>
+  <Package.Dependencies>
+    <Package Name="Demonstration" Version="9.0" />
+    <Package Name="OpenTAP" Version="9.0" />
+  </Package.Dependencies>
+</InstrumentSettings>

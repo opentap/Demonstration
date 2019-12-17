@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestPlan type="OpenTap.TestPlan" Name="DataGenForResultsViewer.TapPlan" Locked="False">
+  <Steps>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.RampResultsStep" Version="9.0" Id="253b2fa6-1d84-495f-8435-e43277bc8d53">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <Name>Ramp</Name>
+      <PointCount>50</PointCount>
+      <ResultName>RampResults</ResultName>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.SineResultsStep" Version="9.0" Id="3094bffa-fe3a-4a02-b03a-6aa2846031b5">
+      <AmplitudePp>20</AmplitudePp>
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <LimitCheckingEnabled>False</LimitCheckingEnabled>
+      <LowerLimit>5</LowerLimit>
+      <Mean>20</Mean>
+      <Name>Sine1</Name>
+      <PointCount>50</PointCount>
+      <NoiseEnabled>False</NoiseEnabled>
+      <ResultName>SineResults</ResultName>
+      <NoiseStdDev>3</NoiseStdDev>
+      <UpperLimit>30</UpperLimit>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.SineResultsStep" Version="9.0" Id="de8a2380-248b-4e35-88fe-3b8fd622c4d1">
+      <AmplitudePp>20</AmplitudePp>
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <LimitCheckingEnabled>False</LimitCheckingEnabled>
+      <LowerLimit>5</LowerLimit>
+      <Mean>20</Mean>
+      <Name>Sine2</Name>
+      <PointCount>30</PointCount>
+      <NoiseEnabled>False</NoiseEnabled>
+      <ResultName>SineResults</ResultName>
+      <NoiseStdDev>3</NoiseStdDev>
+      <UpperLimit>30</UpperLimit>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.SineResultsStep" Version="9.0" Id="b923fadd-3c6b-4d6c-97c1-65faadcee5cc">
+      <AmplitudePp>20</AmplitudePp>
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <LimitCheckingEnabled>False</LimitCheckingEnabled>
+      <LowerLimit>5</LowerLimit>
+      <Mean>20</Mean>
+      <Name>Sine3</Name>
+      <PointCount>50</PointCount>
+      <NoiseEnabled>True</NoiseEnabled>
+      <ResultName>SineResults</ResultName>
+      <NoiseStdDev>3</NoiseStdDev>
+      <UpperLimit>30</UpperLimit>
+    </TestStep>
+  </Steps>
+  <Package.Dependencies>
+    <Package Name="Demonstration" Version="9.0" />
+    <Package Name="OpenTAP" Version="9.0" />
+  </Package.Dependencies>
+</TestPlan>
