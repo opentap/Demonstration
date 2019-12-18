@@ -36,6 +36,6 @@ Copy to Output Directory = Copy if newer-->
     <File Path="DemonstrationHelp.chm"/>
   </Files>
   <PackageActionExtensions>
-  <ActionStep ActionName = "test" ExeFile="tap.exe" Arguments='run Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"' />
+  <ActionStep ActionName = "test" ExeFile="tap" Arguments='run Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"' />
   </PackageActionExtensions>
 </Package>
