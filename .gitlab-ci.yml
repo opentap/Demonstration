@@ -31,7 +31,7 @@ Build:
     when: on_success
     expire_in: 1 week
     paths:
-       - "Demonstration/bin/Release/*.TapPackage"
+       - "/builds/OpenTAP/Plugins/demonstration/bin/Release/*.TapPackage"
 
 
 Package-Test:
