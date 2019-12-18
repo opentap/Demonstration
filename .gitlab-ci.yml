@@ -54,12 +54,9 @@ TestPlan-Test:
   dependencies:
     - Build
   script:
+    - cd /opt/tap
     - cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
-    - tap package install DemonstrationTest.TapPackage --force
-    - echo "$(which tap)"
-    - echo "$(which tap)"
-    - echo "$(which tap)"
-    - ls "$(which tap)"
+    - tap package install DemonstrationTest.TapPackage --force    
     - tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
     - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "Tests/Test Bench Profile"
     - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "Tests/Test Bench Profile"
