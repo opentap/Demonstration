@@ -26,12 +26,13 @@ Build:
   tags: [ docker, gce ]
   script: |
           dotnet restore
-          dotnet publish -c Release    
+          dotnet publish -c Release
+          mv "/builds/OpenTAP/Plugins/demonstration/bin/Release/*.TapPackage" .
   artifacts:
     when: on_success
     expire_in: 1 week
     paths:
-       - "/builds/OpenTAP/Plugins/demonstration/bin/Release/*.TapPackage"
+       - "./*.TapPackage"
 
 
 Package-Test:
