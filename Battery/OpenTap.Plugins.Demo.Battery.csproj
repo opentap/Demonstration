@@ -23,13 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- Developer's System is needed to debug in 'Editor' -->
-    <AdditionalOpenTapPackage Include="Developer's System CE" />
-
-    <!--<AdditionalOpenTapPackage Include="Developer's System" />-->
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="OpenTAP" Version="9.5.0" />
   </ItemGroup>
 
