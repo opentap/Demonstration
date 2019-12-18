@@ -16,11 +16,9 @@ Documentation:
     - tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
   artifacts:
     expire_in: 1 week
-    paths:
-       - "ResultsAndTiming/*.chm"
-
- build
-
+    paths:      
+       - "ResultsAndTiming/*.chm"       
+         
 Build:
   stage: build
   image: opentapio/opentap:9.5-ubuntu18.04
