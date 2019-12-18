@@ -1,0 +1,357 @@
+00:00:00.000 ; TestPlan      ; Start       ; Starting TestPlan 'Untitled*' on 01-09-2015 10:04:19, 1 of 1 TestSteps enabled.
+00:00:00.002 ; Remote        ; Verbose     ; Communication channel Faulted. Recreating.
+00:00:00.308 ; Remote        ; Verbose     ; Locking remote setup
+00:00:00.311 ; Remote        ; Verbose     ; Locked remote setup 'A-E6607C-10275'. [310 ms]
+00:00:00.312 ; EXT           ; Verbose     ; Connecting to 'TCPIP0::A-E6607C-10275.aal.is.keysight.com::inst0::INSTR'
+00:00:00.312 ; Log           ; Information ; Device TapPlugin.ResultListeners.LogResultListener opened [0 ms]
+00:00:00.313 ; Remote        ; Verbose     ; Locking remote setup
+00:00:00.315 ; Remote        ; Verbose     ; Locked remote setup 'A-E6607C-10275'. [3 ms]
+00:00:00.435 ; EXT           ; Verbose     ; SCPI >> *IDN? [1 ms]
+00:00:00.435 ; EXT           ; Verbose     ; SCPI << Agilent Technologies,E6607C,MY51510275,A.12.74
+00:00:00.435 ; EXT           ; Information ; Now connected to: Agilent Technologies,E6607C,MY51510275,A.12.74
+00:00:00.438 ; EXT           ; Verbose     ; SCPI >> *CLS [3 ms]
+00:00:00.439 ; EXT           ; Verbose     ; SCPI >> INST:NSEL? [1 ms]
+00:00:00.439 ; EXT           ; Verbose     ; SCPI << 123
+00:00:00.439 ; EXT           ; Verbose     ; Applying settings.
+00:00:00.448 ; EXT           ; Verbose     ; SCPI >> SYSTem:DEF MOD [9 ms]
+00:00:00.449 ; EXT           ; Verbose     ; SCPI >> SYST:DEF INP [1 ms]
+00:00:00.479 ; EXT           ; Verbose     ; SCPI >> :DISPlay:ENABle ON [30 ms]
+00:00:00.480 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1 ON [1 ms]
+00:00:00.480 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:RF:PORT RFIn [0 ms]
+00:00:00.489 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [9 ms]
+00:00:00.493 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:RF:PORT RFOut [3 ms]
+00:00:00.493 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2 ON [1 ms]
+00:00:00.494 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.494 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO1' (Requires option 'RFIO RF')
+00:00:00.494 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO2' (Requires option 'RFIO RF')
+00:00:00.494 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT:RFIO0 BOTH [0 ms]
+00:00:00.495 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1 ON [0 ms]
+00:00:00.495 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.496 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT RFIO0 [0 ms]
+00:00:00.496 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2 ON [0 ms]
+00:00:00.497 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.497 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT RFIO1 [0 ms]
+00:00:00.498 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT:RFIO1 BOTH [0 ms]
+00:00:00.498 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.499 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT RFIO2 [0 ms]
+00:00:00.499 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT:RFIO2 BOTH [0 ms]
+00:00:00.499 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3 ON [0 ms]
+00:00:00.500 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4 ON [0 ms]
+00:00:00.500 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.501 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT RFIO3 [0 ms]
+00:00:00.501 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT:RFIO3 BOTH [0 ms]
+00:00:00.502 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.502 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT RFIO4 [0 ms]
+00:00:00.503 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT:RFIO4 BOTH [0 ms]
+00:00:00.503 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5 ON [0 ms]
+00:00:00.503 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6 ON [0 ms]
+00:00:00.504 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.504 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT RFIO5 [0 ms]
+00:00:00.505 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT:RFIO5 BOTH [0 ms]
+00:00:00.505 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT RFIO6 [0 ms]
+00:00:00.506 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7 ON [0 ms]
+00:00:00.506 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.506 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT:RFIO6 BOTH [0 ms]
+00:00:00.507 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT RFIO7 [0 ms]
+00:00:00.507 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT:RFIO7 BOTH [0 ms]
+00:00:00.508 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:00.508 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8 ON [0 ms]
+00:00:01.176 ; Settings      ; Verbose     ; Saving GuiSettings to C:\Program Files (x86)\Keysight\TAP\Settings\Default\GuiSettings.xml
+00:00:01.343 ; DUT           ; Information ; DUT open in calibration mode
+00:00:01.343 ; DUT           ; Information ; DUT opened [1032 ms]
+00:00:01.345 ; EXT           ; Verbose     ; SCPI >> INST:CAT? [837 ms]
+00:00:01.345 ; EXT           ; Verbose     ; SCPI << "WCDMA 9, CDMA2K 10, SEQAN 123, WLAN 217, CDMA1XEV 15, TDSCDMA 211, LTE 102, BT 228, ADEMOD 234, LTETDD 105, BASIC 8, WIMAXOFDMA 75, EDGEGSM 13"
+00:00:01.347 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:TIMeout:TRIGger:STATe ON [0 ms]
+00:00:01.348 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:TIMeout:TRIGger 5 [0 ms]
+00:00:01.348 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:STATe ON [0 ms]
+00:00:01.349 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:ARULes IMAT [0 ms]
+00:00:01.365 ; EXT           ; Verbose     ; SCPI >> MMEM:CAT? "D:\" [17 ms]
+00:00:01.365 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"[$RECYCLE.BIN],,","[Agilent],,","[NVARB],,","[System Volume Information],,","[Users],,","[User_My_Documents],,"
+00:00:01.366 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:01.375 ; EXT           ; Verbose     ; SCPI >> MMEM:CAT? "D:\User_My_Documents\Instrument\My Documents\Sequences\" [9 ms]
+00:00:01.375 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"70aba16fbca8278e988cc4221326644c48672f0a.txt,,820","e0056715d0126d3e7ef61f8f1344c60b48133135.txt,,791"
+00:00:01.376 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:01.378 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:01.378 ; EXT           ; Verbose     ; SCPI >> :CAL:AUTO:ALER NONE [0 ms]
+00:00:01.378 ; EXT           ; Verbose     ; SCPI >> :CAL:AUTO OFF [0 ms]
+00:00:01.383 ; EXT           ; Verbose     ; SCPI >> CAL:TEMP:CURR? [4 ms]
+00:00:01.383 ; EXT           ; Verbose     ; SCPI << 3.875000000E+01
+00:00:01.393 ; EXT           ; Verbose     ; SCPI >> CAL:TEMP:LALL? [10 ms]
+00:00:01.393 ; EXT           ; Verbose     ; SCPI << 3.875000000E+01
+00:00:01.403 ; EXT           ; Verbose     ; SCPI >> CAL:TIME:LALL? [10 ms]
+00:00:01.403 ; EXT           ; Verbose     ; SCPI << 4.829134211E+03
+00:00:01.403 ; EXT           ; Verbose     ; AlignIfRequired completed [26 ms]
+00:00:01.404 ; EXT           ; Verbose     ; SCPI >> INST:CAT? [1 ms]
+00:00:01.404 ; EXT           ; Verbose     ; SCPI << "WCDMA 9, CDMA2K 10, SEQAN 123, WLAN 217, CDMA1XEV 15, TDSCDMA 211, LTE 102, BT 228, ADEMOD 234, LTETDD 105, BASIC 8, WIMAXOFDMA 75, EDGEGSM 13"
+00:00:01.405 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:TIMeout:TRIGger:STATe ON [0 ms]
+00:00:01.406 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:TIMeout:TRIGger 5 [0 ms]
+00:00:01.406 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:STATe ON [0 ms]
+00:00:01.407 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:ARULes IMAT [0 ms]
+00:00:01.415 ; EXT           ; Verbose     ; SCPI >> MMEM:CAT? "D:\" [8 ms]
+00:00:01.415 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"[$RECYCLE.BIN],,","[Agilent],,","[NVARB],,","[System Volume Information],,","[Users],,","[User_My_Documents],,"
+00:00:01.415 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:01.423 ; EXT           ; Verbose     ; SCPI >> MMEM:CAT? "D:\User_My_Documents\Instrument\My Documents\Sequences\" [8 ms]
+00:00:01.424 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"70aba16fbca8278e988cc4221326644c48672f0a.txt,,820","e0056715d0126d3e7ef61f8f1344c60b48133135.txt,,791"
+00:00:01.424 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:01.425 ; EXT           ; Verbose     ; SCPI >> INST:NSEL 9 [0 ms]
+00:00:01.425 ; EXT           ; Verbose     ; SCPI >> :DISPlay:ENABle ON [0 ms]
+00:00:01.426 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1 ON [0 ms]
+00:00:01.426 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:RF:PORT RFIn [0 ms]
+00:00:01.426 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.427 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:RF:PORT RFOut [0 ms]
+00:00:01.427 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2 ON [0 ms]
+00:00:01.428 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.428 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO1' (Requires option 'RFIO RF')
+00:00:01.428 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO2' (Requires option 'RFIO RF')
+00:00:01.428 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT:RFIO0 BOTH [0 ms]
+00:00:01.429 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1 ON [0 ms]
+00:00:01.429 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.430 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT RFIO0 [0 ms]
+00:00:01.430 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2 ON [0 ms]
+00:00:01.431 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.431 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT RFIO1 [0 ms]
+00:00:01.431 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT:RFIO1 BOTH [0 ms]
+00:00:01.432 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.432 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT RFIO2 [0 ms]
+00:00:01.433 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT:RFIO2 BOTH [0 ms]
+00:00:01.433 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3 ON [0 ms]
+00:00:01.434 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4 ON [0 ms]
+00:00:01.434 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.447 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT RFIO3 [13 ms]
+00:00:01.448 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT:RFIO3 BOTH [1 ms]
+00:00:01.449 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.449 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT RFIO4 [0 ms]
+00:00:01.450 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT:RFIO4 BOTH [0 ms]
+00:00:01.450 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5 ON [0 ms]
+00:00:01.450 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6 ON [0 ms]
+00:00:01.451 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.451 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT RFIO5 [0 ms]
+00:00:01.452 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT:RFIO5 BOTH [0 ms]
+00:00:01.452 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT RFIO6 [0 ms]
+00:00:01.453 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7 ON [0 ms]
+00:00:01.453 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.453 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT:RFIO6 BOTH [0 ms]
+00:00:01.454 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT RFIO7 [0 ms]
+00:00:01.454 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT:RFIO7 BOTH [0 ms]
+00:00:01.455 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.455 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8 ON [0 ms]
+00:00:01.677 ; EXT           ; Verbose     ; SCPI >> *OPC? [221 ms]
+00:00:01.677 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.678 ; EXT           ; Verbose     ; SCPI >> RAD:STAN:DEV MS [0 ms]
+00:00:01.678 ; EXT           ; Information ; Loaded mode 'Wcdma'. [254 ms]
+00:00:01.678 ; EXT           ; Information ; WCDMA mode initialized. [254 ms]
+00:00:01.678 ; EXT           ; Verbose     ; SCPI >> INST:SEL EDGEGSM [0 ms]
+00:00:01.699 ; EXT           ; Verbose     ; SCPI >> *OPC? [21 ms]
+00:00:01.699 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.701 ; EXT           ; Verbose     ; SCPI >> RAD:DEV MS [1 ms]
+00:00:01.701 ; EXT           ; Information ; GSM/EDGE mode initialized. [23 ms]
+00:00:01.701 ; EXT           ; Verbose     ; SCPI >> INST:NSEL 123 [0 ms]
+00:00:01.702 ; EXT           ; Verbose     ; SCPI >> :DISPlay:ENABle ON [0 ms]
+00:00:01.703 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1 ON [0 ms]
+00:00:01.703 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:RF:PORT RFIn [0 ms]
+00:00:01.703 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.704 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:RF:PORT RFOut [0 ms]
+00:00:01.704 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2 ON [0 ms]
+00:00:01.705 ; EXT           ; Verbose     ; SCPI >> :CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.705 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO1' (Requires option 'RFIO RF')
+00:00:01.705 ; EXT           ; Verbose     ; Skipping setting 'RFCableLossRFIO2' (Requires option 'RFIO RF')
+00:00:01.705 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT:RFIO0 BOTH [0 ms]
+00:00:01.706 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1 ON [0 ms]
+00:00:01.706 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.707 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET1:RF:PORT RFIO0 [0 ms]
+00:00:01.707 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2 ON [0 ms]
+00:00:01.707 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.708 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT RFIO1 [0 ms]
+00:00:01.708 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET2:RF:PORT:RFIO1 BOTH [0 ms]
+00:00:01.709 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.709 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT RFIO2 [0 ms]
+00:00:01.710 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3:RF:PORT:RFIO2 BOTH [0 ms]
+00:00:01.710 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET3 ON [0 ms]
+00:00:01.710 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4 ON [0 ms]
+00:00:01.711 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.711 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT RFIO3 [0 ms]
+00:00:01.712 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET4:RF:PORT:RFIO3 BOTH [0 ms]
+00:00:01.712 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.712 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT RFIO4 [0 ms]
+00:00:01.713 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5:RF:PORT:RFIO4 BOTH [0 ms]
+00:00:01.713 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET5 ON [0 ms]
+00:00:01.714 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6 ON [0 ms]
+00:00:01.714 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.715 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT RFIO5 [0 ms]
+00:00:01.715 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET6:RF:PORT:RFIO5 BOTH [0 ms]
+00:00:01.715 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT RFIO6 [0 ms]
+00:00:01.716 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7 ON [0 ms]
+00:00:01.716 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.717 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET7:RF:PORT:RFIO6 BOTH [0 ms]
+00:00:01.717 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT RFIO7 [0 ms]
+00:00:01.717 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:RF:PORT:RFIO7 BOTH [0 ms]
+00:00:01.718 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8:DATA 10e6, 0, 3000e6, 0 [0 ms]
+00:00:01.718 ; EXT           ; Verbose     ; SCPI >> :MPAD:CORR:CSET8 ON [0 ms]
+00:00:01.846 ; EXT           ; Verbose     ; SCPI >> *OPC? [128 ms]
+00:00:01.846 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.847 ; EXT           ; Information ; Loaded mode 'SequenceAnalyzer'. [146 ms]
+00:00:01.847 ; EXT           ; Information ; Device EXT (TCPIP0::A-E6607C-10275.aal.is.keysight.com::inst0::INSTR) opened [1536 ms]
+00:00:01.934 ; TestPlan      ; Start       ; "Verify GSM Multi RX" started.
+00:00:01.940 ; TestStep      ; Information ; Setting up Instrument
+00:00:01.942 ; EXT           ; Verbose     ; SCPI >> OUTP OFF [1 ms]
+00:00:01.951 ; EXT           ; Verbose     ; SCPI >> MMEMory:CATalog? "D:\NVARB\" [8 ms]
+00:00:01.951 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"CDMA2K_9CHAN.WFM,,1310960","CDMA2K_PILOT.WFM,,655616","CW_TOI_2TONE.WFM,,2816","EDGE_1C_BURST.WFM,,1250320","EDGE_BURST.WFM,,9750192","GSM_1C_BURST.WFM,,1250320","GSM_BURST.WFM,,9750192","GSM_SE_TSC0_TS3_PN9_Normal.WFM,,66300432","MT_31TONES_2MHZSPC.WFM,,4256","MT_7TONES_2KHZSPC.WFM,,6560","Nullwaveform.bin,,40000","null_wfm2.txt,,14","QAM16.WFM,,327904","QPSK.WFM,,327872","SINE_TEST.WFM,,4288","WCDMA_1DPCH.WFM,,1536192","WCDMA_DL_12.2KRMC_All_UP_511.WFM,,98112464","WCDMA_TM1_64DPCH_1C.WFM,,1536224","WCDMA_TM1_64DPCH_4C.WFM,,1344224","WLAN20MHZ54M64QAM.WFM,,112240"
+00:00:01.953 ; EXT           ; Verbose     ; SCPI >> *OPC? [1 ms]
+00:00:01.953 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.955 ; EXT           ; Verbose     ; SCPI >> :MMEMory:HEADer:ID? "GSM_SE_TSC0_TS3_PN9_Normal.WFM" [1 ms]
+00:00:01.955 ; EXT           ; Verbose     ; SCPI << 2445348424
+00:00:01.956 ; EXT           ; Verbose     ; SCPI >> :MMEMory:HEADer:ID? "D:\NVARB\GSM_SE_TSC0_TS3_PN9_Normal.WFM" [1 ms]
+00:00:01.956 ; EXT           ; Verbose     ; SCPI << 2445348424
+00:00:01.956 ; EXT           ; Verbose     ; Waveform file is already loaded.
+00:00:01.957 ; EXT           ; Verbose     ; SCPI >> SOUR:RAD:ARB:WAV 'GSM_SE_TSC0_TS3_PN9_Normal.WFM' [1 ms]
+00:00:01.958 ; EXT           ; Verbose     ; SCPI >> SOUR:RAD:ARB:MDES:PULS {0} [0 ms]
+00:00:01.958 ; EXT           ; Verbose     ; SCPI >> OUTP:MOD ON [0 ms]
+00:00:01.959 ; EXT           ; Verbose     ; SCPI >> SOUR:RAD:ARB ON [0 ms]
+00:00:01.959 ; EXT           ; Verbose     ; SCPI >> OUTP ON [0 ms]
+00:00:01.974 ; EXT           ; Verbose     ; SCPI >> *OPC? [14 ms]
+00:00:01.974 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.974 ; EXT           ; Verbose     ; SCPI >> INST:NSEL 123 [1 ms]
+00:00:01.977 ; EXT           ; Verbose     ; SCPI >> *OPC? [1 ms]
+00:00:01.977 ; EXT           ; Verbose     ; SCPI << 1
+00:00:01.977 ; EXT           ; Information ; Loaded mode 'SequenceAnalyzer'. [3 ms]
+00:00:01.978 ; EXT           ; Verbose     ; SCPI >> SOUR:POW -60 [1 ms]
+00:00:01.978 ; EXT           ; Verbose     ; SCPI >> SOUR:RAD:BAND:LINK DOWN [1 ms]
+00:00:01.979 ; EXT           ; Verbose     ; SCPI >> SOUR:FREQ:CHAN:BAND EGSM [0 ms]
+00:00:01.980 ; EXT           ; Verbose     ; SCPI >> SOUR:FREQ:CHAN:NUMB 30 [1 ms]
+00:00:01.983 ; EXT           ; Verbose     ; SCPI >> SOUR:FREQ 941000000 [1 ms]
+00:00:01.984 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:BTXPower:DIF:BANDwidth 1000000 [1 ms]
+00:00:01.985 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:BFERor:DIF:BWIDth 500000 [0 ms]
+00:00:01.985 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:BIQData:DIF:BWIDth 500000 [0 ms]
+00:00:01.986 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:MSNR 5 [0 ms]
+00:00:01.987 ; EXT           ; Verbose     ; SCPI >> :LSEQuencer:ASRLevels:PPM 0 [0 ms]
+00:00:01.987 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:TYPE MSW [0 ms]
+00:00:01.988 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:LIST:SEL CUST [0 ms]
+00:00:01.988 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:LIST:MOD:FREQ 0,100000,200000,250000,400000,600000,800000,1000000,1200000,1400000,1600000,1800000,1801000,1802000,1803000 [0 ms]
+00:00:01.989 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:LIST:MOD:STAT ON, ON,ON,ON,ON,ON,ON,ON,ON,ON,ON,ON,OFF,OFF,OFF [0 ms]
+00:00:01.989 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:LIST:SWIT:FREQ 0,400000,600000,1200000,1800000,1801000,1802000,1803000,1804000,1805000,1806000,1807000,1808000,1809000,1810000 [0 ms]
+00:00:01.989 ; EXT           ; Verbose     ; SCPI >> LSEQ:EDGE:EORF:LIST:SWIT:STAT ON,ON,ON,ON,ON,OFF,OFF,OFF,OFF,OFF,OFF,OFF,OFF,OFF,OFF [0 ms]
+00:00:01.990 ; EXT           ; Verbose     ; SCPI >> OUTP:MOD ON [0 ms]
+00:00:01.991 ; EXT           ; Verbose     ; SCPI >> FEED:RF:PORT:INPut RFIn [0 ms]
+00:00:01.991 ; EXT           ; Verbose     ; SCPI >> FEED:RF:PORT:OUTPut RFOut [0 ms]
+00:00:01.991 ; EXT           ; Verbose     ; SCPI >> MPADapter:STATe ON [0 ms]
+00:00:01.992 ; EXT           ; Verbose     ; SCPI >> MPADapter:PORT:OUTPut:BITMap 32 [0 ms]
+00:00:01.994 ; DUT           ; Verbose     ; UART >> '31' (EDGE_GPRS_TEST) 
+00:00:01.997 ; DUT           ; Verbose     ; UART >> '1 30' (SET_BCCH_ARFCN) 
+00:00:01.999 ; DUT           ; Verbose     ; UART >> '2 30' (SET_TCH_ARFCH) 
+00:00:02.007 ; DUT           ; Verbose     ; Wait for idle
+00:00:02.007 ; DUT           ; Verbose     ; SE-BER: Initialize [13 ms]
+00:00:02.011 ; DUT           ; Verbose     ; UART >> '4 3 0' (RECEIVE_SLOT_TSC) 
+00:00:02.013 ; DUT           ; Verbose     ; UART >> '14 1 0xff 100 0' (SEBER_MODE) 
+00:00:02.018 ; DUT           ; Verbose     ; Wait for idle
+00:00:02.018 ; DUT           ; Verbose     ; SE-BER: Start SE-BER mode [6 ms]
+00:00:02.318 ; DUT           ; Verbose     ; UART >> '3' (CLEAR_STATUS) 
+00:00:02.334 ; DUT           ; Verbose     ; UART <<  [14 ms]
+00:00:02.334 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:02.351 ; DUT           ; Verbose     ; UART <<  [14 ms]
+00:00:02.451 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:02.467 ; DUT           ; Verbose     ; UART <<  [14 ms]
+00:00:02.567 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:02.587 ; DUT           ; Verbose     ; UART <<  [16 ms]
+00:00:02.687 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:02.703 ; DUT           ; Verbose     ; UART <<  [14 ms]
+00:00:02.803 ; DUT           ; Warning     ; Failed to sync. Trying anyway.. [785 ms]
+00:00:02.803 ; TestStep      ; Verbose     ; Setting up DUTs [811 ms]
+00:00:02.804 ; TestPlan      ; Start       ; "Verify GSM Multi RX\Verify GSM TX" started.
+00:00:02.816 ; EXT           ; Verbose     ; SCPI >> *CLS [1 ms]
+00:00:02.817 ; EXT           ; Verbose     ; SCPI >> :INIT:CONT OFF [1 ms]
+00:00:02.817 ; EXT           ; Verbose     ; Using EXT sequence file format version 1.3.0
+00:00:02.865 ; EXT           ; Verbose     ; SCPI >> MMEMory:CATalog? "D:\User_My_Documents\Instrument\My Documents\Sequences\" [10 ms]
+00:00:02.865 ; EXT           ; Verbose     ; SCPI << 703885312,15024750592,"70aba16fbca8278e988cc4221326644c48672f0a.txt,,820","e0056715d0126d3e7ef61f8f1344c60b48133135.txt,,791"
+00:00:02.865 ; EXT           ; Verbose     ; Skipping sequence file uploading (an identical file has been previously uploaded)
+00:00:02.866 ; EXT           ; Verbose     ; SCPI >> MMEMory:LOAD:SEQ:SAAL "D:\User_My_Documents\Instrument\My Documents\Sequences\e0056715d0126d3e7ef61f8f1344c60b48133135.txt" [1 ms]
+00:00:02.866 ; EXT           ; Information ; Sequence loaded [51 ms]
+00:00:02.867 ; EXT           ; Verbose     ; SCPI >> FEED:RF:PORT:INPut RFIn [1 ms]
+00:00:02.868 ; EXT           ; Verbose     ; SCPI >> FEED:RF:PORT:OUTPut RFOut [1 ms]
+00:00:02.869 ; EXT           ; Verbose     ; SCPI >> MPADapter:STATe ON [1 ms]
+00:00:02.870 ; EXT           ; Verbose     ; SCPI >> MPADapter:PORT:INPut RFIO5 [0 ms]
+00:00:02.871 ; EXT           ; Verbose     ; SCPI >> *CLS [0 ms]
+00:00:02.871 ; EXT           ; Verbose     ; SCPI >> INITiate:RESTart [0 ms]
+00:00:02.913 ; EXT           ; Verbose     ; Waiting for trigger arm (Status: Measuring)
+00:00:02.924 ; EXT           ; Verbose     ; Waiting for trigger arm (Status: Measuring, WaitingForTrigger)
+00:00:02.924 ; EXT           ; Information ; Sequencer armed. [53 ms]
+00:00:02.936 ; EXT           ; Verbose     ; Waiting for measurement (Status: Measuring, WaitingForTrigger)
+00:00:03.680 ; EXT           ; Verbose     ; Instrument triggered. [755 ms]
+00:00:03.680 ; EXT           ; Verbose     ; Waiting for measurement (Status: Idle)
+00:00:03.682 ; EXT           ; Verbose     ; SCPI >> STAT:QUES:INT:COND? [2 ms]
+00:00:03.682 ; EXT           ; Verbose     ; SCPI << 0
+00:00:03.696 ; EXT           ; Verbose     ; Measurement completed. [2 ms]
+00:00:03.705 ; EXT           ; Verbose     ; SCPI >> FETCh:LSEQ? [7 ms]
+00:00:03.705 ; EXT           ; Verbose     ; SCPI << 3.120000000E+02,1.000000000E+00,0.000000000E+00,1.000000000E+00,0.000000000E+00,1.000000000E+00,0.000000000E+00,1.120000000E+02,0.000000000E+00,3.900000000E+01,0.000000000E+00,2.866511726E+01,2.866511726E+01,1.092000020E-04,6.510000094E-04,3.810507187E-04,5.543999723E-04,2.902128601E+01,-8.598604584E+01,-9.787133932E-01,-9.990000000E+02,0.000000000E+00,0.000000000E+00,-9.990000000E+02,-8.266378021E+01,-4.317815399E+01,-1.301768303E+01,-4.853276908E-01,-2.876142561E-01,-1.864447445E-01,-5.534034967E-02,-5.128165707E-02,2.651039883E-02,-1.631573677E+01,-7.813399506E+01,-8.279818726E+01,-8.266378021E+01,-4.317815399E+01,-1.301768303E+01,-4.853276908E-01,-2.876142561E-01,-1.864447445E-01,-5.534034967E-02,-5.128165707E-02,2.651039883E-02,-1.631573677E+01,-7.813399506E+01,-8.279818726E+01,2.866511726E+01,0.000000000E+00,2.420000000E+02,0.000000000E+00,0.000000000E+00,1.931028748E+01,0.000000000E+00,1.931028748E+01,-8.671056747E+00,1.063923073E+01,-5.424106598E+00,1.388618088E+01,-3.370629120E+01,-1.439600277E+01,-3.763920212E+01,-1.832891273E+01,-4.827482605E+01,-2.896454048E+01,-4.427701187E+01,-2.496672249E+01,-6.852410126E+01,-4.921380997E+01,-6.655505371E+01,-4.724476624E+01,-7.495930481E+01,-5.564901733E+01,-7.789343262E+01,-5.858314133E+01,-7.771569824E+01,-5.840540695E+01,-7.897995758E+01,-5.966966629E+01,-8.005006409E+01,-6.073977661E+01,-7.818148804E+01,-5.887120438E+01,-8.043877411E+01,-6.112849045E+01,-8.181547546E+01,-6.250518799E+01,-8.315633392E+01,-6.384604645E+01,-8.430909729E+01,-6.499880981E+01,-8.468177032E+01,-6.537148285E+01,-8.205268097E+01,-6.274238968E+01,-7.922332001E+01,-5.991302872E+01,-7.825585938E+01,-5.894557190E+01,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,0.000000000E+00,2.832771111E+01,0.000000000E+00,2.832771111E+01,9.91E+37,-3.647382736E+01,9.91E+37,-3.935878372E+01,9.91E+37,-3.858277893E+01,9.91E+37,-4.466765213E+01,9.91E+37,-3.979567337E+01,9.91E+37,-4.652408600E+01,9.91E+37,-4.416251373E+01,9.91E+37,-5.141793823E+01,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,-9.171056747E+00,-5.924106598E+00,5.000000000E-01,-3.600000000E+01,-3.706290722E+00,-7.639200687E+00,-3.000000000E+01,-3.600000000E+01,-1.527482796E+01,-1.127700996E+01,-3.300000000E+01,-3.600000000E+01,-1.321381187E+01,-1.124476433E+01,-6.000000000E+01,-3.600000000E+01,-1.495930672E+01,-1.789343071E+01,-6.000000000E+01,-5.100000000E+01,-1.771569633E+01,-1.897995567E+01,-6.000000000E+01,-5.100000000E+01,-2.005006409E+01,-1.818149185E+01,-6.000000000E+01,-5.100000000E+01,-2.043877792E+01,-2.181547737E+01,-6.000000000E+01,-5.100000000E+01,-2.315633392E+01,-2.430910110E+01,-6.000000000E+01,-5.100000000E+01,-2.468177032E+01,-2.205267715E+01,-6.000000000E+01,-5.100000000E+01,-1.622331810E+01,-1.525586128E+01,-6.300000000E+01,-4.600000000E+01,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,-1.347382832E+01,-1.635878372E+01,9.91E+37,-2.300000000E+01,-1.324663639E+01,-1.933150673E+01,9.91E+37,-2.533614349E+01,-1.412338352E+01,-2.085179710E+01,9.91E+37,-2.567228889E+01,-1.549022388E+01,-2.274564934E+01,9.91E+37,-2.867228889E+01,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,9.91E+37,7.000000000E+00,0.000000000E+00,1.700000000E+01,1.000000000E+00,0.000000000E+00,0.000000000E+00,1.000000000E+00,5.671672225E-01,5.671672225E-01,2.206995487E+00,2.206995487E+00,5.000000000E+00,5.000000000E+00,-2.256976318E+02,-2.256976318E+02,-6.114399719E+01,-6.114399719E+01,2.804058313E-04,2.804058313E-04,0.000000000E+00
+00:00:03.739 ; EXT           ; Verbose     ; SCPI >> SERV:LSEQ:SIQD:NUMB:ACQ? [1 ms]
+00:00:03.739 ; EXT           ; Verbose     ; SCPI << 0
+00:00:03.744 ; Result        ; Information ; TX Power:
+00:00:03.745 ; Result        ; Information ;   Average power          : 28,67 dBm    20  -------------------------|-----    30
+00:00:03.745 ; Result        ; Information ;   Power vs. Time         : Pass
+00:00:03.746 ; Result        ; Information ; Modulation Spectrum:
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum -1800kHz :-79,22 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum -1600kHz :-84,68 dBc   -90  -|-----------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum -1400kHz :-83,16 dBc   -90  --|----------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum -1200kHz :-80,44 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum -1000kHz :-80,05 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -800kHz :-77,72 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -600kHz :-74,96 dBc   -90  ----|--------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -400kHz :-68,52 dBc   -90  ------|------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -250kHz :-48,27 dBc   -90  -------------|-----------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -200kHz :-33,71 dBc   -90  -----------------|-------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  -100kHz : -8,67 dBc   -90  -------------------------|-----     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   100kHz : -5,42 dBc   -90  --------------------------|----     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   200kHz :-37,64 dBc   -90  ----------------|--------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   250kHz :-44,28 dBc   -90  --------------|----------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   400kHz :-66,56 dBc   -90  -------|-----------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   600kHz :-77,89 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum   800kHz :-78,98 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  1000kHz :-78,18 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  1200kHz :-81,82 dBc   -90  --|----------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  1400kHz :-84,31 dBc   -90  -|-----------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  1600kHz :-82,05 dBc   -90  --|----------------------------     5
+00:00:03.747 ; Result        ; Information ;   Mod. Spectrum  1800kHz :-78,26 dBc   -90  ---|---------------------------     5
+00:00:03.747 ; Result        ; Information ; Switching Spectrum:
+00:00:03.747 ; Result        ; Information ;   Sw. Spectrum -1800kHz  :-44,16 dBm   -65  ------|------------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum -1200kHz  :-39,80 dBm   -65  -------|-----------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum  -600kHz  :-38,58 dBm   -65  --------|----------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum  -400kHz  :-36,47 dBm   -65  ---------|---------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum     0kHz  : 28,33 dBm   -65  -----------------------------|-    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum   400kHz  :-39,36 dBm   -65  --------|----------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum   600kHz  :-44,67 dBm   -65  ------|------------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum  1200kHz  :-46,52 dBm   -65  -----|-------------------------    30
+00:00:03.748 ; Result        ; Information ;   Sw. Spectrum  1800kHz  :-51,42 dBm   -65  ----|--------------------------    30
+00:00:03.748 ; Result        ; Information ; Phase and frequency:
+00:00:03.748 ; Result        ; Information ;   Average freq error     :-225,70 Hz    -50  <------------------------------    50  Fail
+00:00:03.748 ; Result        ; Information ;   RMS Phase Error        :  0,57 deg     0  ---|---------------------------     5
+00:00:03.748 ; Result        ; Information ;   Peak Phase Error       :  2,21 deg     0  ----|--------------------------    15
+00:00:03.749 ; TestPlan      ; Stop        ; "Verify GSM Multi RX\Verify GSM TX" completed with verdict 'Fail'. [945 ms]
+00:00:03.749 ; TestStep      ; Verbose     ; TX measurements
+00:00:03.752 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:03.790 ; DUT           ; Verbose     ; UART << ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN    EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SET_BCCH_ARFCN SET_BCCH_ARFCN: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SET_TCH_ARFCH SET_TCH_ARFCH: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     RECEIVE_SLOT_TSC RECEIVE_SLOT_TSC: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_MODE  [34 ms]
+00:00:03.889 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:03.905 ; DUT           ; Verbose     ; UART <<  [13 ms]
+00:00:04.005 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:04.023 ; DUT           ; Verbose     ; UART <<  [14 ms]
+00:00:04.123 ; DUT           ; Verbose     ; UART >> '15' (SEBER_STATUS) 
+00:00:04.755 ; DUT           ; Verbose     ; UART << SEBER_MODE: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     CLEAR_STATUS CLEAR_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     SEBER_STATUS bits=     11400  err bits=         0  BER=   0  SEBER_STATUS: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     [628 ms]
+00:00:04.755 ; DUT           ; Verbose     ; SE-BER: Measure [1952 ms]
+00:00:04.756 ; TestStep      ; Verbose     ; RX measurements [0 ms]
+00:00:04.757 ; Result        ; Information ; BER results for DUT 'BC'
+00:00:04.757 ; Result        ; Information ;   Bits Counted           :  11400
+00:00:04.757 ; Result        ; Information ;   Bit errors             :      0
+00:00:04.757 ; Result        ; Information ;   BER                    :      0 %      0  |------------------------------   1,5
+00:00:04.758 ; TestStep      ; Verbose     ; Result processing
+00:00:04.759 ; DUT           ; Verbose     ; UART >> '9' (CHANNEL_RELEASE) 
+00:00:04.760 ; DUT           ; Verbose     ; UART >> '0' (EXIT) 
+00:00:05.481 ; DUT           ; Verbose     ; UART <<  CHANNEL_RELEASE CHANNEL_RELEASE: OK ACK EXIT: NOK ACK  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********EDGE_GPRS_TEST Menu:******** 0  EXIT               12 MELM_LIST_ADD     1  SET_BCCH_ARFCN     13 MELM_EDGE_START   2  SET_TCH_ARFCH      14 SEBER_MODE        3  CLEAR_STATUS       15 SEBER_STATUS      4  RECEIVE_SLOT_TSC   16 GPRS_1_UP_1_DN    5  IDLE_MODE          17 GPRS_2_UP_2_DN    6  REDUCED_EDGE_MODE  18 GPRS_1_UP_3_DN    7  REDUCED_GPRS_MODE  19 GPRS_1_UP_4_DN    8  REDUCED_CS_MODE    20 EDGE_1_UP_1_DN    9  CHANNEL_RELEASE    21 EDGE_2_UP_2_DN    10 RXLEV              22 EDGE_1_UP_3_DN    11 MELM_LIST_RESET    23 EDGE_1_UP_4_DN     EXIT  Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********Main Menu:******** 0  HELP             36 SPM_RAMP_RAM_WRITE  72 MIXED_TRDR_ADJUST         108 RFTEST                 1  ARFCN            37 PMU                 73 MIXED_TX_PROFILE_UP       109 MULTI_BIAS?            2  MODULATION       38 GPIO                74 MIXED_TX_PROFILE_DN       110 GSMBIN                 3  DACVAL           39 GPIO?               75 TX_TRDR0                  111 SLEEP                  4  ALL_RAMPS        40 GPIOEX              76 TX_TRDR_ADJUST            112 SLEEP_DEBUG            5  ALL_RAMPS?       41 GPIOEX?             77 TX_DYN_CAL_PCL            113 MISC                   6  RAMP_SELECT      42 UMTS                78 TX_DYN_CAL_PEAK           114 FDAC_VALUES?           7  RAMP_SELECT?     43 TX_GPIO             79 TX_DYN_CAL_DAC            115 FDACZERO_OFFSET        8  AGC_TABLE?       44 TX_GPIO?            80 TX_DYN_CAL_DAC_REGIONS    116 FDACZERO_OFFSET?       9  AGC_TABLE        45 TX_GPIO_MIXED       81 TX_DYN_CAL_DAC_AND_RXLEV  117 FDAC_OFFSETS           10 AGC              46 TX_GPIO_MIXED?      82 ALL_PEAKS                 118 FDAC_OFFSETS?          11 AGC_INDEX        47 RX_GPIO             83 ALL_LO_PEAKS              119 XOCALTEMP              12 GSYS             48 RX_GPIO?            84 BLUETOOTH                 120 XOCALTEMP?             13 START            49 TX_TA_ADJUST        85 BLUETOOTH?                121 XOTEMPPROFILE?         14 STOP             50 TXSCALE_TABLE       86 I2C                       122 GETRXIP2?              15 DSPWR            51 BATTVOL             87 I2C?                      123 RXIP2SETWORDS?         16 ARMWR            52 BATTVOL?            88 CAL                       124 CATE                   17 ISPCS            53 ADC_BY_CHANNEL?     89 BATTTEMP?                 125 IMEIREAD               18 DSPRD?           54 FREQ_LSB            90 HWVER                     126 TXDBPWR_TABLE          19 ARMRD?           55 FREQ_MULT           91 HWVER?                    127 LUT_DIG_VALUE          20 RXLEV?           56 FREQ_SHIFT          92 RF_WRITE_QUEUE            128 LUT_DIG_STATE          21 RXLEVDB16?       57 GSYS_WRITE          93 RF_WRITE_EXE              129 GAIN_SEGMENT?          22 MULTIRXLEVDB16?  58 GSYS_READ?          94 FACT_TRACK                130 GAIN_PROFILE?          23 RXLEV_COMP       59 FLASH               95 PHONE_INFO                131 GAIN_ERROR             24 RXLEV_COMP_LIST  60 IMEI                96 DACVAL?                   132 GPSSTEST               25 RXLEV_COMP?      61 IMEI2               97 TSC                       133 RX_CAL_POINTS?         26 GSYS?            62 IMEI?               98 ADC2VOLT?                 134 GAIN_ERROR_ARFCN?      27 RX_CAL_PARMS     63 IMEI2?              99 VOLT2ADC?                 135 TX_3G_POWER            28 MULTISLOT        64 TX_OLC_PARM         100 ADC2TEMP?                 136 ISPCG                  29 EN_AUTO_SIM      65 DEFAULT_THRESH      101 TEMP2ADC?                 137 ISPCG?                 30 L1_TEST          66 TX_BIAS             102 TXSCALE_VOLTS             138 RTC_SET                31 EDGE_GPRS_TEST   67 APCSWG              103 TXSCALE_TEMPS             139 RTC_GET                32 TXDB_WRITE       68 MSWTR               104 SW_VERSION?               140 SIM                    33 TXDB_CONVERT?    69 APCPDFR             105 RF_REG_WRITE              141 GET_LOG_BY_RESET       34 CHANGEMODE       70 APCGDFR             106 RF_REG_READ?              142 SET_DUMP_AFTER_RESET   35 CDAC             71 TXOLC_WRITE         107 READ_RF_REGS              143 PSI_VERSION?            Current version supports commands below:     (for help, enter "? <XX>", where XX is the command number ********Main Menu:******** 0  HELP             36 SPM_RAMP_RAM_WRITE  72 MIXED_TRDR_ADJUST         108 RFTEST                 1  ARFCN            37 PMU                 73 MIXED_TX_PROFILE_UP       109 MULTI_BIAS?            2  MODULATION       38 GPIO                74 MIXED_TX_PROFILE_DN       110 GSMBIN                 3  DACVAL           39 GPIO?               75 TX_TRDR0                  111 SLEEP                  4  ALL_RAMPS        40 GPIOEX              76 TX_TRDR_ADJUST            112 SLEEP_DEBUG            5  ALL_RAMPS?       41 GPIOEX?             77 TX_DYN_CAL_PCL            113 MISC                   6  RAMP_SELECT      42 UMTS                78 TX_DYN_CAL_PEAK           114 FDAC_VALUES?           7  RAMP_SELECT?     43 TX_GPIO             79 TX_DYN_CAL_DAC            115 FDACZERO_OFFSET        8  AGC_TABLE?       44 TX_GPIO?            80 TX_DYN_CAL_DAC_REGIONS    116 FDACZERO_OFFSET?       9  AGC_TABLE        45 TX_GPIO_MIXED       81 TX_DYN_CAL_DAC_AND_RXLEV  117 FDAC_OFFSETS           10 AGC              46 TX_GPIO_MIXED?      82 ALL_PEAKS                 118 FDAC_OFFSETS?          11 AGC_INDEX        47 RX_GPIO             83 ALL_LO_PEAKS              119 XOCALTEMP              12 GSYS             48 RX_GPIO?            84 BLUETOOTH                 120 XOCALTEMP?             13 START            49 TX_TA_ADJUST        85 BLUETOOTH?                121 XOTEMPPROFILE?         14 STOP             50 TXSCALE_TABLE       86 I2C                       122 GETRXIP2?              15 DSPWR            51 BATTVOL             87 I2C?                      123 RXIP2SETWORDS?         16 ARMWR            52 BATTVOL?            88 CAL                       124 CATE                   17 ISPCS            53 ADC_BY_CHANNEL?     89 BATTTEMP?                 125 IMEIREAD               18 DSPRD?           54 FREQ_LSB            90 HWVER                     126 TXDBPWR_TABLE          19 ARMRD?           55 FREQ_MULT           91 HWVER?                    127 LUT_DIG_VALUE          20 RXLEV?           56 FREQ_SHIFT          92 RF_WRITE_QUEUE            128 LUT_DIG_STATE          21 RXLEVDB16?       57 GSYS_WRITE          93 RF_WRITE_EXE              129 GAIN_SEGMENT?          22 MULTIRXLEVDB16?  58 GSYS_READ?          94 FACT_TRACK                130 GAIN_PROFILE?          23 RXLEV_COMP       59 FLASH               95 PHONE_INFO                131 GAIN_ERROR             24 RXLEV_COMP_LIST  60 IMEI                96 DACVAL?                   132 GPSSTEST               25 RXLEV_COMP?      61 IMEI2               97 TSC                       133 RX_CAL_POINTS?         26 GSYS?            62 IMEI?               98 ADC2VOLT?                 134 GAIN_ERROR_ARFCN?      27 RX_CAL_PARMS     63 IMEI2?              99 VOLT2ADC?                 135 TX_3G_POWER            28 MULTISLOT        64 TX_OLC_PARM         100 ADC2TEMP?                 136 ISPCG                  29 EN_AUTO_SIM      65 DEFAULT_THRESH      101 TEMP2ADC?                 137 ISPCG?                 30 L1_TEST          66 TX_BIAS             102 TXSCALE_VOLTS             138 RTC_SET                31 EDGE_GPRS_TEST   67 APCSWG              103 TXSCALE_TEMPS             139 RTC_GET                32 TXDB_WRITE       68 MSWTR               104 SW_VERSION?               140 SIM                    33 TXDB_CONVERT?    69 APCPDFR             105 RF_REG_WRITE              141 GET_LOG_BY_RESET       34 CHANGEMODE       70 APCGDFR             106 RF_REG_READ?              142 SET_DUMP_AFTER_RESET   35 CDAC             71 TXOLC_WRITE         107 READ_RF_REGS              143 PSI_VERSION?            [718 ms]
+00:00:05.481 ; DUT           ; Verbose     ; SE-BER: Reset [722 ms]
+00:00:05.482 ; EXT           ; Verbose     ; SCPI >> *CLS [0 ms]
+00:00:05.482 ; EXT           ; Verbose     ; SCPI >> OUTP OFF [0 ms]
+00:00:05.483 ; EXT           ; Verbose     ; SCPI >> OUTP:MOD OFF [0 ms]
+00:00:05.483 ; EXT           ; Verbose     ; SCPI >> SOUR:RAD:ARB OFF [0 ms]
+00:00:05.483 ; TestStep      ; Verbose     ; Exit EDGE GPRS SE-BER mode [725 ms]
+00:00:05.483 ; TestPlan      ; Stop        ; "Verify GSM Multi RX" completed with verdict 'Pass'. [3549 ms]
+00:00:05.483 ; TestPlan      ; Stop        ; TestPlan finished. [5484 ms]
+00:00:05.483 ; TestPlan      ; Verbose     ; Running step PostPlanRun in REVERSE order.
+00:00:05.483 ; TestPlan      ; Verbose     ; TestStep 'Verify GSM TX' PostPlanRun completed. [0 ms]
+00:00:05.483 ; TestPlan      ; Verbose     ; TestStep 'Verify GSM Multi RX' PostPlanRun completed. [0 ms]

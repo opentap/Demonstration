@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(TAP_PATH)\Editor.exe</StartProgram>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ED5480D-D6A0-48E3-9B94-599568294626}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenTap.Plugins.Demo.Battery</RootNamespace>
+    <AssemblyName>OpenTap.Plugins.Demo.Battery</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(TAP_PATH)\Packages\Demonstration</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(TAP_PATH)\Packages\Demonstration</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTap">
+      <HintPath>$(TAP_PATH)\OpenTap.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DischargeStep.cs" />
+    <Compile Include="ChargeStep.cs" />
+    <Compile Include="PowerAnalyzer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumber.cs" />
+    <Compile Include="RatingStep.cs" />
+    <Compile Include="SamplingStepBase.cs" />
+    <Compile Include="SetTemperatureStep.cs" />
+    <Compile Include="TemperatureChamber.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <UsingTask TaskName="Keysight.OpenTap.Sdk.MSBuild.PackageTask" AssemblyFile="$(TAP_PATH)\Packages\SDK Tools\Keysight.OpenTap.Sdk.MSBuild.dll" />
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="TargetInfo" />
+    </GetAssemblyIdentity>
+    <!--<PackageTask Dir="$(TargetDir)" ConfFile="$(ProjectDir)\package.xml" />
+      DISABLED because its already done by the other project.
+    -->
+  </Target>
+</Project>

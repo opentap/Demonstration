@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestPlan type="OpenTap.TestPlan" Locked="False">
+  <Steps>
+    <TestStep type="OpenTap.Plugins.Demo.Battery.ChargeStep" Id="37ed049b-6e21-4362-8e6b-dd40d58a2c7a" Version="9.0">
+      <ChildTestSteps />
+      <Current>10</Current>
+      <Enabled>True</Enabled>
+      <MeasurementInterval>0.2</MeasurementInterval>
+      <Name>Charge</Name>
+      <PowerAnalyzer Source="OpenTap.InstrumentSettings">PSU</PowerAnalyzer>
+      <TargetCellVoltageMargin>0.1</TargetCellVoltageMargin>
+      <Voltage>4.2</Voltage>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.Battery.DischargeStep" Id="63ae0f31-45d1-49b7-bdff-d3225e0e4cdf" Version="9.0">
+      <ChildTestSteps />
+      <Current>5</Current>
+      <Enabled>True</Enabled>
+      <MeasurementInterval>0.2</MeasurementInterval>
+      <Name>Discharge</Name>
+      <PowerAnalyzer Source="OpenTap.InstrumentSettings">PSU</PowerAnalyzer>
+      <TargetCellVoltageMargin>0.8</TargetCellVoltageMargin>
+      <Voltage>2.2</Voltage>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.Battery.RatingStep" Id="2bfa65b8-b01d-43ac-b97e-70f355fea07a" Version="9.0">
+      <ChargeTime>
+        <PropertyName>OpenTap.Plugins.Demo.Battery.ChargeStep, OpenTap.Plugins.Demo.Battery, Version=8.0, Culture=neutral, PublicKeyToken=null|ChargeTime</PropertyName>
+        <Step type="OpenTap.Plugins.Demo.Battery.ChargeStep">37ed049b-6e21-4362-8e6b-dd40d58a2c7a</Step>
+      </ChargeTime>
+      <ChildTestSteps />
+      <DischargeTime>
+        <PropertyName>OpenTap.Plugins.Demo.Battery.DischargeStep, OpenTap.Plugins.Demo.Battery, Version=8.0, Culture=neutral, PublicKeyToken=null|DischargeTime</PropertyName>
+        <Step type="OpenTap.Plugins.Demo.Battery.DischargeStep">63ae0f31-45d1-49b7-bdff-d3225e0e4cdf</Step>
+      </DischargeTime>
+      <Enabled>True</Enabled>
+      <MinBestLimit>6.5</MinBestLimit>
+      <MinBetterLimit>7</MinBetterLimit>
+      <Name>Rating</Name>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.Battery.SetTemperatureStep" Id="b985ad37-9d37-4e10-8b1b-555f5fd7358e" Version="9.0">
+      <Chamber Source="OpenTap.InstrumentSettings">TEMP</Chamber>
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <Humidity>50</Humidity>
+      <Name>Set Temperature</Name>
+      <Temperature>25</Temperature>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.RampResultsStep" Id="891c87b4-9ffd-4542-b08d-f0d08dba2e37" Version="9.0">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <Name>Ramp Result</Name>
+      <PointCount>50</PointCount>
+      <ResultName>RampResults</ResultName>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.SineResultsStep" Id="2bce7051-f015-4163-9cb7-0240e44eb096" Version="9.0">
+      <AmplitudePp>20</AmplitudePp>
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <LimitCheckingEnabled>False</LimitCheckingEnabled>
+      <LowerLimit>5</LowerLimit>
+      <Mean>20</Mean>
+      <Name>Sine Result</Name>
+      <NoiseEnabled>False</NoiseEnabled>
+      <NoiseStdDev>3</NoiseStdDev>
+      <PointCount>50</PointCount>
+      <ResultName>SineResults</ResultName>
+      <UpperLimit>30</UpperLimit>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Demo.ResultsAndTiming.TimeActivityStep" Id="c5f128c1-76e3-4026-b02f-3a64ec979b2f" Version="9.0">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <MyDut Source="OpenTap.DutSettings">TimeDut</MyDut>
+      <MyInstrument Source="OpenTap.InstrumentSettings">TimeInst</MyInstrument>
+      <Name>Time Activity</Name>
+      <PostPlanRunTimeMeanSecs>0</PostPlanRunTimeMeanSecs>
+      <PrePlanRunTimeMeanSecs>0</PrePlanRunTimeMeanSecs>
+      <ResultName>TimeActivity</ResultName>
+      <RunTimeMeanSecs>0.1</RunTimeMeanSecs>
+      <RunTimeStdDevSecs>0</RunTimeStdDevSecs>
+    </TestStep>
+    <TestStep type="OpenTap.Plugins.Example.ResultsAndTiming.TimeResourceActivityStep" Id="3aa00809-6124-48d4-ac7b-4a0431b17529" Version="9.0">
+      <ChildTestSteps />
+      <Enabled>True</Enabled>
+      <MyDut Source="OpenTap.DutSettings">TimeDut</MyDut>
+      <MyInstrument Source="OpenTap.InstrumentSettings">TimeInst</MyInstrument>
+      <Name>Time Resource Activity</Name>
+      <PostPlanRunTimeMeanSecs>0</PostPlanRunTimeMeanSecs>
+      <PrePlanRunTimeMeanSecs>0</PrePlanRunTimeMeanSecs>
+      <ResultName>TimeResourceActivity</ResultName>
+    </TestStep>
+  </Steps>
+  <Package.Dependencies>
+    <Package Name="Demonstration" Version="9.0" />
+    <Package Name="OpenTAP" Version="9.0" />
+  </Package.Dependencies>
+</TestPlan>
