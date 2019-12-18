@@ -10,8 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.Result
 		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB} = {FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipSource", "ZipSource\ZipSource.csproj", "{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,10 +24,6 @@ Global
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

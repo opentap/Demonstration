@@ -1,111 +1,66 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <StartAction>Program</StartAction>
-    <StartProgram>$(TAP_PATH)/Editor.exe</StartProgram>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{400E13F0-E63E-496B-9E3F-955BECC22444}</ProjectGuid>
+    <OutputPath>../bin/Release</OutputPath>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenTap.Plugins.Demo.ResultsAndTiming</RootNamespace>
-    <AssemblyName>OpenTap.Plugins.Demo.ResultsAndTiming</AssemblyName>
-    <!-- 'v4.5.2' removed because we only support 4.5.2-->
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <!-- We are debugging using NET Framework, but builds to Netstandard in release mode to ensure cross platform compatibility -->
+    <!-- If your plugin is Windows only and you use Windows specific API's, feel free to change "netstandard2.0" below to "net462" and everything will work as when you are debugging. In this case, remember to change "OS" in package.xml to only "windows" -->
+    <!-- If your plugin should be cross platform but does not build in release mode, please verify that all API's you used are available. You might need references or nuget packages for API's that are available in NET framework, but not in NetStandard -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OpenTapPackageDefinitionPath>package.xml</OpenTapPackageDefinitionPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>$(TAP_PATH)/Packages/Demonstration</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <OutputPath>../bin/Debug</OutputPath>
+    <!-- We are setting TargetFramework in debug configuration, otherwise Visual Studio tries to attach a .NET Core debugger. That will not work, because the program we open is a .NET Framework executable -->
+    <TargetFramework>net462</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>$(TAP_PATH)/Packages/Demonstration</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="OpenTap, Version=4.2.594.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TAP_PATH)/OpenTap.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Folder Include="Properties\" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Properties/AssemblyInfo.cs" />
-    <Compile Include="LimitCheckAndNoiseBaseStep.cs" />
-    <Compile Include="RampResultsStep.cs" />
-    <Compile Include="SineResultsStep.cs" />
-    <Compile Include="DemoBaseStep.cs" />
-    <Compile Include="TimeDut.cs" />
-    <Compile Include="TimeInst.cs" />
-    <Compile Include="TimeActivityStep.cs" />
-    <Compile Include="TimeResourceActivityStep.cs" />
-    <Compile Include="RandomValue.cs" />
-    <None Include="DataGenForResultsViewer.TapPlan">
+    <!-- Developer's System is needed to debug in 'Editor' -->
+    <AdditionalOpenTapPackage Include="Developer's System CE" />
+
+    <!--<AdditionalOpenTapPackage Include="Developer's System" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTAP" Version="9.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataGenForResultsViewer.TapPlan">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </None>
-    <None Include="DataGenForTimingAnalysis.TapPlan">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataGenForTimingAnalysisParallel.TapPlan">
+    <None Update="DataGenForTimingAnalysis.TapPlan">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="package.xml">
-      <SubType>Designer</SubType>
+    <None Update="Tests\DemonstrationAllSteps.TapPlan">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Tests/DemonstrationAllSteps.TapPlan">
+    <None Update="DemonstrationHelp.chm">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SampleLog.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Tests/Test Bench Profile/Connections.xml">
+    <None Update="Tests\Test Bench Profile\Connections.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Tests/Test Bench Profile/DUTs.xml">
+    </None>
+    <None Update="Tests\Test Bench Profile\DUTs.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="Tests/Test Bench Profile/Instruments.xml">
+    </None>
+    <None Update="Tests\Test Bench Profile\Instruments.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DataGenForTimingAnalysisParallel.TapPlan">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SampleLog.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets" />
-  <UsingTask TaskName="Keysight.OpenTap.Sdk.MSBuild.PackageTask" AssemblyFile="$(TAP_PATH)/Packages/SDK Tools/Keysight.OpenTap.Sdk.MSBuild.dll" />
-  <Target Name="BeforeBuild">
-    <Copy SourceFiles="DemonstrationHelp.chm" DestinationFolder="$(TAP_PATH)" ContinueOnError="true" />
-  </Target>
-  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
-    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
-      <Output TaskParameter="Assemblies" ItemName="TargetInfo" />
-    </GetAssemblyIdentity>
-    <PackageTask Dir="$(TAP_PATH)" ConfFile="$(ProjectDir)/package.xml" />
-  </Target>
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-  </PropertyGroup>
+
 </Project>

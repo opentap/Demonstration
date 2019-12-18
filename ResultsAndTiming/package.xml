@@ -23,11 +23,10 @@
     <File Path="Packages/Demonstration/DataGenForResultsViewer.TapPlan"/>
     <File Path="Packages/Demonstration/DataGenForTimingAnalysis.TapPlan"/>
     <File Path="Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan"/>
-    <File Path="Packages/Demonstration/DemonstrationSource.zip"/>
-    <File Path="Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Connections.xml"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/DUTs.xml"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Instruments.xml"/>
+    <File Path="Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan" SourcePath="Tests/DemonstrationAllSteps.TapPlan"/>
+    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Connections.xml" SourcePath="Tests/Test Bench Profile/Connections.xml"/>
+    <File Path="Packages/Demonstration/Tests/Test Bench Profile/DUTs.xml" SourcePath="Tests/Test Bench Profile/DUTs.xml"/>
+    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Instruments.xml" SourcePath="Tests/Test Bench Profile/Instruments.xml"/>
 
 <!--To pick up the chm file you should:
 1.  Add the file to the project that homes the package definition
