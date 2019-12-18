@@ -6,9 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.Battery", "Battery\OpenTap.Plugins.Demo.Battery.csproj", "{6ED5480D-D6A0-48E3-9B94-599568294626}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.ResultsAndTiming", "ResultsAndTiming\OpenTap.Plugins.Demo.ResultsAndTiming.csproj", "{400E13F0-E63E-496B-9E3F-955BECC22444}"
-	ProjectSection(ProjectDependencies) = postProject
-		{FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB} = {FD33E5E1-C1A2-4113-8F0B-6D50924FDAFB}
-	EndProjectSection
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
