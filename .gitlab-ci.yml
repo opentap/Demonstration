@@ -20,7 +20,7 @@ stages:
 #       - "ResultsAndTiming/*.chm"
 
 # build
-- 
+
 Build:
   stage: build
   image: opentapio/opentap:9.3-ubuntu18.04
