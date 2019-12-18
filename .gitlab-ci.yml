@@ -17,7 +17,7 @@ Documentation:
   artifacts:
     expire_in: 1 week
     paths:
-       - ResultsAndTiming/*.chm
+       - "ResultsAndTiming/*.chm"
 
 # build
 Build:
