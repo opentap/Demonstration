@@ -20,14 +20,15 @@ stages:
 #       - "ResultsAndTiming/*.chm"
 
 # build
+- 
 Build:
   stage: build
   image: opentapio/opentap:9.3-ubuntu18.04
   tags: [ docker, gce ]
   script: 
-        -  dotnet restore
-        -  dotnet publish -c Release
-        -  mv bin/Release/*.TapPackage .
+    - dotnet restore
+    - dotnet publish -c Release
+    - mv bin/Release/*.TapPackage .
   artifacts:
     when: on_success
     expire_in: 1 week
@@ -37,17 +38,14 @@ Build:
 
 Package-Test:
   stage: tests
-  tags:
-     - vs2017
+  image: opentapio/opentap:9.3-ubuntu18.04
+  tags: [ docker, gce ]
   dependencies:
     - Build
-  script: |
-          Keysight.Tap.Install.exe --uninstall --clean --install --version "9.0"
-          cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
-          "%TAP_PATH%/tap.exe" package install DemonstrationTest.TapPackage --force
-          rm -f DemonstrationTest.TapPackage
-          cd "%TAP_PATH%"
-          tap.exe package test Demonstration -v
+  script:
+    - cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
+    - tap package install DemonstrationTest.TapPackage --force    
+    - tap package test Demonstration -v
 
 TestPlan-Test:
   stage: tests
@@ -78,7 +76,7 @@ AutoPublish (Internal Repo):
           "%TAP_PATH%/tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
 
 # manual publish
-ManualPublish (Internal Repo):
+ManualPublish (External Repo):
   stage: publish
   when: manual
   dependencies:
