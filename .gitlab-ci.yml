@@ -1,5 +1,5 @@
 variables:
-  REPO_URL: 'packages.opentap.keysight.com'
+  REPO_URL: 'packages.opentap.io'
 
 stages:
   - docs
@@ -12,7 +12,7 @@ Documentation:
   tags:
     - docgen
   script: |
-          chmgen "Documentation\Help\Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation\Help\Welcome\Readme.md"
+          tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
   artifacts:
     expire_in: 1 week
     paths:
@@ -28,46 +28,46 @@ Build:
   script: |
           git clean -x -f -d
           Keysight.Tap.Install.exe --uninstall --clean --install --version "9.0"
-          DEL "%TAP_PATH%\*.TapPackage"
+          DEL "%TAP_PATH%/*.TapPackage"
           MSBuild.exe Demos.sln /p:Configuration=Release
-          move "%TAP_PATH%\*.TapPackage" .
+          move "%TAP_PATH%/*.TapPackage" .
   artifacts:
     when: on_success
     expire_in: 1 week
     paths:
        - "*.TapPackage"
-       
-       
+
+
 Package-Test:
   stage: tests
   tags:
-     - vs2017    
+     - vs2017
   dependencies:
     - Build
   script: |
           Keysight.Tap.Install.exe --uninstall --clean --install --version "9.0"
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
-          "%TAP_PATH%\tap.exe" package install DemonstrationTest.TapPackage --force
+          "%TAP_PATH%/tap.exe" package install DemonstrationTest.TapPackage --force
           rm -f DemonstrationTest.TapPackage
           cd "%TAP_PATH%"
-          tap.exe package test Demonstration -v       
+          tap.exe package test Demonstration -v
 
 TestPlan-Test:
   stage: tests
   tags:
-     - vs2017    
+     - vs2017
   dependencies:
     - Build
   script: |
           Keysight.Tap.Install.exe --uninstall --clean --install --version "9.0"
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
-          "%TAP_PATH%\tap.exe" package install DemonstrationTest.TapPackage --force
+          "%TAP_PATH%/tap.exe" package install DemonstrationTest.TapPackage --force
           rm -f DemonstrationTest.TapPackage
           cd "%TAP_PATH%"
-          tap.exe run Packages\Demonstration\DataGenForResultsViewer.TapPlan
-          tap.exe run Packages\Demonstration\DataGenForTimingAnalysis.TapPlan --settings "..\..\Packages\Demonstration\Tests\Test Bench Profile"
-          tap.exe run Packages\Demonstration\DataGenForTimingAnalysisParallel.TapPlan --settings "..\..\Packages\Demonstration\Tests\Test Bench Profile"
-          
+          tap.exe run Packages/Demonstration/DataGenForResultsViewer.TapPlan
+          tap.exe run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+          tap.exe run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+
 # auto publish from release9x
 AutoPublish (Internal Repo):
   stage: publish
@@ -77,8 +77,8 @@ AutoPublish (Internal Repo):
      - Build
   script: |
           Keysight.Tap.Install.exe --uninstall --clean --install --requirement "-beta"
-          "%TAP_PATH%\tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
-          "%TAP_PATH%\tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
+          "%TAP_PATH%/tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
+          "%TAP_PATH%/tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
 
 # manual publish
 ManualPublish (Internal Repo):
@@ -88,5 +88,5 @@ ManualPublish (Internal Repo):
      - Build
   script: |
           Keysight.Tap.Install.exe --uninstall --clean --install --requirement "-beta"
-          "%TAP_PATH%\tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
-          "%TAP_PATH%\tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
+          "%TAP_PATH%/tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
+          "%TAP_PATH%/tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage

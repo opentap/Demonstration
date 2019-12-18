@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <StartAction>Program</StartAction>
-    <StartProgram>$(TAP_PATH)\Editor.exe</StartProgram>
+    <StartProgram>$(TAP_PATH)/Editor.exe</StartProgram>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>$(TAP_PATH)\Packages\Demonstration</OutputPath>
+    <OutputPath>$(TAP_PATH)/Packages/Demonstration</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,7 +29,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>$(TAP_PATH)\Packages\Demonstration</OutputPath>
+    <OutputPath>$(TAP_PATH)/Packages/Demonstration</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,7 +37,7 @@
   <ItemGroup>
     <Reference Include="OpenTap, Version=4.2.594.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(TAP_PATH)\OpenTap.dll</HintPath>
+      <HintPath>$(TAP_PATH)/OpenTap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties/AssemblyInfo.cs" />
     <Compile Include="LimitCheckAndNoiseBaseStep.cs" />
     <Compile Include="RampResultsStep.cs" />
     <Compile Include="SineResultsStep.cs" />
@@ -72,7 +72,7 @@
     <None Include="package.xml">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Tests\DemonstrationAllSteps.TapPlan">
+    <None Include="Tests/DemonstrationAllSteps.TapPlan">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
@@ -81,20 +81,20 @@
     <Content Include="SampleLog.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tests\Test Bench Profile\Connections.xml">
+    <Content Include="Tests/Test Bench Profile/Connections.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Tests\Test Bench Profile\DUTs.xml">
+    <Content Include="Tests/Test Bench Profile/DUTs.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Tests\Test Bench Profile\Instruments.xml">
+    <None Include="Tests/Test Bench Profile/Instruments.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <UsingTask TaskName="Keysight.OpenTap.Sdk.MSBuild.PackageTask" AssemblyFile="$(TAP_PATH)\Packages\SDK Tools\Keysight.OpenTap.Sdk.MSBuild.dll" />
+  <Import Project="$(MSBuildToolsPath)/Microsoft.CSharp.targets" />
+  <UsingTask TaskName="Keysight.OpenTap.Sdk.MSBuild.PackageTask" AssemblyFile="$(TAP_PATH)/Packages/SDK Tools/Keysight.OpenTap.Sdk.MSBuild.dll" />
   <Target Name="BeforeBuild">
     <Copy SourceFiles="DemonstrationHelp.chm" DestinationFolder="$(TAP_PATH)" ContinueOnError="true" />
   </Target>
@@ -102,7 +102,7 @@
     <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
       <Output TaskParameter="Assemblies" ItemName="TargetInfo" />
     </GetAssemblyIdentity>
-    <PackageTask Dir="$(TAP_PATH)" ConfFile="$(ProjectDir)\package.xml" />
+    <PackageTask Dir="$(TAP_PATH)" ConfFile="$(ProjectDir)/package.xml" />
   </Target>
   <PropertyGroup>
     <PreBuildEvent>
