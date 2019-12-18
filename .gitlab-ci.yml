@@ -9,8 +9,9 @@ stages:
 
 Documentation:
   stage: docs
+  image: gitlab.it.keysight.com:4567/tap/documentationgeneration/docgen:beta
   tags:
-    - docgen
+    - docker,ubuntu18.4
   script: |
           tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
   artifacts:
