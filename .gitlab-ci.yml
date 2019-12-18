@@ -22,21 +22,17 @@ Documentation:
 # build
 Build:
   stage: build
-  tags:
-     - vs2017
-  dependencies:
-    - Documentation
+  image: opentapio/opentap:9.3-ubuntu18.04
+  tags: 
+    - dotnetcore2.1  
   script: |
-          git clean -x -f -d
-          Keysight.Tap.Install.exe --uninstall --clean --install --version "9.0"
-          DEL "%TAP_PATH%/*.TapPackage"
-          MSBuild.exe Demos.sln /p:Configuration=Release
-          move "%TAP_PATH%/*.TapPackage" .
+          dotnet restore
+          dotnet publish -c Release    
   artifacts:
     when: on_success
     expire_in: 1 week
     paths:
-       - "*.TapPackage"
+       - "Demonstration/bin/Release/*.TapPackage"
 
 
 Package-Test:
