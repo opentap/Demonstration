@@ -58,8 +58,8 @@ TestPlan-Test:
     - tap package install DemonstrationTest.TapPackage --force
     - cd /opt/tap
     - tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
-    - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "Tests/Test Bench Profile"
-    - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "Tests/Test Bench Profile"
+    - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+    - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
 
 # auto publish from release9x
 AutoPublish (Internal Repo):
