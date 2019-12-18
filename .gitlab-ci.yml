@@ -56,9 +56,13 @@ TestPlan-Test:
   script:
     - cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
     - tap package install DemonstrationTest.TapPackage --force
+    - echo "$(which tap)"
+    - echo "$(which tap)"
+    - echo "$(which tap)"
+    - ls "$(which tap)"
     - tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
-    - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
-    - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+    - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "Tests/Test Bench Profile"
+    - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "Tests/Test Bench Profile"
 
 # auto publish from release9x
 AutoPublish (Internal Repo):
@@ -67,10 +71,9 @@ AutoPublish (Internal Repo):
      - release9x
   dependencies:
      - Build
-  script: |
-          Keysight.Tap.Install.exe --uninstall --clean --install --requirement "-beta"
-          "%TAP_PATH%/tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
-          "%TAP_PATH%/tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
+  script:
+    - tap package install -f -r "$REPO_URL" PackagePublishAction --version beta
+    - tap package publish -r "$REPO_URL" -p Demonstration -k "$REPO_PUBLISH_KEY" *.TapPackage
 
 # manual publish
 ManualPublish (External Repo):
@@ -78,7 +81,6 @@ ManualPublish (External Repo):
   when: manual
   dependencies:
      - Build
-  script: |
-          Keysight.Tap.Install.exe --uninstall --clean --install --requirement "-beta"
-          "%TAP_PATH%/tap.exe" package install -f -r %REPO_URL% "PackagePublishAction" --version "beta"
-          "%TAP_PATH%/tap.exe" package publish -r %REPO_URL% -p "Demonstration" -k "%REPO_PUBLISH_KEY%" *.TapPackage
+  script: 
+    - tap package install -f -r "$REPO_URL" PackagePublishAction --version beta
+    - tap package publish -r "$REPO_URL" -p Demonstration -k "$REPO_PUBLISH_KEY" *.TapPackage
