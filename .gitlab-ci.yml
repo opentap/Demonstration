@@ -24,15 +24,15 @@ Build:
   stage: build
   image: opentapio/opentap:9.3-ubuntu18.04
   tags: [ docker, gce ]
-  script:
-      - dotnet restore
-      - dotnet publish -c Release
-      - mv "**/*.TapPackage" .
+  script: |
+          dotnet restore
+          dotnet publish -c Release
+          mv "bin/Release/*.TapPackage" .
   artifacts:
     when: on_success
     expire_in: 1 week
     paths:
-       - "**/*.TapPackage"
+       - "*.TapPackage"
 
 
 Package-Test:
