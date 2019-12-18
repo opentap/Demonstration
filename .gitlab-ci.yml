@@ -3,28 +3,27 @@ variables:
   DOCKER_REGISTRY: 'registry.gitlab.com'
 
 stages:
-  - docs
+#  - docs
   - build
   - tests
   - publish
 
-Documentation:
-  stage: docs
-  image: $DOCKER_REGISTRY/opentap/buildrunners/documentationgeneration:latest
-  tags: [ docker, gce ]
-  script:
-    - tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
-  artifacts:
-    expire_in: 1 week
-    paths:
-       - "ResultsAndTiming/*.chm"
+#Documentation:
+#  stage: docs
+#  image: $DOCKER_REGISTRY/opentap/buildrunners/documentationgeneration:latest
+#  tags: [ docker, gce ]
+#  script:
+#    - tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
+#  artifacts:
+#    expire_in: 1 week
+#    paths:
+#       - "ResultsAndTiming/*.chm"
 
 # build
 Build:
   stage: build
   image: opentapio/opentap:9.3-ubuntu18.04
-  tags: 
-    - dotnetcore2.1  
+  tags: [ docker, gce ]
   script: |
           dotnet restore
           dotnet publish -c Release    
