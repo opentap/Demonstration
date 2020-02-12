@@ -3,13 +3,11 @@
   <Description>
     This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test plans.
     <Status>Released</Status>
-    <Organisation>Keysight Technologies</Organisation>
-    <Contacts>
-      tap.support@keysight.com
-    </Contacts>
-    <Prerequisites>None</Prerequisites>
+    <Organisation>OpenTAP</Organisation>
+    <Contacts><Contact Email="support@opentap.io" Name="OpenTAP Support"/></Contacts>
     <Hardware>Emulated PSU</Hardware>
   </Description>
+    <Owner>Keysight Technologies, Inc.</Owner>
   <Files>
     <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
     One of those dlls comes from a second project.-->
