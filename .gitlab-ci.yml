@@ -61,10 +61,10 @@ TestPlan-Test:
 
 Publish (manually):
   stage: publish
-  image: opentapio/opentap:9.5-ubuntu18.04
+  image: opentapio/opentap:9.8-slim-ubuntu18.04
   when: manual
   dependencies:
      - Build
   script: 
-    - tap package install -f -r "$REPO_URL" PackagePublishAction --version beta
+    - tap package install -f PackagePublish
     - tap package publish -r "$REPO_URL" -p Demonstration -k "$REPO_PUBLISH_KEY" *.TapPackage
