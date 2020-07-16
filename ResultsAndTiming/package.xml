@@ -8,6 +8,7 @@
     <Hardware>Emulated PSU</Hardware>
   </Description>
     <Owner>Keysight Technologies, Inc.</Owner>
+  <SourceUrl>https://gitlab.com/OpenTAP/Plugins/demonstration</SourceUrl>
   <Files>
     <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
     One of those dlls comes from a second project.-->
