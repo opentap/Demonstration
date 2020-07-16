@@ -61,6 +61,7 @@ TestPlan-Test:
 
 Publish (manually):
   stage: publish
+  image: opentapio/opentap:9.5-ubuntu18.04
   when: manual
   dependencies:
      - Build
