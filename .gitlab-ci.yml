@@ -1,5 +1,6 @@
 variables:
   REPO_URL: 'packages.opentap.io'
+  INTERNAL_REPO_URL: 'packages.opentap.keysight.com'
   DOCKER_REGISTRY: 'registry.gitlab.com'
 
 stages:
@@ -59,7 +60,7 @@ TestPlan-Test:
     - tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
     - tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
 
-Publish (manually):
+Publish External (manual):
   stage: publish
   image: opentapio/opentap:9.8-slim-ubuntu18.04
   when: manual
@@ -68,3 +69,13 @@ Publish (manually):
   script: 
     - tap package install -f PackagePublish
     - tap package publish -r "$REPO_URL" -p Demonstration -k "$REPO_PUBLISH_KEY" *.TapPackage
+
+Publish Internal (manual):
+  stage: publish
+  image: opentapio/opentap:9.8-slim-ubuntu18.04
+  when: manual
+  dependencies:
+     - Build
+  script: 
+    - tap package install -f PackagePublish
+    - tap package publish -r "$INTERNAL_REPO_URL" -p Demonstration -k "$INTERNAL_REPO_PUBLISH_KEY" *.TapPackage
