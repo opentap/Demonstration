@@ -68,14 +68,5 @@ Publish External (manual):
      - Build
   script: 
     - tap package install -f PackagePublish
-    - tap package publish -r "$REPO_URL" -p Demonstration -k "$REPO_PUBLISH_KEY" *.TapPackage
-
-Publish Internal (manual):
-  stage: publish
-  image: opentapio/opentap:9.8-slim-ubuntu18.04
-  when: manual
-  dependencies:
-     - Build
-  script: 
-    - tap package install -f PackagePublish
-    - tap package publish -r "$INTERNAL_REPO_URL" -p Demonstration -k "$INTERNAL_REPO_PUBLISH_KEY" *.TapPackage
+    - tap package publish -r "$REPO_URL" -k "$REPO_PUBLISH_KEY" *.TapPackage
+    
