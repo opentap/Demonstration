@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Package Name="Demonstration" xmlns="http://opentap.io/schemas/package" Version="$(GitVersion)" OS="Windows,Linux">
+<Package Name="Demonstration" xmlns="http://opentap.io/schemas/package" Version="$(GitVersion)" OS="Windows,Linux,Macos">
   <Description>
     This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test plans.
     <Status>Released</Status>
