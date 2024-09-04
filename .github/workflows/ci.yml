@@ -92,8 +92,6 @@ jobs:
     steps:
       - name: Setup OpenTAP
         uses: opentap/setup-opentap@main
-        with:
-          version: 9.5.0
 
       - name: Download TapPackage Artifact
         uses: actions/download-artifact@v4
@@ -131,8 +129,6 @@ jobs:
 
         - name: Setup OpenTAP
           uses: opentap/setup-opentap@main
-          with:
-            version: 9.5.0
 
         - name: Publish Packages
           working-directory: ./
