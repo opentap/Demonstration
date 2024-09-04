@@ -38,7 +38,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Package
+      - name: Setup OpenTAP
+        uses: opentap/setup-opentap@main
+
+      - name: Build
         run: |
           dotnet restore
           dotnet publish -c Release
