@@ -1,0 +1,123 @@
+name: CI
+on: [push]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  Documentation:
+    runs-on:
+       group: OpenTAP-SpokeVPC
+       labels:  [Linux, X64]
+    container: ghcr.io/opentap/documentationgeneration:1.0.2-beta.47
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+      - name: Package
+        run: |
+          tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          retention-days: 7
+          path: "ResultsAndTiming/*.chm"
+  Build:
+    runs-on:
+      group: OpenTAP-SpokeVPC
+      labels:  [Linux, X64]
+    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    env:
+      KS8500_USER_TOKEN: ${{ secrets.KS8500_USER_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build
+        run: dotnet build -c Release
+      - name: Package
+        run: |
+          dotnet restore
+          dotnet publish -c Release
+          mv bin/Release/*.TapPackage .
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          retention-days: 5
+          path: "*.TapPackage"
+
+  Package-Test:
+    runs-on:
+      group: OpenTAP-SpokeVPC
+      labels:  [Linux, X64]
+    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    needs:
+      - Build
+    steps:
+      - name: Setup OpenTAP
+        uses: opentap/setup-opentap@main
+      - name: Download TapPackage Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: package
+          path: .
+      - name: Package
+        run: |
+          cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
+          tap package install DemonstrationTest.TapPackage --force    
+          tap package test Demonstration -v
+
+  TestPlan-Test:
+    runs-on:
+      group: OpenTAP-SpokeVPC
+      labels:  [Linux, X64]
+    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    needs:
+      - Build
+    steps:
+      - name: Setup OpenTAP
+        uses: opentap/setup-opentap@main
+      - name: Download TapPackage Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: package
+          path: .
+      - name: Package
+        run: |
+          cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
+          tap package install DemonstrationTest.TapPackage --force
+          cd /opt/tap
+          tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
+          tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+          tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
+
+  Publish:
+      # Only publish on the main branch or if the commit is tagged.
+      if: github.ref == 'refs/heads/main' || contains(github.ref, 'refs/heads/release') || contains(github.ref, 'refs/tags/v')
+      runs-on:
+        group: OpenTAP-SpokeVPC
+        labels:  [Linux, X64]
+      container: ghcr.io/opentap/oci-images/build-dotnet:latest
+      # This step depends on the build step
+      needs:
+        - Build
+        - Package-Test
+        - TestPlan-Test
+      steps:
+        - name: Download TapPackage Artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: package
+            path: .
+
+        - name: Setup OpenTAP
+          uses: opentap/setup-opentap@main
+
+        - name: Publish Packages
+          working-directory: ./
+          run: |
+            tap package install -f PackagePublish
+            tap package publish --repository http://packages.opentap.io -k ${{ secrets.PUBLIC_REPO_PASS }} *.TapPackage
