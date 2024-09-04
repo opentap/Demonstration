@@ -7,6 +7,9 @@
     <Contacts><Contact Email="support@opentap.io" Name="OpenTAP Support"/></Contacts>
     <Hardware>Emulated PSU</Hardware>
   </Description>
+  <Dependencies>
+    <PackageDependency Package="OpenTAP" Version="^9.5.0"/>
+  </Dependencies>
     <Owner>Keysight Technologies, Inc.</Owner>
   <SourceUrl>https://gitlab.com/OpenTAP/Plugins/demonstration</SourceUrl>
   <Files>
