@@ -38,8 +38,4 @@
       <RunTimeStdDevSecs>0.1</RunTimeStdDevSecs>
     </TestStep>
   </Steps>
-  <Package.Dependencies>
-    <Package Name="Demonstration" Version="9.0" />
-    <Package Name="OpenTAP" Version="9.0" />
-  </Package.Dependencies>
 </TestPlan>
