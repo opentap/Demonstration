@@ -129,9 +129,10 @@ jobs:
 
         - name: Setup OpenTAP
           uses: opentap/setup-opentap@main
+          with:
+           version: 9.23.0
+           packages: 'Repository Client:1.0'
 
         - name: Publish Packages
           working-directory: ./
-          run: |
-            tap package install -f PackagePublish
-            tap package publish --repository http://packages.opentap.io -k ${{ secrets.PUBLIC_REPO_PASS }} *.TapPackage
+          run: tap repo upload --repository https://packages.opentap.io --token ${{ secrets.PUBLIC_REPO_TOKEN }} *.TapPackage
