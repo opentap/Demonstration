@@ -132,7 +132,7 @@ jobs:
         - name: Setup OpenTAP
           uses: opentap/setup-opentap@main
           with:
-           version: 9.23.0
+           version: 9.25.1
            packages: 'Repository Client:1.0'
 
         - name: Publish Packages
