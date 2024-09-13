@@ -137,4 +137,4 @@ jobs:
 
         - name: Publish Packages
           working-directory: ./
-          run: tap repo upload --repository https://packages.opentap.io --token ${{ secrets.PUBLIC_REPO_TOKEN }} *.TapPackage
+          run: tap repo upload --repository https://packages.opentap.io --token ${{ secrets.PUBLIC_REPO_TOKEN }} Demonstration.*.TapPackage
