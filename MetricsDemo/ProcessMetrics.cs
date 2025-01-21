@@ -6,7 +6,7 @@ using OpenTap.Metrics;
 namespace OpenTap.Demonstration
 {
 
-    public class ProcessMetrics : IOnPollMetricsCallback
+    public class ProcessMetrics : IMetricSource, IOnPollMetricsCallback
     {
         public Stopwatch runnerTimer = Stopwatch.StartNew();
         public Dictionary<int, long> prevCpuByPid = new Dictionary<int, long>();
