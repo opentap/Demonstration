@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.Batter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.ResultsAndTiming", "ResultsAndTiming\OpenTap.Plugins.Demo.ResultsAndTiming.csproj", "{400E13F0-E63E-496B-9E3F-955BECC22444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics", "Metrics\Metrics.csproj", "{AD785327-C02C-41CE-894C-AED4C8625172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics", "MetricsDemo\Metrics.csproj", "{AD785327-C02C-41CE-894C-AED4C8625172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
