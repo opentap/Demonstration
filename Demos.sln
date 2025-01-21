@@ -6,7 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.Battery", "Battery\OpenTap.Plugins.Demo.Battery.csproj", "{6ED5480D-D6A0-48E3-9B94-599568294626}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTap.Plugins.Demo.ResultsAndTiming", "ResultsAndTiming\OpenTap.Plugins.Demo.ResultsAndTiming.csproj", "{400E13F0-E63E-496B-9E3F-955BECC22444}"
-
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Metrics", "Metrics\Metrics.csproj", "{AD785327-C02C-41CE-894C-AED4C8625172}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +23,10 @@ Global
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400E13F0-E63E-496B-9E3F-955BECC22444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD785327-C02C-41CE-894C-AED4C8625172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD785327-C02C-41CE-894C-AED4C8625172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD785327-C02C-41CE-894C-AED4C8625172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD785327-C02C-41CE-894C-AED4C8625172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
