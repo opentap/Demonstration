@@ -11,7 +11,7 @@
     <PackageDependency Package="OpenTAP" Version="^9.5.0"/>
   </Dependencies>
     <Owner>Keysight Technologies, Inc.</Owner>
-  <SourceUrl>https://gitlab.com/OpenTAP/Plugins/demonstration</SourceUrl>
+  <SourceUrl>https://github.com/opentap/Demonstration</SourceUrl>
   <Files>
     <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
     One of those dlls comes from a second project.-->
