@@ -4,6 +4,7 @@
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
 
+using System;
 using System.Diagnostics;
 using OpenTap;
 
@@ -12,17 +13,9 @@ namespace OpenTap.Plugins.Demo.Battery
     [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.", Groups: new[] { "Demo", "Battery Test" })]
     public class PowerAnalyzer : Instrument
     {
-        #region Settings 
-        [Display("Cell Size Factor", "A larger cell size will result in faster charging and discharging.")]               
-        public double CellSizeFactor { get; set; }
-        #endregion
-
         public PowerAnalyzer()
         {
-            Name = "PSU";
-
-            CellSizeFactor = 0.005;
-            Rules.Add(() => (CellSizeFactor >= 0) && (CellSizeFactor <= .1), "CellSizeFactor must be >= 0 and <= .1", "Voltage");
+            Name = "PSU";       
         }
 
         /// <summary>
@@ -61,11 +54,12 @@ namespace OpenTap.Plugins.Demo.Battery
             return _cellVoltage;
         }
 
-        internal void Setup(double voltage, double current)
+        internal void Setup(double voltage, double current, double cellSizeFactor)
         {
             _voltage = voltage;
             _currentLimit = current;
             _current = current;
+            _cellSizeFactor = cellSizeFactor;
         }
 
         internal void EnableOutput()
@@ -85,6 +79,8 @@ namespace OpenTap.Plugins.Demo.Battery
         private double _current = 10;
         private double _currentLimit;
         Stopwatch _sw;
+        private double _cellSizeFactor = 0.1;
+
         private void UpdateCurrentAndVoltage()
         {
             if (_sw == null || !_sw.IsRunning)  // Only update if output is enabled
@@ -102,8 +98,15 @@ namespace OpenTap.Plugins.Demo.Battery
                 _current = 0- _currentLimit;
             }
 
-            _cellVoltage += CellSizeFactor * _current * _sw.Elapsed.TotalSeconds * 10;
+            _cellVoltage += GetCellSizeFactorWithTemp() * _current * _sw.Elapsed.TotalSeconds * 10;
             _sw.Restart();
+        }
+
+        double GetCellSizeFactorWithTemp()
+        {
+            // the cell operates best at nominal temperature 24C.
+            var factor = Math.Cos((TemperatureChamber.Temperature - 24) * 0.02);
+            return _cellSizeFactor * factor;
         }
     }
 }

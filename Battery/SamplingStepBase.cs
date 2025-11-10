@@ -19,6 +19,9 @@ namespace OpenTap.Plugins.Demo.Battery
         [Display("Power Analyzer", Group: "Resources", Order: -100)]
         public PowerAnalyzer PowerAnalyzer { get; set; }
         
+        [Display("DUT")]
+        public BatteryDut Dut { get; set; }
+        
         public SamplingStepBase()
         {
             MeasurementInterval = .2;

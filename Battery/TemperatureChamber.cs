@@ -3,6 +3,8 @@
 //               the sample application files (and/or any modified version) in any way
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
+
+using System;
 using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
@@ -10,6 +12,10 @@ namespace OpenTap.Plugins.Demo.Battery
     [Display("Temperature Chamber", "Simulated temperature chamber instrument used for SetTemperature demo step.", Groups: new[] { "Demo", "Battery Test" })]
     public class TemperatureChamber : Instrument
     {
+        private double humidityTarget;
+        private double temperatureTarget;
+        public static double Temperature = 25;
+        
         public TemperatureChamber()
         {
             Name = "TEMP";
@@ -31,6 +37,41 @@ namespace OpenTap.Plugins.Demo.Battery
         {
             Log.Info("Device TEMP closed");
             base.Close();
+        }
+
+        public void SetTarget(double temperature, double humidity)
+        {
+            this.temperatureTarget = temperature;
+            this.humidityTarget = humidity;
+        }
+
+        public void WaitForConditions()
+        {
+            var rnd = new Random();
+            if (temperatureTarget > Temperature)
+            {
+                Log.Debug("Heating...");
+                while (temperatureTarget > Temperature)
+                {
+                    // heating up.
+                    Temperature += rnd.NextDouble() * 0.02 + 0.05;
+                    TapThread.Sleep(10);
+                    OnActivity();
+                }
+            }else if (temperatureTarget < Temperature)
+            {
+                Log.Debug("Cooling...");
+                while (temperatureTarget < Temperature)
+                {
+                    
+                    Temperature -= (rnd.NextDouble() * 0.02 + 0.05);
+                    TapThread.Sleep(10);
+                    OnActivity();
+                }
+                
+            }
+
+            Temperature = temperatureTarget;
         }
     }
 }

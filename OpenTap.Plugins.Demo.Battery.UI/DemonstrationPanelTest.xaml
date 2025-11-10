@@ -1,0 +1,56 @@
+<UserControl x:Class="OpenTap.Plugins.Demo.Battery.UI.DemonstrationPanelTest"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:OpenTap.Plugins.Demo.Battery.UI"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="400">
+    <Grid>
+        <ScrollViewer x:Name="scrollViewer" VerticalScrollBarVisibility="Auto">
+            <StackPanel HorizontalAlignment="Stretch" MaxWidth="720" VerticalAlignment="Stretch">
+                <StackPanel Margin="10">
+                    <TextBlock FontSize="20" FontWeight="DemiBold" TextWrapping="Wrap">Battery Test Demonstration</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,10,0,0">
+                        In this demonstration, we will show how a simple battery test can be set up. 
+                        Here we are testing how different temperatures affect charging and discharging the battery.
+                        It consists of the following simulated instruments:
+                       
+                            
+                    </TextBlock>
+                    <TextBlock Margin="10,20,0,0">
+                        •	A battery device under test.
+                    </TextBlock>
+                    <TextBlock Margin="10,0,0,0">
+                        •	A power supply
+                    </TextBlock>
+                    <TextBlock Margin="10,0,0,0">
+                        •	A temperature chamber
+                    </TextBlock>
+                    <Image Margin="0,20,0,0" Source="pack://application:,,,/OpenTap.Plugins.Demo.Battery.UI;component/Resources/batterydemo.png" />
+                    
+                    <TextBlock Margin="0,10,0,0" Text="To get started follow these steps:"/>
+                    
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                        •	<Hyperlink Click="OnLoadInstrumentsClicked">Click here to load a DUT, a Power Analyzer and a Temperature Chamber.</Hyperlink>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                        •	<Hyperlink Click="OnLoadTestPlan">Click here to load test plan.</Hyperlink>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                        •	<Hyperlink Click="OnRunTestPlan">Run the test plan.</Hyperlink>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                        •	<Hyperlink Click="OnLoadPreset">Load Preset</Hyperlink>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                        •	<Hyperlink Click="OnShowResultsViewer">Show Results Viewer</Hyperlink>
+                    </TextBlock>
+                    
+                    
+                </StackPanel>
+                
+                </StackPanel>
+            </ScrollViewer>
+    </Grid>
+</UserControl>

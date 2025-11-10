@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListOfSettingsGroup type="System.Collections.Generic.List`1[[Keysight.OpenTap.Wpf.ViewPreset+SettingsGroup, Keysight.OpenTap.Wpf, Version=9.31.0.0, Culture=neutral, PublicKeyToken=null]]">
+  <SettingsGroup>
+    <Name>Keysight.OpenTap.Wpf.GuiControlsSettings</Name>
+    <Settings>
+      <SettingsTuple>
+        <Name>MainWindowHeight</Name>
+        <Value type="System.Double">800</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>MainWindowWidth</Name>
+        <Value type="System.Double">1280</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>MainWindowTop</Name>
+        <Value type="System.Double">193.33333333333331</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>MainWindowLeft</Name>
+        <Value type="System.Double">457.3333333333333</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>MainWindowState</Name>
+        <Value type="Keysight.OpenTap.Wpf.TapWindowState">Normal</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>TestPlanGridColumnDetails</Name>
+        <Value type="System.String"></Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>TestPlanColumnState2</Name>
+        <Value type="System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]" />
+      </SettingsTuple>
+    </Settings>
+  </SettingsGroup>
+  <SettingsGroup>
+    <Name>Keysight.OpenTap.Wpf.EditorSettings</Name>
+    <Settings>
+      <SettingsTuple>
+        <Name>ViewDebug</Name>
+        <Value type="System.Boolean">false</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ViewMessages</Name>
+        <Value type="System.Boolean">true</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ViewWarnings</Name>
+        <Value type="System.Boolean">true</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ViewErrors</Name>
+        <Value type="System.Boolean">true</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ColorTheme</Name>
+        <Value type="Keysight.OpenTap.Wpf.Themes.TapSkins+Theme">Dark</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ResultPopup</Name>
+        <Value type="System.Boolean">false</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ClearLog</Name>
+        <Value type="System.Boolean">true</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>ShowGuiLog</Name>
+        <Value type="System.Boolean">true</Value>
+      </SettingsTuple>
+      <SettingsTuple>
+        <Name>FocusMode</Name>
+        <Value type="System.Boolean">false</Value>
+      </SettingsTuple>
+    </Settings>
+  </SettingsGroup>
+  <SettingsGroup>
+    <Name>Keysight.OpenTap.Gui.PanelSettings</Name>
+    <Settings>
+      <SettingsTuple>
+        <Name>Layout</Name>
+        <Value type="System.String">
+          <Base64>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMYXlvdXRSb290Pg0KICA8Um9vdFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIj4NCiAgICA8TGF5b3V0UGFuZWwgT3JpZW50YXRpb249IlZlcnRpY2FsIiBEb2NrV2lkdGg9IjEuNTY1NDAwODQzODgxODU2NSoiPg0KICAgICAgPExheW91dFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrSGVpZ2h0PSIxLjMxNzE5Mzk0NzczMDM5ODkqIiBEb2NrTWluV2lkdGg9IjEwMCIgRG9ja01pbkhlaWdodD0iMTAwIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIzNTZiNzcyOS1kYThiLTQ0OTAtODJmOS0zYTU0MDVkYmIzYjIiIERvY2tXaWR0aD0iMS44MjU5MzcxNjMyMjEzMTg4KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iV2VsY29tZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5XZWxjb21lU2NyZWVuUGFuZWwiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMC8yMDI1IDE0OjQ5OjAwIiAvPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IlRlc3QgUGxhbiIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5UZXN0UGxhblBsdWdpbiIgVG9vbFRpcD0iVGVzdCBQbGFuIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1Nzo1NSIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIxNDRmYWE0MS02YmRkLTRmNzQtYWY5Yy0wZGZlMzY1MTZiMzUiIERvY2tXaWR0aD0iMS44NzQxMzE5NDQ0NDQ0NDM1KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iTG9nIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuR3VpLkxvZ1BhbmVsUGx1Z2luIiBUb29sVGlwPSJMb2cgUGFuZWwiIEZsb2F0aW5nTGVmdD0iMTEzOC42NjY2NjY2NjY2NjY1IiBGbG9hdGluZ1RvcD0iMzk3LjMzMzMzMzMzMzMzMzMiIEZsb2F0aW5nV2lkdGg9IjUwMiIgRmxvYXRpbmdIZWlnaHQ9IjQzMC42NjY2NjY2NjY2NjY2MyIgTGFzdEFjdGl2YXRpb25UaW1lU3RhbXA9IjExLzEwLzIwMjUgMTQ6NTc6MDgiIFByZXZpb3VzQ29udGFpbmVySWQ9ImY4N2UxNTNjLTQ5ZTAtNDdkMC1iMDFhLTVjY2U5NWIwODE4OCIgUHJldmlvdXNDb250YWluZXJJbmRleD0iMSIgLz4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJUZXN0IFN0ZXAgU2V0dGluZ3MiIENvbnRlbnRJZD0iS2V5c2lnaHQuT3BlblRhcC5HdWkuU3RlcFNldHRpbmdzUGx1Z2luIiBUb29sVGlwPSJTdGVwIFNldHRpbmdzIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1Njo0MCIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0UGFuZWw+DQogICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cCBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCIgRG9ja0hlaWdodD0iMi4wODI1MDgyNTA4MjUwODI3KiI+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBGbG9hdGluZ1dpZHRoPSI3OTQiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIEZsb2F0aW5nV2lkdGg9Ijc5NCIgRmxvYXRpbmdIZWlnaHQ9IjUwMCIgRmxvYXRpbmdMZWZ0PSI2MzIuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdUb3A9IjgyNi42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAgMSIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNzk0IiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1ODo1NyIgLz4NCiAgICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lR3JvdXA+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBJZD0iZjg3ZTE1M2MtNDllMC00N2QwLWIwMWEtNWNjZTk1YjA4MTg4IiBEb2NrV2lkdGg9IjEuMDU5NDgzMTM2ODM1OTU1OSoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAyIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuTGl2ZVJlc3VsdHNQYW5lbC5MaXZlUmVzdWx0czIiIEZsb2F0aW5nTGVmdD0iMTI5MCIgRmxvYXRpbmdUb3A9IjgzMiIgRmxvYXRpbmdXaWR0aD0iNjI4LjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nSGVpZ2h0PSI0OTQiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMC8yMDI1IDE0OjU4OjQ5IiAvPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmUgRG9ja1dpZHRoPSIwLjkzOTg2MjU0Mjk1NTMyNjEqIiBGbG9hdGluZ1dpZHRoPSI1MDAiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iMTE1MCIgRmxvYXRpbmdUb3A9IjcxOC42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJMaXZlIFJlc3VsdHMgMyIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMzIiBGbG9hdGluZ0xlZnQ9IjExNTAiIEZsb2F0aW5nVG9wPSI3MTguNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNTAwIiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1ODo1MSIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cD4NCiAgICA8L0xheW91dFBhbmVsPg0KICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrV2lkdGg9IjAuNDM0NTk5MTU2MTE4MTQzNSoiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBEb2NrV2lkdGg9IjIuNyoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iQmF0dGVyeSBEZW1vIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9Ik9wZW5UYXAuUGx1Z2lucy5EZW1vLkJhdHRlcnkuVUkuQmF0dGVyeURlbW9QYW5lbCIgVG9vbFRpcD0iVGhpcyBpcyBhIHRlc3QgZGVtbyBwYW5lbC4iIEZsb2F0aW5nTGVmdD0iMTUyNi42NjY2NjY2NjY2NjY1IiBGbG9hdGluZ1RvcD0iNTkzLjMzMzMzMzMzMzMzMzMiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1OTowNSIgUHJldmlvdXNDb250YWluZXJJZD0iMzU2Yjc3MjktZGE4Yi00NDkwLTgyZjktM2E1NDA1ZGJiM2IyIiBQcmV2aW91c0NvbnRhaW5lckluZGV4PSIwIiAvPg0KICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lR3JvdXA+DQogIDwvUm9vdFBhbmVsPg0KICA8VG9wU2lkZSAvPg0KICA8UmlnaHRTaWRlIC8+DQogIDxMZWZ0U2lkZSAvPg0KICA8Qm90dG9tU2lkZSAvPg0KICA8RmxvYXRpbmdXaW5kb3dzIC8+DQogIDxIaWRkZW4gLz4NCjwvTGF5b3V0Um9vdD4=</Base64>
+        </Value>
+      </SettingsTuple>
+    </Settings>
+  </SettingsGroup>
+  <SettingsGroup>
+    <Name>Keysight.OpenTap.LiveResultsPanel.LiveResultPanelSettings</Name>
+    <Settings>
+      <SettingsTuple>
+        <Name>Charts</Name>
+        <Value type="System.Collections.Generic.List`1[[Keysight.OpenTap.LiveResultsPanel.ChartSelection, Keysight.OpenTap.LiveResultsPanel, Version=1.1.1.0, Culture=neutral, PublicKeyToken=null]]">
+          <ChartSelection type="emb:Keysight.OpenTap.LiveResultsPanel.ChartSelection">
+            <IsCollapsed>false</IsCollapsed>
+            <DataTruncated>false</DataTruncated>
+            <HideSeries>false</HideSeries>
+            <HideTakeLast>false</HideTakeLast>
+            <Series></Series>
+            <TakeLast>1000</TakeLast>
+            <ShowLegend>true</ShowLegend>
+            <AxisSelections />
+            <Selection.XAxis></Selection.XAxis>
+            <Selection.YAxis></Selection.YAxis>
+            <Selection.YAxis2></Selection.YAxis2>
+            <Selection.YAxis3></Selection.YAxis3>
+            <Selection.Bins>10</Selection.Bins>
+            <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
+            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
+            <Selection.LockToBottom>false</Selection.LockToBottom>
+            <Selection.AvailableCharts>
+              <ChartType>XYScatter</ChartType>
+              <ChartType>XYLine</ChartType>
+              <ChartType>Histogram</ChartType>
+              <ChartType>DataTable</ChartType>
+            </Selection.AvailableCharts>
+            <Selection.Type>XYScatter</Selection.Type>
+            <Selection.Modifier1>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier1>
+            <Selection.Modifier2>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier2>
+            <Selection.Modifier3>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier3>
+            <Selection.Modifier4>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier4>
+            <Modifier1.Modifier>None</Modifier1.Modifier>
+            <Modifier1.N>0</Modifier1.N>
+            <Modifier1.SplitOn></Modifier1.SplitOn>
+            <Modifier1.FilterOn></Modifier1.FilterOn>
+            <Modifier1.FilterValues />
+            <Modifier2.Modifier>None</Modifier2.Modifier>
+            <Modifier2.N>0</Modifier2.N>
+            <Modifier2.SplitOn></Modifier2.SplitOn>
+            <Modifier2.FilterOn></Modifier2.FilterOn>
+            <Modifier2.FilterValues />
+            <Modifier3.Modifier>None</Modifier3.Modifier>
+            <Modifier3.N>0</Modifier3.N>
+            <Modifier3.SplitOn></Modifier3.SplitOn>
+            <Modifier3.FilterOn></Modifier3.FilterOn>
+            <Modifier3.FilterValues />
+            <Modifier4.Modifier>None</Modifier4.Modifier>
+            <Modifier4.N>0</Modifier4.N>
+            <Modifier4.SplitOn></Modifier4.SplitOn>
+            <Modifier4.FilterOn></Modifier4.FilterOn>
+            <Modifier4.FilterValues />
+          </ChartSelection>
+          <ChartSelection type="emb:Keysight.OpenTap.LiveResultsPanel.ChartSelection">
+            <IsCollapsed>true</IsCollapsed>
+            <DataTruncated>false</DataTruncated>
+            <HideSeries>false</HideSeries>
+            <HideTakeLast>false</HideTakeLast>
+            <Series>Charge</Series>
+            <TakeLast>1000</TakeLast>
+            <ShowLegend>true</ShowLegend>
+            <AxisSelections>
+              <KeyValuePairOfString>
+                <Key></Key>
+                <Value>
+                  <XAxis></XAxis>
+                  <YAxis></YAxis>
+                  <YAxis2></YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYScatter</Type>
+                  <Modifier1>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+              <KeyValuePairOfString>
+                <Key>Charge</Key>
+                <Value>
+                  <XAxis>Sample Number</XAxis>
+                  <YAxis>Voltage</YAxis>
+                  <YAxis2>
+                    <Base64>IA==</Base64>
+                  </YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYLine</Type>
+                  <Modifier1>
+                    <Modifier>Split</Modifier>
+                    <N>0</N>
+                    <SplitOn>Test Step \ Temperature</SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+            </AxisSelections>
+            <Selection.XAxis>Sample Number</Selection.XAxis>
+            <Selection.YAxis>Voltage</Selection.YAxis>
+            <Selection.YAxis2>
+              <Base64>IA==</Base64>
+            </Selection.YAxis2>
+            <Selection.YAxis3></Selection.YAxis3>
+            <Selection.Bins>10</Selection.Bins>
+            <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
+            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
+            <Selection.LockToBottom>false</Selection.LockToBottom>
+            <Selection.AvailableCharts>
+              <ChartType>XYScatter</ChartType>
+              <ChartType>XYLine</ChartType>
+              <ChartType>Histogram</ChartType>
+              <ChartType>DataTable</ChartType>
+            </Selection.AvailableCharts>
+            <Selection.Type>XYLine</Selection.Type>
+            <Selection.Modifier1>
+              <Modifier>Split</Modifier>
+              <N>0</N>
+              <SplitOn>Test Step \ Temperature</SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier1>
+            <Selection.Modifier2>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier2>
+            <Selection.Modifier3>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier3>
+            <Selection.Modifier4>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier4>
+            <Modifier1.Modifier>Split</Modifier1.Modifier>
+            <Modifier1.N>0</Modifier1.N>
+            <Modifier1.SplitOn>Test Step \ Temperature</Modifier1.SplitOn>
+            <Modifier1.FilterOn></Modifier1.FilterOn>
+            <Modifier1.FilterValues />
+            <Modifier2.Modifier>None</Modifier2.Modifier>
+            <Modifier2.N>0</Modifier2.N>
+            <Modifier2.SplitOn></Modifier2.SplitOn>
+            <Modifier2.FilterOn></Modifier2.FilterOn>
+            <Modifier2.FilterValues />
+            <Modifier3.Modifier>None</Modifier3.Modifier>
+            <Modifier3.N>0</Modifier3.N>
+            <Modifier3.SplitOn></Modifier3.SplitOn>
+            <Modifier3.FilterOn></Modifier3.FilterOn>
+            <Modifier3.FilterValues />
+            <Modifier4.Modifier>None</Modifier4.Modifier>
+            <Modifier4.N>0</Modifier4.N>
+            <Modifier4.SplitOn></Modifier4.SplitOn>
+            <Modifier4.FilterOn></Modifier4.FilterOn>
+            <Modifier4.FilterValues />
+          </ChartSelection>
+          <ChartSelection type="emb:Keysight.OpenTap.LiveResultsPanel.ChartSelection">
+            <IsCollapsed>true</IsCollapsed>
+            <DataTruncated>false</DataTruncated>
+            <HideSeries>false</HideSeries>
+            <HideTakeLast>false</HideTakeLast>
+            <Series>Charge</Series>
+            <TakeLast>1000</TakeLast>
+            <ShowLegend>true</ShowLegend>
+            <AxisSelections>
+              <KeyValuePairOfString>
+                <Key>Discharge</Key>
+                <Value>
+                  <XAxis>[Index]</XAxis>
+                  <YAxis>Current</YAxis>
+                  <YAxis2></YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYScatter</Type>
+                  <Modifier1>
+                    <Modifier>Split</Modifier>
+                    <N>0</N>
+                    <SplitOn>Test Step \ Temperature</SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+              <KeyValuePairOfString>
+                <Key>Charge</Key>
+                <Value>
+                  <XAxis>Sample Number</XAxis>
+                  <YAxis>Current</YAxis>
+                  <YAxis2></YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYLine</Type>
+                  <Modifier1>
+                    <Modifier>Split</Modifier>
+                    <N>0</N>
+                    <SplitOn>Test Step \ Temperature</SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+            </AxisSelections>
+            <Selection.XAxis>Sample Number</Selection.XAxis>
+            <Selection.YAxis>Current</Selection.YAxis>
+            <Selection.YAxis2></Selection.YAxis2>
+            <Selection.YAxis3></Selection.YAxis3>
+            <Selection.Bins>10</Selection.Bins>
+            <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
+            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
+            <Selection.LockToBottom>false</Selection.LockToBottom>
+            <Selection.AvailableCharts>
+              <ChartType>XYScatter</ChartType>
+              <ChartType>XYLine</ChartType>
+              <ChartType>Histogram</ChartType>
+              <ChartType>DataTable</ChartType>
+            </Selection.AvailableCharts>
+            <Selection.Type>XYLine</Selection.Type>
+            <Selection.Modifier1>
+              <Modifier>Split</Modifier>
+              <N>0</N>
+              <SplitOn>Test Step \ Temperature</SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier1>
+            <Selection.Modifier2>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier2>
+            <Selection.Modifier3>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier3>
+            <Selection.Modifier4>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier4>
+            <Modifier1.Modifier>Split</Modifier1.Modifier>
+            <Modifier1.N>0</Modifier1.N>
+            <Modifier1.SplitOn>Test Step \ Temperature</Modifier1.SplitOn>
+            <Modifier1.FilterOn></Modifier1.FilterOn>
+            <Modifier1.FilterValues />
+            <Modifier2.Modifier>None</Modifier2.Modifier>
+            <Modifier2.N>0</Modifier2.N>
+            <Modifier2.SplitOn></Modifier2.SplitOn>
+            <Modifier2.FilterOn></Modifier2.FilterOn>
+            <Modifier2.FilterValues />
+            <Modifier3.Modifier>None</Modifier3.Modifier>
+            <Modifier3.N>0</Modifier3.N>
+            <Modifier3.SplitOn></Modifier3.SplitOn>
+            <Modifier3.FilterOn></Modifier3.FilterOn>
+            <Modifier3.FilterValues />
+            <Modifier4.Modifier>None</Modifier4.Modifier>
+            <Modifier4.N>0</Modifier4.N>
+            <Modifier4.SplitOn></Modifier4.SplitOn>
+            <Modifier4.FilterOn></Modifier4.FilterOn>
+            <Modifier4.FilterValues />
+          </ChartSelection>
+          <ChartSelection type="emb:Keysight.OpenTap.LiveResultsPanel.ChartSelection">
+            <IsCollapsed>true</IsCollapsed>
+            <DataTruncated>false</DataTruncated>
+            <HideSeries>false</HideSeries>
+            <HideTakeLast>false</HideTakeLast>
+            <Series>Discharge</Series>
+            <TakeLast>1000</TakeLast>
+            <ShowLegend>true</ShowLegend>
+            <AxisSelections>
+              <KeyValuePairOfString>
+                <Key>Discharge</Key>
+                <Value>
+                  <XAxis>Sample Number</XAxis>
+                  <YAxis>Voltage</YAxis>
+                  <YAxis2></YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYLine</Type>
+                  <Modifier1>
+                    <Modifier>Split</Modifier>
+                    <N>0</N>
+                    <SplitOn>Test Step \ Temperature</SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+            </AxisSelections>
+            <Selection.XAxis>Sample Number</Selection.XAxis>
+            <Selection.YAxis>Voltage</Selection.YAxis>
+            <Selection.YAxis2></Selection.YAxis2>
+            <Selection.YAxis3></Selection.YAxis3>
+            <Selection.Bins>10</Selection.Bins>
+            <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
+            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
+            <Selection.LockToBottom>false</Selection.LockToBottom>
+            <Selection.AvailableCharts>
+              <ChartType>XYScatter</ChartType>
+              <ChartType>XYLine</ChartType>
+              <ChartType>Histogram</ChartType>
+              <ChartType>DataTable</ChartType>
+            </Selection.AvailableCharts>
+            <Selection.Type>XYLine</Selection.Type>
+            <Selection.Modifier1>
+              <Modifier>Split</Modifier>
+              <N>0</N>
+              <SplitOn>Test Step \ Temperature</SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier1>
+            <Selection.Modifier2>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier2>
+            <Selection.Modifier3>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier3>
+            <Selection.Modifier4>
+              <Modifier>None</Modifier>
+              <N>0</N>
+              <SplitOn></SplitOn>
+              <FilterOn></FilterOn>
+              <FilterValues />
+            </Selection.Modifier4>
+            <Modifier1.Modifier>Split</Modifier1.Modifier>
+            <Modifier1.N>0</Modifier1.N>
+            <Modifier1.SplitOn>Test Step \ Temperature</Modifier1.SplitOn>
+            <Modifier1.FilterOn></Modifier1.FilterOn>
+            <Modifier1.FilterValues />
+            <Modifier2.Modifier>None</Modifier2.Modifier>
+            <Modifier2.N>0</Modifier2.N>
+            <Modifier2.SplitOn></Modifier2.SplitOn>
+            <Modifier2.FilterOn></Modifier2.FilterOn>
+            <Modifier2.FilterValues />
+            <Modifier3.Modifier>None</Modifier3.Modifier>
+            <Modifier3.N>0</Modifier3.N>
+            <Modifier3.SplitOn></Modifier3.SplitOn>
+            <Modifier3.FilterOn></Modifier3.FilterOn>
+            <Modifier3.FilterValues />
+            <Modifier4.Modifier>None</Modifier4.Modifier>
+            <Modifier4.N>0</Modifier4.N>
+            <Modifier4.SplitOn></Modifier4.SplitOn>
+            <Modifier4.FilterOn></Modifier4.FilterOn>
+            <Modifier4.FilterValues />
+          </ChartSelection>
+        </Value>
+      </SettingsTuple>
+    </Settings>
+  </SettingsGroup>
+  <Package.Dependencies>
+    <Package Name="OpenTAP" Version="^9.31.1-rc.2+2aaadc78" />
+  </Package.Dependencies>
+</ListOfSettingsGroup>

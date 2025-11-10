@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenTAP" Version="$(OpenTapVersion)" />
+      <PackageReference Include="OpenTAP" Version="$(OpenTapVersion)" />
   </ItemGroup>
 
 </Project>

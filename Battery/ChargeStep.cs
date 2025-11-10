@@ -21,40 +21,43 @@ namespace OpenTap.Plugins.Demo.Battery
         [Unit("V")]
         public double Voltage { get; set; }
         
-        [Display("Target Voltage Margin", Group: "Cell", Order: -1)]
+        [Display("Target Voltage", Group: "Power Supply", Order: -1)]
         [Unit("V")]
-        public double TargetCellVoltageMargin { get; set; }
+        public double TargetVoltage { get; set; }
         
         [Display("Charge Time", Group: "Output", Order: 0)]
         [Unit("s")]
         [Output]
         public double ChargeTime { get; private set; }
+        
+        
         #endregion
 
         public ChargeStep()
         {
             Voltage = 4.2;
             Current = 10;
-            TargetCellVoltageMargin = 0.1;
-            Rules.Add(() => (Voltage >= 0) && (Voltage <= 10), "Voltage must be >= 0 and <= 10", "Voltage");
-            Rules.Add(() => (Current >= 0) && (Current <= 20), "Current must be >= 0 and <= 20", "Current");
-            Rules.Add(() => (TargetCellVoltageMargin >= 0) && (TargetCellVoltageMargin <= 1), "TargetCellVoltageMargin must be >= 0 and <= 1", "TargetCellVoltageMargin");
+            TargetVoltage = 4.1;
+            Rules.Add(() => (Voltage >= 0) && (Voltage <= 10), "Voltage must be >= 0 and <= 10", nameof(Voltage));
+            Rules.Add(() => (Current >= 0) && (Current <= 20), "Current must be >= 0 and <= 20", nameof(Current));
+            Rules.Add(() => TargetVoltage < Voltage, "Target voltage must be less than the voltage", nameof(TargetVoltage));
         }
 
         public override void Run()
         {
             var sw = Stopwatch.StartNew();
-            PowerAnalyzer.Setup(Voltage, Current);
+            PowerAnalyzer.Setup(Voltage, Current, Dut.CellSizeFactor);
             PowerAnalyzer.EnableOutput();
             Log.Info("Charging at: " + Current + "A" + " Target Voltage: " + Voltage + "V");
             base.Run();  // Most of the work is being done here, with callbacks to this class.
             PowerAnalyzer.DisableOutput();
             ChargeTime = sw.Elapsed.TotalSeconds;
+            UpgradeVerdict(Verdict.Pass);
         }
 
         protected override void WhileSampling()
         {
-            while(Math.Abs(PowerAnalyzer.MeasureVoltage() - Voltage) > TargetCellVoltageMargin)
+            while(PowerAnalyzer.MeasureVoltage() < TargetVoltage)
             {
                 TapThread.Sleep(50);
             }

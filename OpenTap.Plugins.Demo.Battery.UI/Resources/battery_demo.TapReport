@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ResultReportTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" TemplateName="Some report template">
+  <Charts>
+    <Chart ChartTitle="Charge" ChartType="Keysight.OpenTap.ResultsViewer.XYLineChart, ResultsViewer, Version=9.30.0.0, Culture=neutral, PublicKeyToken=null">
+      <ChartProperties>
+        <ChartProperty>UseDarkTheme=True</ChartProperty>
+        <ChartProperty>LegendPlacement=0</ChartProperty>
+        <ChartProperty>LegendPosition=2</ChartProperty>
+        <ChartProperty>LegendAxisName=True</ChartProperty>
+        <ChartProperty>LegendVisible=True</ChartProperty>
+        <ChartProperty>DatetimeAxis=False</ChartProperty>
+      </ChartProperties>
+      <Conditions />
+      <LowerLimit />
+      <UpperLimit />
+      <AxesValues>
+        <Axis Tag="0">
+          <Dimensions>
+            <Dimension AxisType="8">Sample Number</Dimension>
+          </Dimensions>
+        </Axis>
+        <Axis Tag="1">
+          <Dimensions>
+            <Dimension AxisType="8">Voltage</Dimension>
+          </Dimensions>
+        </Axis>
+        <Axis Tag="2">
+          <Dimensions>
+            <Dimension AxisType="8">Current</Dimension>
+          </Dimensions>
+        </Axis>
+      </AxesValues>
+      <Modifiers>
+        <Modifier ModifierType="Keysight.OpenTap.ResultsViewer.ResultTypeModifier">
+          <Properties>
+            <Properties>ResultType=Charge</Properties>
+          </Properties>
+        </Modifier>
+        <Modifier ModifierType="Keysight.OpenTap.ResultsViewer.SplitModifier">
+          <Properties>
+            <Properties>Column=Temperature</Properties>
+          </Properties>
+        </Modifier>
+      </Modifiers>
+      <ShowLimits>true</ShowLimits>
+    </Chart>
+    <Chart ChartTitle="Discharge" ChartType="Keysight.OpenTap.ResultsViewer.XYLineChart, ResultsViewer, Version=9.30.0.0, Culture=neutral, PublicKeyToken=null">
+      <ChartProperties>
+        <ChartProperty>UseDarkTheme=True</ChartProperty>
+        <ChartProperty>LegendPlacement=0</ChartProperty>
+        <ChartProperty>LegendPosition=2</ChartProperty>
+        <ChartProperty>LegendAxisName=True</ChartProperty>
+        <ChartProperty>LegendVisible=True</ChartProperty>
+        <ChartProperty>DatetimeAxis=False</ChartProperty>
+      </ChartProperties>
+      <Conditions />
+      <LowerLimit />
+      <UpperLimit />
+      <AxesValues>
+        <Axis Tag="0">
+          <Dimensions>
+            <Dimension AxisType="8">Sample Number</Dimension>
+          </Dimensions>
+        </Axis>
+        <Axis Tag="1">
+          <Dimensions>
+            <Dimension AxisType="8">Voltage</Dimension>
+          </Dimensions>
+        </Axis>
+        <Axis Tag="2">
+          <Dimensions>
+            <Dimension AxisType="8">Current</Dimension>
+          </Dimensions>
+        </Axis>
+      </AxesValues>
+      <Modifiers>
+        <Modifier ModifierType="Keysight.OpenTap.ResultsViewer.ResultTypeModifier">
+          <Properties>
+            <Properties>ResultType=Discharge</Properties>
+          </Properties>
+        </Modifier>
+        <Modifier ModifierType="Keysight.OpenTap.ResultsViewer.SplitModifier">
+          <Properties>
+            <Properties>Column=Temperature</Properties>
+          </Properties>
+        </Modifier>
+      </Modifiers>
+      <ShowLimits>true</ShowLimits>
+    </Chart>
+  </Charts>
+</ResultReportTemplate>

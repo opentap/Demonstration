@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-        <OpenTapVersion>9.25.1</OpenTapVersion>
+        <OpenTapVersion>9.31.1-rc.2+2aaadc78</OpenTapVersion>
         <OutputPath>$(MSBuildThisFileDirectory)/bin/$(Configuration)</OutputPath>
     </PropertyGroup>
 </Project>
