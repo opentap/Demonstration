@@ -13,7 +13,6 @@ namespace OpenTap.Plugins.Demo.Battery.UI;
 
 public partial class DemonstrationPanelTest : UserControl
 {
-    private const string presetName = "Battery Demo";
     private readonly ITapDockContext _context;
 
     public DemonstrationPanelTest(ITapDockContext context)
@@ -22,25 +21,29 @@ public partial class DemonstrationPanelTest : UserControl
         InitializeComponent();
     }
 
-    private void OnLoadInstrumentsClicked(object sender, RoutedEventArgs e)
+    private void OnLoadInstruments(object sender, RoutedEventArgs e)
     {
-        var response = ShowMessage("Loaded Resources", "Loaded a DUT, a power analyzer and a temperature chamber.\n\n" +
-                                        "This will cause the Battery Demo bench profile to be loaded.\n" +
-                                        "To undo this change the bench profile in your bench settings.",
-            ["OK", "Cancel"]);
-        if (response == "Cancel")
-            return;
-        ComponentSettings.SetSettingsProfile("Bench", "Settings/Bench/Battery Demo");
+        ComponentSettings.SetSettingsProfile("Bench", Path.GetFullPath(Path.Combine("Settings","Bench","Battery Demo")));
         InstrumentSettings.Current.Clear();
         InstrumentSettings.Current.Add(new PowerAnalyzer());
         InstrumentSettings.Current.Add(new TemperatureChamber());
+        InstrumentSettings.Current.Save();
         DutSettings.Current.Clear();
         DutSettings.Current.Add(new BatteryDut());
-        if(ResultSettings.Current.OfType<CsvResultListener>().Any() == false)
+        
+        DutSettings.Current.Save();
+        if (ResultSettings.Current.OfType<CsvResultListener>().Any() == false)
             ResultSettings.Current.Add(new CsvResultListener());
-        if(ResultSettings.Current.OfType<SQLiteDatabase>().Any() == false)
-            ResultSettings.Current.Add(new SQLiteDatabase());
 
+        if (ResultSettings.Current.OfType<SQLiteDatabase>().Any() == false)
+        {
+            ResultSettings.Current.Add(new SQLiteDatabase());
+            ResultSettings.Current.Save();
+        }
+        
+        InstrumentSettings.Current.Invalidate();
+        DutSettings.Current.Invalidate();
+        
     }
     
     private void OnLoadTestPlan(object sender, RoutedEventArgs e)
@@ -52,10 +55,12 @@ public partial class DemonstrationPanelTest : UserControl
         var temp = new SetTemperatureStep() { };
         var charge = new ChargeStep();
         var discharge = new DischargeStep();
-        plan.ChildTestSteps.Add(tempSweep);
         tempSweep.ChildTestSteps.Add(temp);
         tempSweep.ChildTestSteps.Add(charge);
-        tempSweep.ChildTestSteps.Add(discharge);
+        tempSweep.ChildTestSteps.Add(discharge);// set the sweep loop to being expanded.
+        ChildItemVisibility.SetVisibility(tempSweep, ChildItemVisibility.Visibility.Visible);
+        
+        plan.ChildTestSteps.Add(tempSweep);
         
         TypeData.GetTypeData(temp)
             .GetMember(nameof(temp.Temperature))
@@ -67,6 +72,11 @@ public partial class DemonstrationPanelTest : UserControl
         tempSweep.SweepValues.Add(new BasicSteps.SweepRow(){Values = {["Temperature"] = 24.0}});
         tempSweep.SweepValues.Add(new BasicSteps.SweepRow(){Values = {["Temperature"] = 30.0}});
         tempSweep.SweepValues.Add(new BasicSteps.SweepRow(){Values = {["Temperature"] = 45.0}});
+        
+        plan.Save("Battery Demo.TapPlan");
+        
+        var testPlanGridType = TypeData.GetTypeData("Keysight.OpenTap.Gui.TestPlanPlugin");
+        TapPanel.Focus(testPlanGridType);
         
         
     }
@@ -139,4 +149,18 @@ public partial class DemonstrationPanelTest : UserControl
     }
 
 
+    private void OnLoadDemo(object sender, RoutedEventArgs e)
+    {
+        var response = ShowMessage("Load Demonstration Setup?", " - Creating resources: Loaded a DUT, a power analyzer and a temperature chamber.\n\n" +
+                                                                     " - Adding CSV and SQLite database result storage.\n"+
+                                                                     " - Loading a demonstration test plan\n" +
+                                                                     " - Loading the demo preset, providing an optimized view.\n\n" +
+            "This can be undone, but going to bench settings and selecting your previous profile. And selecting the 'Default' view preset.",
+            ["OK", "Cancel"]);
+        if (response == "Cancel")
+            return;
+        OnLoadInstruments(sender ,e);
+        OnLoadTestPlan(sender ,e);
+        OnLoadPreset(sender ,e);
+    }
 }

@@ -25,8 +25,10 @@ namespace OpenTap.Plugins.Demo.Battery
         {
             base.Open();
             _voltage = 0;
-            _cellVoltage = 2.7;
             Log.Info("Device PSU opened");
+            _sw = new Stopwatch();
+            _sw.Start();
+            
         }
 
         /// <summary>
@@ -42,24 +44,20 @@ namespace OpenTap.Plugins.Demo.Battery
             base.Close();
         }
 
-        public double MeasureCurrent()
+        public (double voltage, double current) Measure(BatteryDut dut)
         {
-            UpdateCurrentAndVoltage();
-            return _current;
+            if(_sw.ElapsedMilliseconds > 1)
+            {
+                dut.Model.Update(_voltage, _sw.Elapsed.TotalSeconds, TemperatureChamber.Temperature, _currentLimit);
+                _sw.Restart();
+            }
+            return (dut.Model.Voc, dut.Model.Current_A);
         }
 
-        public double MeasureVoltage()
-        {
-            UpdateCurrentAndVoltage();
-            return _cellVoltage;
-        }
-
-        internal void Setup(double voltage, double current, double cellSizeFactor)
+        internal void Setup(double voltage, double current)
         {
             _voltage = voltage;
             _currentLimit = current;
-            _current = current;
-            _cellSizeFactor = cellSizeFactor;
         }
 
         internal void EnableOutput()
@@ -75,38 +73,7 @@ namespace OpenTap.Plugins.Demo.Battery
         }
 
         private double _voltage;
-        private double _cellVoltage = 2.7;
-        private double _current = 10;
-        private double _currentLimit;
         Stopwatch _sw;
-        private double _cellSizeFactor = 0.1;
-
-        private void UpdateCurrentAndVoltage()
-        {
-            if (_sw == null || !_sw.IsRunning)  // Only update if output is enabled
-                return;
-
-            // Generates a somewhat random curve that gradually approaches the limit.
-            _current = (_currentLimit * (_voltage - _cellVoltage)*2 + RandomNumber.Generate()*_currentLimit/50);
-
-            if (_current >= _currentLimit)
-            {
-                _current = _currentLimit;
-            }
-            else if (_current < 0-_currentLimit)
-            { 
-                _current = 0- _currentLimit;
-            }
-
-            _cellVoltage += GetCellSizeFactorWithTemp() * _current * _sw.Elapsed.TotalSeconds * 10;
-            _sw.Restart();
-        }
-
-        double GetCellSizeFactorWithTemp()
-        {
-            // the cell operates best at nominal temperature 24C.
-            var factor = Math.Cos((TemperatureChamber.Temperature - 24) * 0.02);
-            return _cellSizeFactor * factor;
-        }
+        private double _currentLimit;
     }
 }

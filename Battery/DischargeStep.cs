@@ -36,7 +36,7 @@ namespace OpenTap.Plugins.Demo.Battery
         {
             Voltage = 2.2;
             Current = 5;
-            TargetVoltage = 2.7;
+            TargetVoltage = 3.1;
             Rules.Add(() => (Voltage >= 0) && (Voltage <= 10), "Voltage must be >= 0 and <= 10", "Voltage");
             Rules.Add(() => (Current >= 0) && (Current <= 20), "Current must be >= 0 and <= 20", "Current");
             Rules.Add(() => (TargetVoltage > Voltage), "Target Voltage must be greater than the voltage.", "TargetCellVoltageMargin");
@@ -45,7 +45,7 @@ namespace OpenTap.Plugins.Demo.Battery
         public override void Run()
         {
             var sw = Stopwatch.StartNew();
-            PowerAnalyzer.Setup(Voltage, Current, Dut.CellSizeFactor);
+            PowerAnalyzer.Setup(Voltage, Current);
             PowerAnalyzer.EnableOutput();
             Log.Info("Discharging at: " + Current + "A" + " Target Voltage: " + Voltage + "V");
             base.Run();
@@ -56,7 +56,7 @@ namespace OpenTap.Plugins.Demo.Battery
 
         protected override void WhileSampling()
         {
-            while(PowerAnalyzer.MeasureVoltage() > TargetVoltage)
+            while(Dut.Model.Voc > TargetVoltage)
             {
                 TapThread.Sleep(50);
             }

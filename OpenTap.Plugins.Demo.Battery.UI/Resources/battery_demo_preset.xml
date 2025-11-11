@@ -80,7 +80,7 @@
       <SettingsTuple>
         <Name>Layout</Name>
         <Value type="System.String">
-          <Base64>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMYXlvdXRSb290Pg0KICA8Um9vdFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIj4NCiAgICA8TGF5b3V0UGFuZWwgT3JpZW50YXRpb249IlZlcnRpY2FsIiBEb2NrV2lkdGg9IjEuNTY1NDAwODQzODgxODU2NSoiPg0KICAgICAgPExheW91dFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrSGVpZ2h0PSIxLjMxNzE5Mzk0NzczMDM5ODkqIiBEb2NrTWluV2lkdGg9IjEwMCIgRG9ja01pbkhlaWdodD0iMTAwIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIzNTZiNzcyOS1kYThiLTQ0OTAtODJmOS0zYTU0MDVkYmIzYjIiIERvY2tXaWR0aD0iMS44MjU5MzcxNjMyMjEzMTg4KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iV2VsY29tZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5XZWxjb21lU2NyZWVuUGFuZWwiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMC8yMDI1IDE0OjQ5OjAwIiAvPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IlRlc3QgUGxhbiIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5UZXN0UGxhblBsdWdpbiIgVG9vbFRpcD0iVGVzdCBQbGFuIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1Nzo1NSIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIxNDRmYWE0MS02YmRkLTRmNzQtYWY5Yy0wZGZlMzY1MTZiMzUiIERvY2tXaWR0aD0iMS44NzQxMzE5NDQ0NDQ0NDM1KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iTG9nIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuR3VpLkxvZ1BhbmVsUGx1Z2luIiBUb29sVGlwPSJMb2cgUGFuZWwiIEZsb2F0aW5nTGVmdD0iMTEzOC42NjY2NjY2NjY2NjY1IiBGbG9hdGluZ1RvcD0iMzk3LjMzMzMzMzMzMzMzMzMiIEZsb2F0aW5nV2lkdGg9IjUwMiIgRmxvYXRpbmdIZWlnaHQ9IjQzMC42NjY2NjY2NjY2NjY2MyIgTGFzdEFjdGl2YXRpb25UaW1lU3RhbXA9IjExLzEwLzIwMjUgMTQ6NTc6MDgiIFByZXZpb3VzQ29udGFpbmVySWQ9ImY4N2UxNTNjLTQ5ZTAtNDdkMC1iMDFhLTVjY2U5NWIwODE4OCIgUHJldmlvdXNDb250YWluZXJJbmRleD0iMSIgLz4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJUZXN0IFN0ZXAgU2V0dGluZ3MiIENvbnRlbnRJZD0iS2V5c2lnaHQuT3BlblRhcC5HdWkuU3RlcFNldHRpbmdzUGx1Z2luIiBUb29sVGlwPSJTdGVwIFNldHRpbmdzIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1Njo0MCIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0UGFuZWw+DQogICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cCBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCIgRG9ja0hlaWdodD0iMi4wODI1MDgyNTA4MjUwODI3KiI+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBGbG9hdGluZ1dpZHRoPSI3OTQiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIEZsb2F0aW5nV2lkdGg9Ijc5NCIgRmxvYXRpbmdIZWlnaHQ9IjUwMCIgRmxvYXRpbmdMZWZ0PSI2MzIuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdUb3A9IjgyNi42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAgMSIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNzk0IiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1ODo1NyIgLz4NCiAgICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lR3JvdXA+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBJZD0iZjg3ZTE1M2MtNDllMC00N2QwLWIwMWEtNWNjZTk1YjA4MTg4IiBEb2NrV2lkdGg9IjEuMDU5NDgzMTM2ODM1OTU1OSoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAyIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuTGl2ZVJlc3VsdHNQYW5lbC5MaXZlUmVzdWx0czIiIEZsb2F0aW5nTGVmdD0iMTI5MCIgRmxvYXRpbmdUb3A9IjgzMiIgRmxvYXRpbmdXaWR0aD0iNjI4LjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nSGVpZ2h0PSI0OTQiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMC8yMDI1IDE0OjU4OjQ5IiAvPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmUgRG9ja1dpZHRoPSIwLjkzOTg2MjU0Mjk1NTMyNjEqIiBGbG9hdGluZ1dpZHRoPSI1MDAiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iMTE1MCIgRmxvYXRpbmdUb3A9IjcxOC42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJMaXZlIFJlc3VsdHMgMyIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMzIiBGbG9hdGluZ0xlZnQ9IjExNTAiIEZsb2F0aW5nVG9wPSI3MTguNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNTAwIiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1ODo1MSIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cD4NCiAgICA8L0xheW91dFBhbmVsPg0KICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrV2lkdGg9IjAuNDM0NTk5MTU2MTE4MTQzNSoiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBEb2NrV2lkdGg9IjIuNyoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iQmF0dGVyeSBEZW1vIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9Ik9wZW5UYXAuUGx1Z2lucy5EZW1vLkJhdHRlcnkuVUkuQmF0dGVyeURlbW9QYW5lbCIgVG9vbFRpcD0iVGhpcyBpcyBhIHRlc3QgZGVtbyBwYW5lbC4iIEZsb2F0aW5nTGVmdD0iMTUyNi42NjY2NjY2NjY2NjY1IiBGbG9hdGluZ1RvcD0iNTkzLjMzMzMzMzMzMzMzMzMiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1OTowNSIgUHJldmlvdXNDb250YWluZXJJZD0iMzU2Yjc3MjktZGE4Yi00NDkwLTgyZjktM2E1NDA1ZGJiM2IyIiBQcmV2aW91c0NvbnRhaW5lckluZGV4PSIwIiAvPg0KICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lR3JvdXA+DQogIDwvUm9vdFBhbmVsPg0KICA8VG9wU2lkZSAvPg0KICA8UmlnaHRTaWRlIC8+DQogIDxMZWZ0U2lkZSAvPg0KICA8Qm90dG9tU2lkZSAvPg0KICA8RmxvYXRpbmdXaW5kb3dzIC8+DQogIDxIaWRkZW4gLz4NCjwvTGF5b3V0Um9vdD4=</Base64>
+          <Base64>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxMYXlvdXRSb290Pg0KICA8Um9vdFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIj4NCiAgICA8TGF5b3V0UGFuZWwgT3JpZW50YXRpb249IlZlcnRpY2FsIiBEb2NrV2lkdGg9IjEuNTY1NDAwODQzODgxODU2NSoiPg0KICAgICAgPExheW91dFBhbmVsIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrSGVpZ2h0PSIxLjMxNzE5Mzk0NzczMDM5ODkqIiBEb2NrTWluV2lkdGg9IjEwMCIgRG9ja01pbkhlaWdodD0iMTAwIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIzNTZiNzcyOS1kYThiLTQ0OTAtODJmOS0zYTU0MDVkYmIzYjIiIERvY2tXaWR0aD0iMS44MjU5MzcxNjMyMjEzMTg4KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iV2VsY29tZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5XZWxjb21lU2NyZWVuUGFuZWwiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMC8yMDI1IDE0OjQ5OjAwIiAvPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IlRlc3QgUGxhbiIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkd1aS5UZXN0UGxhblBsdWdpbiIgVG9vbFRpcD0iVGVzdCBQbGFuIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTEvMjAyNSAwODoyMzozMCIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIElkPSIxNDRmYWE0MS02YmRkLTRmNzQtYWY5Yy0wZGZlMzY1MTZiMzUiIERvY2tXaWR0aD0iMS44NzQxMzE5NDQ0NDQ0NDM1KiIgRG9ja01pbldpZHRoPSIxMDAiIERvY2tNaW5IZWlnaHQ9IjEwMCI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iTG9nIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuR3VpLkxvZ1BhbmVsUGx1Z2luIiBUb29sVGlwPSJMb2cgUGFuZWwiIEZsb2F0aW5nTGVmdD0iMTEzOC42NjY2NjY2NjY2NjY1IiBGbG9hdGluZ1RvcD0iMzk3LjMzMzMzMzMzMzMzMzMiIEZsb2F0aW5nV2lkdGg9IjUwMiIgRmxvYXRpbmdIZWlnaHQ9IjQzMC42NjY2NjY2NjY2NjY2MyIgTGFzdEFjdGl2YXRpb25UaW1lU3RhbXA9IjExLzEwLzIwMjUgMTQ6NTc6MDgiIFByZXZpb3VzQ29udGFpbmVySWQ9ImY4N2UxNTNjLTQ5ZTAtNDdkMC1iMDFhLTVjY2U5NWIwODE4OCIgUHJldmlvdXNDb250YWluZXJJbmRleD0iMSIgLz4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJUZXN0IFN0ZXAgU2V0dGluZ3MiIENvbnRlbnRJZD0iS2V5c2lnaHQuT3BlblRhcC5HdWkuU3RlcFNldHRpbmdzUGx1Z2luIiBUb29sVGlwPSJTdGVwIFNldHRpbmdzIFBhbmVsIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1Njo0MCIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0UGFuZWw+DQogICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cCBPcmllbnRhdGlvbj0iSG9yaXpvbnRhbCIgRG9ja0hlaWdodD0iMi4wODI1MDgyNTA4MjUwODI3KiI+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBGbG9hdGluZ1dpZHRoPSI3OTQiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiI+DQogICAgICAgICAgPExheW91dEFuY2hvcmFibGVQYW5lIEZsb2F0aW5nV2lkdGg9Ijc5NCIgRmxvYXRpbmdIZWlnaHQ9IjUwMCIgRmxvYXRpbmdMZWZ0PSI2MzIuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdUb3A9IjgyNi42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAgMSIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMiIEZsb2F0aW5nTGVmdD0iNjMyLjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nVG9wPSI4MjYuNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNzk0IiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTAvMjAyNSAxNDo1ODo1NyIgLz4NCiAgICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lR3JvdXA+DQogICAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBJZD0iZjg3ZTE1M2MtNDllMC00N2QwLWIwMWEtNWNjZTk1YjA4MTg4IiBEb2NrV2lkdGg9IjEuMDU5NDgzMTM2ODM1OTU1OSoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiPg0KICAgICAgICAgIDxMYXlvdXRBbmNob3JhYmxlIEF1dG9IaWRlTWluV2lkdGg9IjEwMCIgQXV0b0hpZGVNaW5IZWlnaHQ9IjEwMCIgVGl0bGU9IkxpdmUgUmVzdWx0cyAyIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9IktleXNpZ2h0Lk9wZW5UYXAuTGl2ZVJlc3VsdHNQYW5lbC5MaXZlUmVzdWx0czIiIEZsb2F0aW5nTGVmdD0iMTI5MCIgRmxvYXRpbmdUb3A9IjgzMiIgRmxvYXRpbmdXaWR0aD0iNjI4LjY2NjY2NjY2NjY2NjYiIEZsb2F0aW5nSGVpZ2h0PSI0OTQiIExhc3RBY3RpdmF0aW9uVGltZVN0YW1wPSIxMS8xMS8yMDI1IDEwOjU0OjExIiAvPg0KICAgICAgICA8L0xheW91dEFuY2hvcmFibGVQYW5lPg0KICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZVBhbmUgRG9ja1dpZHRoPSIwLjkzOTg2MjU0Mjk1NTMyNjEqIiBGbG9hdGluZ1dpZHRoPSI1MDAiIEZsb2F0aW5nSGVpZ2h0PSI1MDAiIEZsb2F0aW5nTGVmdD0iMTE1MCIgRmxvYXRpbmdUb3A9IjcxOC42NjY2NjY2NjY2NjY2Ij4NCiAgICAgICAgICA8TGF5b3V0QW5jaG9yYWJsZSBBdXRvSGlkZU1pbldpZHRoPSIxMDAiIEF1dG9IaWRlTWluSGVpZ2h0PSIxMDAiIFRpdGxlPSJMaXZlIFJlc3VsdHMgMyIgSXNTZWxlY3RlZD0iVHJ1ZSIgQ29udGVudElkPSJLZXlzaWdodC5PcGVuVGFwLkxpdmVSZXN1bHRzUGFuZWwuTGl2ZVJlc3VsdHMzIiBGbG9hdGluZ0xlZnQ9IjExNTAiIEZsb2F0aW5nVG9wPSI3MTguNjY2NjY2NjY2NjY2NiIgRmxvYXRpbmdXaWR0aD0iNTAwIiBGbG9hdGluZ0hlaWdodD0iNTAwIiBMYXN0QWN0aXZhdGlvblRpbWVTdGFtcD0iMTEvMTEvMjAyNSAxMDo1NDoyMiIgLz4NCiAgICAgICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZT4NCiAgICAgIDwvTGF5b3V0QW5jaG9yYWJsZVBhbmVHcm91cD4NCiAgICA8L0xheW91dFBhbmVsPg0KICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwIE9yaWVudGF0aW9uPSJIb3Jpem9udGFsIiBEb2NrV2lkdGg9IjAuNDM0NTk5MTU2MTE4MTQzNSoiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgIDxMYXlvdXRBbmNob3JhYmxlUGFuZSBEb2NrV2lkdGg9IjIuNyoiIERvY2tNaW5XaWR0aD0iMTAwIiBEb2NrTWluSGVpZ2h0PSIxMDAiIEZsb2F0aW5nV2lkdGg9IjQwOCIgRmxvYXRpbmdIZWlnaHQ9IjcyOC42NjY2NjY2NjY2NjY2IiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIj4NCiAgICAgICAgPExheW91dEFuY2hvcmFibGUgQXV0b0hpZGVNaW5XaWR0aD0iMTAwIiBBdXRvSGlkZU1pbkhlaWdodD0iMTAwIiBUaXRsZT0iQmF0dGVyeSBEZW1vIiBJc1NlbGVjdGVkPSJUcnVlIiBDb250ZW50SWQ9Ik9wZW5UYXAuUGx1Z2lucy5EZW1vLkJhdHRlcnkuVUkuQmF0dGVyeURlbW9QYW5lbCIgVG9vbFRpcD0iVGhpcyBpcyBhIGRlbW9uc3RyYXRpb24gcGFuZWwgZm9yIHRoZSBiYXR0ZXJ5IHRlc3QuIiBGbG9hdGluZ0xlZnQ9IjE1MjYuNjY2NjY2NjY2NjY2NSIgRmxvYXRpbmdUb3A9IjU5My4zMzMzMzMzMzMzMzMzIiBGbG9hdGluZ1dpZHRoPSI0MDgiIEZsb2F0aW5nSGVpZ2h0PSI3MjguNjY2NjY2NjY2NjY2NiIgTGFzdEFjdGl2YXRpb25UaW1lU3RhbXA9IjExLzExLzIwMjUgMTA6NTM6MDQiIFByZXZpb3VzQ29udGFpbmVySWQ9IjM1NmI3NzI5LWRhOGItNDQ5MC04MmY5LTNhNTQwNWRiYjNiMiIgUHJldmlvdXNDb250YWluZXJJbmRleD0iMCIgLz4NCiAgICAgIDwvTGF5b3V0QW5jaG9yYWJsZVBhbmU+DQogICAgPC9MYXlvdXRBbmNob3JhYmxlUGFuZUdyb3VwPg0KICA8L1Jvb3RQYW5lbD4NCiAgPFRvcFNpZGUgLz4NCiAgPFJpZ2h0U2lkZSAvPg0KICA8TGVmdFNpZGUgLz4NCiAgPEJvdHRvbVNpZGUgLz4NCiAgPEZsb2F0aW5nV2luZG93cyAvPg0KICA8SGlkZGVuIC8+DQo8L0xheW91dFJvb3Q+</Base64>
         </Value>
       </SettingsTuple>
     </Settings>
@@ -99,14 +99,64 @@
             <Series></Series>
             <TakeLast>1000</TakeLast>
             <ShowLegend>true</ShowLegend>
-            <AxisSelections />
+            <AxisSelections>
+              <KeyValuePairOfString>
+                <Key></Key>
+                <Value>
+                  <XAxis></XAxis>
+                  <YAxis></YAxis>
+                  <YAxis2></YAxis2>
+                  <YAxis3></YAxis3>
+                  <Bins>10</Bins>
+                  <ShowAllColumns>false</ShowAllColumns>
+                  <EnabledColumns />
+                  <HideAutoScroll>false</HideAutoScroll>
+                  <LockToBottom>false</LockToBottom>
+                  <AvailableCharts>
+                    <ChartType>XYScatter</ChartType>
+                    <ChartType>XYLine</ChartType>
+                    <ChartType>Histogram</ChartType>
+                    <ChartType>DataTable</ChartType>
+                  </AvailableCharts>
+                  <Type>XYScatter</Type>
+                  <Modifier1>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier1>
+                  <Modifier2>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier2>
+                  <Modifier3>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier3>
+                  <Modifier4>
+                    <Modifier>None</Modifier>
+                    <N>0</N>
+                    <SplitOn></SplitOn>
+                    <FilterOn></FilterOn>
+                    <FilterValues />
+                  </Modifier4>
+                </Value>
+              </KeyValuePairOfString>
+            </AxisSelections>
             <Selection.XAxis></Selection.XAxis>
             <Selection.YAxis></Selection.YAxis>
             <Selection.YAxis2></Selection.YAxis2>
             <Selection.YAxis3></Selection.YAxis3>
             <Selection.Bins>10</Selection.Bins>
             <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
-            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.EnabledColumns />
             <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
             <Selection.LockToBottom>false</Selection.LockToBottom>
             <Selection.AvailableCharts>
@@ -183,7 +233,7 @@
                   <YAxis3></YAxis3>
                   <Bins>10</Bins>
                   <ShowAllColumns>false</ShowAllColumns>
-                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <EnabledColumns />
                   <HideAutoScroll>false</HideAutoScroll>
                   <LockToBottom>false</LockToBottom>
                   <AvailableCharts>
@@ -234,7 +284,7 @@
                   <YAxis3></YAxis3>
                   <Bins>10</Bins>
                   <ShowAllColumns>false</ShowAllColumns>
-                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <EnabledColumns />
                   <HideAutoScroll>false</HideAutoScroll>
                   <LockToBottom>false</LockToBottom>
                   <AvailableCharts>
@@ -283,7 +333,7 @@
             <Selection.YAxis3></Selection.YAxis3>
             <Selection.Bins>10</Selection.Bins>
             <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
-            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.EnabledColumns />
             <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
             <Selection.LockToBottom>false</Selection.LockToBottom>
             <Selection.AvailableCharts>
@@ -349,7 +399,7 @@
             <HideTakeLast>false</HideTakeLast>
             <Series>Charge</Series>
             <TakeLast>1000</TakeLast>
-            <ShowLegend>true</ShowLegend>
+            <ShowLegend>false</ShowLegend>
             <AxisSelections>
               <KeyValuePairOfString>
                 <Key>Discharge</Key>
@@ -360,7 +410,7 @@
                   <YAxis3></YAxis3>
                   <Bins>10</Bins>
                   <ShowAllColumns>false</ShowAllColumns>
-                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <EnabledColumns />
                   <HideAutoScroll>false</HideAutoScroll>
                   <LockToBottom>false</LockToBottom>
                   <AvailableCharts>
@@ -409,7 +459,10 @@
                   <YAxis3></YAxis3>
                   <Bins>10</Bins>
                   <ShowAllColumns>false</ShowAllColumns>
-                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <EnabledColumns>
+                    <String>Test Plan \ Name</String>
+                    <String>Test Plan \ Station</String>
+                  </EnabledColumns>
                   <HideAutoScroll>false</HideAutoScroll>
                   <LockToBottom>false</LockToBottom>
                   <AvailableCharts>
@@ -456,7 +509,10 @@
             <Selection.YAxis3></Selection.YAxis3>
             <Selection.Bins>10</Selection.Bins>
             <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
-            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.EnabledColumns>
+              <String>Test Plan \ Name</String>
+              <String>Test Plan \ Station</String>
+            </Selection.EnabledColumns>
             <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
             <Selection.LockToBottom>false</Selection.LockToBottom>
             <Selection.AvailableCharts>
@@ -522,7 +578,7 @@
             <HideTakeLast>false</HideTakeLast>
             <Series>Discharge</Series>
             <TakeLast>1000</TakeLast>
-            <ShowLegend>true</ShowLegend>
+            <ShowLegend>false</ShowLegend>
             <AxisSelections>
               <KeyValuePairOfString>
                 <Key>Discharge</Key>
@@ -533,7 +589,7 @@
                   <YAxis3></YAxis3>
                   <Bins>10</Bins>
                   <ShowAllColumns>false</ShowAllColumns>
-                  <EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+                  <EnabledColumns />
                   <HideAutoScroll>false</HideAutoScroll>
                   <LockToBottom>false</LockToBottom>
                   <AvailableCharts>
@@ -580,7 +636,7 @@
             <Selection.YAxis3></Selection.YAxis3>
             <Selection.Bins>10</Selection.Bins>
             <Selection.ShowAllColumns>false</Selection.ShowAllColumns>
-            <Selection.EnabledColumns type="Keysight.OpenTap.LiveResultsPanel.MarkerObjects+MarkerList" />
+            <Selection.EnabledColumns />
             <Selection.HideAutoScroll>false</Selection.HideAutoScroll>
             <Selection.LockToBottom>false</Selection.LockToBottom>
             <Selection.AvailableCharts>

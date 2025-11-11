@@ -29,19 +29,11 @@
                     </TextBlock>
                     <Image Margin="0,20,0,0" Source="pack://application:,,,/OpenTap.Plugins.Demo.Battery.UI;component/Resources/batterydemo.png" />
                     
-                    <TextBlock Margin="0,10,0,0" Text="To get started follow these steps:"/>
-                    
                     <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
-                        •	<Hyperlink Click="OnLoadInstrumentsClicked">Click here to load a DUT, a Power Analyzer and a Temperature Chamber.</Hyperlink>
-                    </TextBlock>
-                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
-                        •	<Hyperlink Click="OnLoadTestPlan">Click here to load test plan.</Hyperlink>
+                        •	<Hyperlink Click="OnLoadDemo">Load the demonstration.</Hyperlink>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
                         •	<Hyperlink Click="OnRunTestPlan">Run the test plan.</Hyperlink>
-                    </TextBlock>
-                    <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
-                        •	<Hyperlink Click="OnLoadPreset">Load Preset</Hyperlink>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
                         •	<Hyperlink Click="OnShowResultsViewer">Show Results Viewer</Hyperlink>
