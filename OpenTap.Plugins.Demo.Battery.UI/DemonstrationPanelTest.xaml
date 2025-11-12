@@ -12,17 +12,16 @@
                 <StackPanel Margin="10">
                     <TextBlock FontSize="20" FontWeight="DemiBold" TextWrapping="Wrap">Battery Test Demonstration</TextBlock>
                     <TextBlock TextWrapping="Wrap" Margin="0,10,0,0">
-                        In this demonstration, we will show how a simple battery test can be set up. 
+                        In this demonstration, we will show how a basic battery test can be set up. 
                         Here we are testing how different temperatures affect charging and discharging the battery.
                         It consists of the following simulated instruments:
                        
-                            
                     </TextBlock>
                     <TextBlock Margin="10,20,0,0">
-                        •	A battery device under test.
+                        •	A battery device under test (DUT).
                     </TextBlock>
                     <TextBlock Margin="10,0,0,0">
-                        •	A power supply
+                        •	A power supply / analyzer
                     </TextBlock>
                     <TextBlock Margin="10,0,0,0">
                         •	A temperature chamber
@@ -36,9 +35,8 @@
                         •	<Hyperlink Click="OnRunTestPlan">Run the test plan.</Hyperlink>
                     </TextBlock>
                     <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
-                        •	<Hyperlink Click="OnShowResultsViewer">Show Results Viewer</Hyperlink>
+                        •	<Hyperlink Click="OnShowResultsViewer">Show Results Viewer.</Hyperlink>
                     </TextBlock>
-                    
                     
                 </StackPanel>
                 

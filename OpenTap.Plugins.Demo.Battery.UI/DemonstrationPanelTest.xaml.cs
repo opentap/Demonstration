@@ -21,7 +21,7 @@ public partial class DemonstrationPanelTest : UserControl
         InitializeComponent();
     }
 
-    private void OnLoadInstruments(object sender, RoutedEventArgs e)
+    private void LoadResources()
     {
         ComponentSettings.SetSettingsProfile("Bench", Path.GetFullPath(Path.Combine("Settings","Bench","Battery Demo")));
         InstrumentSettings.Current.Clear();
@@ -46,7 +46,7 @@ public partial class DemonstrationPanelTest : UserControl
         
     }
     
-    private void OnLoadTestPlan(object sender, RoutedEventArgs e)
+    private void LoadTestPlan()
     {
         var plan = new TestPlan();
         _context.Plan = plan;
@@ -88,7 +88,7 @@ public partial class DemonstrationPanelTest : UserControl
         TapPanel.Focus(testPlanGridType);
     }
 
-    private void OnLoadPreset(object sender, RoutedEventArgs e)
+    private void LoadViewPreset()
     {
         var destPath = Path.Combine(ViewPreset.PresetDir, "batterydemo.xml");
         var srcPath = Path.Combine("Packages", "Demonstration", "battery_demo_preset.xml");
@@ -103,6 +103,24 @@ public partial class DemonstrationPanelTest : UserControl
         var templatePath = Path.Combine("Packages", "Demonstration", "battery_demo.TapReport");
         var store = ResultSettings.Current.OfType<IResultStore>().FirstOrDefault();
         ResultsViewer.Open(store, Application.Current.MainWindow, templatePath, 1);
+    }
+    
+    private void OnLoadDemo(object sender, RoutedEventArgs e)
+    {
+        var response = ShowMessage("Load Demonstration?",
+            " Loading the battery test demonstration will cause the following changes:\n" +
+            " - New bench profile: a DUT, a power analyzer and a temperature chamber.\n" +
+            " - Added result listeners: Adding CSV and SQLite database result storage.\n"+
+            " - New view preset: A view preset will be applied providing an optimized view.\n" +
+            " - New test plan: A demonstration test plan will be loaded.\n\n" +
+            
+            "This can be undone by selecting the previous bench profile and view preset.",
+            ["OK", "Cancel"]);
+        if (response == "Cancel")
+            return;
+        LoadResources();
+        LoadTestPlan();
+        LoadViewPreset();
     }
 
     public class MessageBox : IDisplayAnnotation
@@ -146,21 +164,5 @@ public partial class DemonstrationPanelTest : UserControl
         };
         UserInput.Request(box);
         return box.SelectedOption;
-    }
-
-
-    private void OnLoadDemo(object sender, RoutedEventArgs e)
-    {
-        var response = ShowMessage("Load Demonstration Setup?", " - Creating resources: Loaded a DUT, a power analyzer and a temperature chamber.\n\n" +
-                                                                     " - Adding CSV and SQLite database result storage.\n"+
-                                                                     " - Loading a demonstration test plan\n" +
-                                                                     " - Loading the demo preset, providing an optimized view.\n\n" +
-            "This can be undone, but going to bench settings and selecting your previous profile. And selecting the 'Default' view preset.",
-            ["OK", "Cancel"]);
-        if (response == "Cancel")
-            return;
-        OnLoadInstruments(sender ,e);
-        OnLoadTestPlan(sender ,e);
-        OnLoadPreset(sender ,e);
     }
 }
