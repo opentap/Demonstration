@@ -5,7 +5,6 @@
 //               warranty, obligations or liability for any sample application files.
 using System;
 using System.Diagnostics;  // Use Platform infrastructure/core components (log,TestStep definition, etc)
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
 {

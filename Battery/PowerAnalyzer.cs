@@ -6,13 +6,19 @@
 
 using System;
 using System.Diagnostics;
-using OpenTap;
+using OpenTap.Metrics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
-    [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.", Groups: new[] { "Demo", "Battery Test" })]
+    [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.",
+        Groups: new[] { "Demo", "Battery Test" })]
     public class PowerAnalyzer : Instrument
     {
+        private double idleVoltage = 0.0;
+        
+        [Metric] [Unit("V")]
+        [Display("Idle Voltage")]
+        public double? IdleVoltage => Math.Round( lastBattery?.Model?.Voc ?? idleVoltage, 2);
         public PowerAnalyzer()
         {
             Name = "PSU";       
@@ -27,7 +33,7 @@ namespace OpenTap.Plugins.Demo.Battery
             _voltage = 0;
             Log.Info("Device PSU opened");
             _sw = new Stopwatch();
-            _sw.Start();
+            
             
         }
 
@@ -44,8 +50,15 @@ namespace OpenTap.Plugins.Demo.Battery
             base.Close();
         }
 
+        private BatteryDut lastBattery;
         public (double voltage, double current) Measure(BatteryDut dut)
         {
+            if (_sw.IsRunning == false)
+            {
+                dut.Model.Update(_voltage, 0.0, TemperatureChamber.Temperature, _currentLimit);
+                _sw.Start();
+            }
+            lastBattery = dut;
             if(_sw.ElapsedMilliseconds > 1)
             {
                 dut.Model.Update(_voltage, _sw.Elapsed.TotalSeconds, TemperatureChamber.Temperature, _currentLimit);

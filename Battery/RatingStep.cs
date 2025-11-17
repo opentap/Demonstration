@@ -5,7 +5,6 @@
 //               warranty, obligations or liability for any sample application files.
 using System.ComponentModel;
 using System.Xml.Serialization;
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
 {

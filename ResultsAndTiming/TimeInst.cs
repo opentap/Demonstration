@@ -5,7 +5,6 @@
 //               warranty, obligations or liability for any sample application files.
 using System.Diagnostics;
 using System.Threading;
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.ResultsAndTiming
 {

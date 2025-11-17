@@ -5,16 +5,21 @@
 //               warranty, obligations or liability for any sample application files.
 
 using System;
-using OpenTap;
+using OpenTap.Metrics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
     [Display("Temperature Chamber", "Simulated temperature chamber instrument used for SetTemperature demo step.", Groups: new[] { "Demo", "Battery Test" })]
     public class TemperatureChamber : Instrument
     {
-        private double humidityTarget;
-        private double temperatureTarget;
+        private double humidityTarget = 50;
+        private double temperatureTarget = 50;
         public static double Temperature = 25;
+        public static double Humidity = 25;
+        [Metric] 
+        [Unit("°C")]
+        [Display("Temperature")]
+        public double TemperatureMetric => Math.Round(Temperature, 2);
         
         public TemperatureChamber()
         {

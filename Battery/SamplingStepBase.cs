@@ -3,8 +3,6 @@
 //               the sample application files (and/or any modified version) in any way
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
-using System.Timers;
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
@@ -33,7 +31,8 @@ namespace OpenTap.Plugins.Demo.Battery
             bool measuring = true;
             var trd = TapThread.Start(() =>
             {
-                
+                PowerAnalyzer.Measure(Dut);
+                TapThread.Sleep(10);
                 while (measuring)
                 {
                     var (voltage, current) = PowerAnalyzer.Measure(Dut);

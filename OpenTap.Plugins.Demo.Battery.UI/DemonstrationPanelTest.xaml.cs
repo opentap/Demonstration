@@ -1,7 +1,5 @@
 using System.ComponentModel;
 using System.IO;
-using System.IO.Packaging;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using Keysight.OpenTap.Gui;

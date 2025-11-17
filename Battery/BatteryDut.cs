@@ -16,10 +16,14 @@ namespace OpenTap.Plugins.Demo.Battery
         [Display("Charged Voltage", "The battery voltage when charged.")]
         [Unit("V")]
         public double ChargedVoltage { get; set; } = 4.2;
+
+        [Display("Initial Charge")]
+        [Unit("Ah")]
+        public double InitialCharge { get; set; } = 0.01;
         
         #endregion
         
-        public BatteryModel Model { get; private set; }
+        internal BatteryModel Model { get; private set; }
         public BatteryDut()
         {
             Name = "Bat";
@@ -31,7 +35,7 @@ namespace OpenTap.Plugins.Demo.Battery
 
         public override void Open()
         {
-            Model = new BatteryModel(initialCharge_Ah: 0.01, capacity_Ah: Capacity, chargedVoltage: ChargedVoltage, baseVoltage: BaseVoltage);
+            Model = new BatteryModel(initialCharge_Ah: InitialCharge, capacity_Ah: Capacity, chargedVoltage: ChargedVoltage, baseVoltage: BaseVoltage);
             base.Open();
         }
     }

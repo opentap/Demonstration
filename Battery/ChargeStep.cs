@@ -4,8 +4,6 @@
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
 using System;
-using OpenTap;
-
 using System.Diagnostics;  // Use Platform infrastructure/core components (log,TestStep definition, etc)
 
 namespace OpenTap.Plugins.Demo.Battery
