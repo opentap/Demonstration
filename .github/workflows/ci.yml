@@ -77,7 +77,7 @@ jobs:
       - name: Package
         run: |
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
-          tap package install DemonstrationTest.TapPackage --force    
+          tap package install DemonstrationTest.TapPackage
           tap package test Demonstration -v
 
   TestPlan-Test:
@@ -101,7 +101,7 @@ jobs:
       - name: Package
         run: |
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
-          tap package install DemonstrationTest.TapPackage --force
+          tap package install DemonstrationTest.TapPackage
           cd /opt/tap
           tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
           tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
