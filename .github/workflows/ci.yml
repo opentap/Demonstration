@@ -57,13 +57,14 @@ jobs:
           path: "bin/Release/*.TapPackage"
 
   Package-Test:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: ubuntu-latest
     needs:
       - Build
     steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
       - name: Setup OpenTAP
         uses: opentap/setup-opentap@main
 
@@ -80,13 +81,14 @@ jobs:
           tap package test Demonstration -v
 
   TestPlan-Test:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: ubuntu-latest
     needs:
       - Build
     steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
       - name: Setup OpenTAP
         uses: opentap/setup-opentap@main
 
