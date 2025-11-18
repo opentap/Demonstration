@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using Keysight.OpenTap.Gui;
@@ -30,10 +31,10 @@ public partial class DemonstrationPanelTest : UserControl
         DutSettings.Current.Add(new BatteryDut());
         
         DutSettings.Current.Save();
-        if (ResultSettings.Current.OfType<CsvResultListener>().Any() == false)
+        if (!ResultSettings.Current.OfType<CsvResultListener>().Any())
             ResultSettings.Current.Add(new CsvResultListener());
 
-        if (ResultSettings.Current.OfType<SQLiteDatabase>().Any() == false)
+        if (!ResultSettings.Current.OfType<SQLiteDatabase>().Any())
         {
             ResultSettings.Current.Add(new SQLiteDatabase());
             ResultSettings.Current.Save();
@@ -50,7 +51,7 @@ public partial class DemonstrationPanelTest : UserControl
         _context.Plan = plan;
         
         var tempSweep = new BasicSteps.SweepParameterStep();
-        var temp = new SetTemperatureStep() { };
+        var temp = new SetTemperatureStep();
         var charge = new ChargeStep();
         var discharge = new DischargeStep();
         tempSweep.ChildTestSteps.Add(temp);
@@ -123,11 +124,11 @@ public partial class DemonstrationPanelTest : UserControl
 
     public class MessageBox : IDisplayAnnotation
     {
-        string IDisplayAnnotation.Description { get; }
-        string[] IDisplayAnnotation.Group { get; }
+        string IDisplayAnnotation.Description => null;
+        string[] IDisplayAnnotation.Group => null;
         
-        double IDisplayAnnotation.Order { get; }
-        bool IDisplayAnnotation.Collapsed { get; }
+        double IDisplayAnnotation.Order => 0.0;
+        bool IDisplayAnnotation.Collapsed => false;
         
         
         public string Name { get; internal set; }

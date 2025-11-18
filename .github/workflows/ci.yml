@@ -28,36 +28,27 @@ jobs:
           retention-days: 7
           path: "ResultsAndTiming/*.chm"
   Build:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: windows-latest
     env:
       KS8500_USER_TOKEN: ${{ secrets.KS8500_USER_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
-
+          fetch-depth: 0
+          
       - name: Fix tags
         if: startsWith(github.ref, 'refs/tags/v')
         run: git fetch -f origin ${{ github.ref }}:${{ github.ref }} # Fixes an issue with actions/checkout@v4. See https://github.com/actions/checkout/issues/290
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.x
-      - name: Setup OpenTAP
-        uses: opentap/setup-opentap@main
-
+        
       - name: Build
+        run: dotnet build -c Release
+          
+      - name: Create Package
         run: |
-          dotnet restore
-          dotnet build -c Release
-      - name: Create Pacage
-        working-directory: bin/Release
-        run: |
-          tap package create ../../package.xml -v
+          cd bin/Release
+          ./tap package create ../../package.xml -v
+          
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
