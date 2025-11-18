@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <UseWPF>True</UseWPF>
+        <EnableWindowsTargeting>True</EnableWindowsTargeting>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="OpenTAP" Version="$(OpenTapVersion)" />
