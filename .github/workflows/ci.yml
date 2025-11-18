@@ -53,15 +53,17 @@ jobs:
       - name: Build
         run: |
           dotnet restore
-          dotnet publish -c Release
-          mv bin/Release/*.TapPackage .
-
+          dotnet build -c Release
+      - name: Create Pacage
+        working-directory: bin/Release
+        run: |
+          tap package create ../../package.xml -v
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: tap_package
           retention-days: 7
-          path: "*.TapPackage"
+          path: "bin/Release/*.TapPackage"
 
   Package-Test:
     runs-on:

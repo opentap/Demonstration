@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <CreateOpenTapPackage>true</CreateOpenTapPackage>
+    <CreateOpenTapPackage>false</CreateOpenTapPackage>
   </PropertyGroup>
 
   <ItemGroup>
