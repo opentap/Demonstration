@@ -43,14 +43,12 @@ jobs:
       - name: Fix tags
         if: startsWith(github.ref, 'refs/tags/v')
         run: git fetch -f origin ${{ github.ref }}:${{ github.ref }} # Fixes an issue with actions/checkout@v4. See https://github.com/actions/checkout/issues/290
-
-      - name: Setup OpenTAP
-        uses: opentap/setup-opentap@main
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.x
+          dotnet-version: 9.x
+      - name: Setup OpenTAP
+        uses: opentap/setup-opentap@main
 
       - name: Build
         run: |
