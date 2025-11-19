@@ -26,7 +26,7 @@
                     <TextBlock Margin="10,0,0,0">
                         •	A temperature chamber
                     </TextBlock>
-                    <Image Margin="0,20,0,0" Source="pack://application:,,,/OpenTap.Plugins.Demo.Battery.UI;component/Resources/batterydemo.png" />
+                    <Image Margin="0,20,0,0" MaxWidth="300" HorizontalAlignment="Left" Source="pack://application:,,,/OpenTap.Plugins.Demo.Battery.UI;component/Resources/batterydemo.png" />
                     
                     <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
                         •	<Hyperlink Click="OnLoadDemo">Load the demonstration.</Hyperlink>
