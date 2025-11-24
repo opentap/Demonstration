@@ -6,7 +6,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
-using OpenTap;
 using OpenTap.Plugins.Demo.ResultsAndTiming;
 
 

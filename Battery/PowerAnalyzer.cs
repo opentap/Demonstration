@@ -4,25 +4,24 @@
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
 
+using System;
 using System.Diagnostics;
-using OpenTap;
+using OpenTap.Metrics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
-    [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.", Groups: new[] { "Demo", "Battery Test" })]
+    [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.",
+        Groups: new[] { "Demo", "Battery Test" })]
     public class PowerAnalyzer : Instrument
     {
-        #region Settings 
-        [Display("Cell Size Factor", "A larger cell size will result in faster charging and discharging.")]               
-        public double CellSizeFactor { get; set; }
-        #endregion
-
+        private double idleVoltage = 0.0;
+        
+        [Metric] [Unit("V")]
+        [Display("Idle Voltage")]
+        public double? IdleVoltage => Math.Round( lastBattery?.Model?.Voc ?? idleVoltage, 2);
         public PowerAnalyzer()
         {
-            Name = "PSU";
-
-            CellSizeFactor = 0.005;
-            Rules.Add(() => (CellSizeFactor >= 0) && (CellSizeFactor <= .1), "CellSizeFactor must be >= 0 and <= .1", "Voltage");
+            Name = "PSU";       
         }
 
         /// <summary>
@@ -32,8 +31,10 @@ namespace OpenTap.Plugins.Demo.Battery
         {
             base.Open();
             _voltage = 0;
-            _cellVoltage = 2.7;
             Log.Info("Device PSU opened");
+            _sw = new Stopwatch();
+            
+            
         }
 
         /// <summary>
@@ -49,23 +50,27 @@ namespace OpenTap.Plugins.Demo.Battery
             base.Close();
         }
 
-        public double MeasureCurrent()
+        private BatteryDut lastBattery;
+        public (double voltage, double current) Measure(BatteryDut dut)
         {
-            UpdateCurrentAndVoltage();
-            return _current;
-        }
-
-        public double MeasureVoltage()
-        {
-            UpdateCurrentAndVoltage();
-            return _cellVoltage;
+            if (_sw.IsRunning == false)
+            {
+                dut.Model.Update(_voltage, 0.0, TemperatureChamber.Temperature, _currentLimit);
+                _sw.Start();
+            }
+            lastBattery = dut;
+            if(_sw.ElapsedMilliseconds > 1)
+            {
+                dut.Model.Update(_voltage, _sw.Elapsed.TotalSeconds, TemperatureChamber.Temperature, _currentLimit);
+                _sw.Restart();
+            }
+            return (dut.Model.Voc, dut.Model.Current_A);
         }
 
         internal void Setup(double voltage, double current)
         {
             _voltage = voltage;
             _currentLimit = current;
-            _current = current;
         }
 
         internal void EnableOutput()
@@ -81,29 +86,7 @@ namespace OpenTap.Plugins.Demo.Battery
         }
 
         private double _voltage;
-        private double _cellVoltage = 2.7;
-        private double _current = 10;
-        private double _currentLimit;
         Stopwatch _sw;
-        private void UpdateCurrentAndVoltage()
-        {
-            if (_sw == null || !_sw.IsRunning)  // Only update if output is enabled
-                return;
-
-            // Generates a somewhat random curve that gradually approaches the limit.
-            _current = (_currentLimit * (_voltage - _cellVoltage)*2 + RandomNumber.Generate()*_currentLimit/50);
-
-            if (_current >= _currentLimit)
-            {
-                _current = _currentLimit;
-            }
-            else if (_current < 0-_currentLimit)
-            { 
-                _current = 0- _currentLimit;
-            }
-
-            _cellVoltage += CellSizeFactor * _current * _sw.Elapsed.TotalSeconds * 10;
-            _sw.Restart();
-        }
+        private double _currentLimit;
     }
 }

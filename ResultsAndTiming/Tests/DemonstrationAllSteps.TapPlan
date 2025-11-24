@@ -3,23 +3,17 @@
   <Steps>
     <TestStep type="OpenTap.Plugins.Demo.Battery.ChargeStep" Id="37ed049b-6e21-4362-8e6b-dd40d58a2c7a" Version="9.0">
       <ChildTestSteps />
-      <Current>10</Current>
       <Enabled>True</Enabled>
       <MeasurementInterval>0.2</MeasurementInterval>
       <Name>Charge</Name>
       <PowerAnalyzer Source="OpenTap.InstrumentSettings">PSU</PowerAnalyzer>
-      <TargetCellVoltageMargin>0.1</TargetCellVoltageMargin>
-      <Voltage>4.2</Voltage>
     </TestStep>
     <TestStep type="OpenTap.Plugins.Demo.Battery.DischargeStep" Id="63ae0f31-45d1-49b7-bdff-d3225e0e4cdf" Version="9.0">
       <ChildTestSteps />
-      <Current>5</Current>
       <Enabled>True</Enabled>
       <MeasurementInterval>0.2</MeasurementInterval>
       <Name>Discharge</Name>
       <PowerAnalyzer Source="OpenTap.InstrumentSettings">PSU</PowerAnalyzer>
-      <TargetCellVoltageMargin>0.8</TargetCellVoltageMargin>
-      <Voltage>2.2</Voltage>
     </TestStep>
     <TestStep type="OpenTap.Plugins.Demo.Battery.RatingStep" Id="2bfa65b8-b01d-43ac-b97e-70f355fea07a" Version="9.0">
       <ChargeTime>

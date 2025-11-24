@@ -8,6 +8,15 @@
     <Name>TimeDut</Name>
     <OpenTimeSecs>0.1</OpenTimeSecs>
   </TimeDut>
+    <BatteryDut type="OpenTap.Plugins.Demo.Battery.BatteryDut" Source="">
+        <Capacity>0.3</Capacity>
+        <BaseVoltage>3</BaseVoltage>
+        <ChargedVoltage>4.2</ChargedVoltage>
+        <InitialCharge>0.01</InitialCharge>
+        <ID Metadata="ID" />
+        <Comment Metadata="Comment" />
+        <Name>Bat</Name>
+    </BatteryDut>
   <Package.Dependencies>
     <Package Name="Demonstration" Version="9.0" />
     <Package Name="OpenTAP" Version="9.0" />

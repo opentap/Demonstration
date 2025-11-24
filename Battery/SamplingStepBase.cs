@@ -3,8 +3,6 @@
 //               the sample application files (and/or any modified version) in any way
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
-using System.Timers;
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
@@ -19,6 +17,9 @@ namespace OpenTap.Plugins.Demo.Battery
         [Display("Power Analyzer", Group: "Resources", Order: -100)]
         public PowerAnalyzer PowerAnalyzer { get; set; }
         
+        [Display("DUT")]
+        public BatteryDut Dut { get; set; }
+        
         public SamplingStepBase()
         {
             MeasurementInterval = .2;
@@ -27,9 +28,19 @@ namespace OpenTap.Plugins.Demo.Battery
         public override void Run()
         {
             _sampleNo = 0;
-            Timer timer = new Timer((int)(MeasurementInterval * 1000));
-            timer.Elapsed += timer_Elapsed;
-            timer.Start();
+            bool measuring = true;
+            var trd = TapThread.Start(() =>
+            {
+                PowerAnalyzer.Measure(Dut);
+                TapThread.Sleep(10);
+                while (measuring)
+                {
+                    var (voltage, current) = PowerAnalyzer.Measure(Dut);
+                    OnSample(voltage, current, _sampleNo++);
+                    TapThread.Sleep((int)(1000.0 * MeasurementInterval));
+                }
+
+            });
             try
             {
                 // Sleep, while the timer thread generates data.
@@ -39,15 +50,8 @@ namespace OpenTap.Plugins.Demo.Battery
             }
             finally
             {
-                timer.Stop();
+                measuring = false;
             }
-        }
-
-        private void timer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            double voltage = PowerAnalyzer.MeasureVoltage();
-            double current = PowerAnalyzer.MeasureCurrent();
-            OnSample(voltage, current, _sampleNo++);
         }
 
         protected abstract void WhileSampling();
