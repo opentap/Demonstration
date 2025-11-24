@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <UseWPF>True</UseWPF>
+        <EnableWindowsTargeting>True</EnableWindowsTargeting>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="OpenTAP" Version="$(OpenTapVersion)" />
+        <OpenTapPackageReference Include="OpenTAP" />
+        <OpenTapPackageReference Include="Editor" Version="9.31.0-rc.2+c39a4f1f"/>
+        <OpenTapPackageReference Include="WPF Controls" Version="9.31.0-rc.2+c39a4f1f"/>
+        <OpenTapPackageReference Include="CSV" Version="9.14.2+44a9bac5"/>
+        <OpenTapPackageReference Include="SQLite and PostgreSQL" Version="9.6.0+558afbf4"/>
+        <OpenTapPackageReference Include="Live Results Panel" Version="1.2.0-rc.1+0a11eba7"/>
+        <OpenTapPackageReference Include="Results Viewer" Version="9.30.0+069e0db1"/>
+        <OpenTapPackageReference Include="Metrics and Assets Panel" Version="1.2.0-rc.1+0a11eba7"/>
+
+    </ItemGroup>
+    <ItemGroup>
+      <Resource Include="Resources\batterydemo.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Battery\OpenTap.Plugins.Demo.Battery.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="Resources\battery_demo.TapReport">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+          <Link>Packages/Demonstration/battery_demo.TapReport</Link>
+      </None>
+        <None Update="Resources\battery_demo_preset.xml">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Link>Packages/Demonstration/battery_demo_preset.xml</Link>
+        </None>
+    </ItemGroup>
+
+</Project>

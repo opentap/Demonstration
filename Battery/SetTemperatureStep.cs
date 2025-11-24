@@ -4,8 +4,7 @@
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
 
-using OpenTap;
-
+using System.Diagnostics;
 namespace OpenTap.Plugins.Demo.Battery
 {
     [Display("Set Temperature", "Configure the temperature chamber.", Groups: new[] {"Demo", "Battery Test" })]
@@ -36,9 +35,23 @@ namespace OpenTap.Plugins.Demo.Battery
         public override void Run()
         {
             Log.Info("Temperature set to: " + Temperature + " °C");
-            TapThread.Sleep(3000);
-            Log.Info("Temperature reached: " + Temperature + " °C [3000 ms]");
-            RunChildSteps(); //If step has child steps.
+            bool waiting = true;
+            TapThread.Start(() =>
+            {
+                while (waiting)
+                {
+                    Log.Info($"Current temperature: {TemperatureChamber.Temperature:F1} °C");
+                    TapThread.Sleep(1000);
+                }
+
+            });
+            Chamber.SetTarget(Temperature, Humidity);
+            var sw = Stopwatch.StartNew();
+            
+            Chamber.WaitForConditions();
+            waiting = false;
+            
+            Log.Info(sw, "Temperature reached: " + Temperature + " °C");
         }
     }
 }

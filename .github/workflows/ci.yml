@@ -28,51 +28,43 @@ jobs:
           retention-days: 7
           path: "ResultsAndTiming/*.chm"
   Build:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: windows-latest
     env:
       KS8500_USER_TOKEN: ${{ secrets.KS8500_USER_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 
-
+          fetch-depth: 0
+          
       - name: Fix tags
         if: startsWith(github.ref, 'refs/tags/v')
         run: git fetch -f origin ${{ github.ref }}:${{ github.ref }} # Fixes an issue with actions/checkout@v4. See https://github.com/actions/checkout/issues/290
-
-      - name: Setup OpenTAP
-        uses: opentap/setup-opentap@main
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.x
-
+        
       - name: Build
+        run: dotnet build -c Release
+          
+      - name: Create Package
         run: |
-          dotnet restore
-          dotnet publish -c Release
-          mv bin/Release/*.TapPackage .
-
+          cd bin/Release
+          ./tap package create ../../package.xml -v
+          
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: tap_package
           retention-days: 7
-          path: "*.TapPackage"
+          path: "bin/Release/*.TapPackage"
 
   Package-Test:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: ubuntu-latest
     needs:
       - Build
     steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
       - name: Setup OpenTAP
         uses: opentap/setup-opentap@main
 
@@ -85,17 +77,18 @@ jobs:
       - name: Package
         run: |
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage
-          tap package install DemonstrationTest.TapPackage --force    
+          tap package install DemonstrationTest.TapPackage
           tap package test Demonstration -v
 
   TestPlan-Test:
-    runs-on:
-      group: OpenTAP-SpokeVPC
-      labels:  [Linux, X64]
-    container: ghcr.io/opentap/oci-images/build-dotnet:latest
+    runs-on: ubuntu-latest
     needs:
       - Build
     steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
       - name: Setup OpenTAP
         uses: opentap/setup-opentap@main
 
@@ -108,7 +101,7 @@ jobs:
       - name: Package
         run: |
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
-          tap package install DemonstrationTest.TapPackage --force
+          tap package install DemonstrationTest.TapPackage
           cd /opt/tap
           tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
           tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"

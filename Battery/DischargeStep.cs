@@ -5,7 +5,6 @@
 //               warranty, obligations or liability for any sample application files.
 using System;
 using System.Diagnostics;  // Use Platform infrastructure/core components (log,TestStep definition, etc)
-using OpenTap;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
@@ -19,10 +18,11 @@ namespace OpenTap.Plugins.Demo.Battery
         [Display("Voltage", Group: "Power Supply", Order: -1)]
         [Unit("V")]
         public double Voltage { get; set; }
-
-        [Display("Target Voltage Margin", Group: "Cell", Order: -1)]
+        
+        [Display("Target Voltage", Group: "Power Supply", Order: -1)]
         [Unit("V")]
-        public double TargetCellVoltageMargin { get; set; }
+        public double TargetVoltage { get; set; }
+
         
         [Display("Discharge Time", Group: "Output", Order: 0)]
         [Unit("s")]
@@ -35,10 +35,10 @@ namespace OpenTap.Plugins.Demo.Battery
         {
             Voltage = 2.2;
             Current = 5;
-            TargetCellVoltageMargin = 0.8;
+            TargetVoltage = 3.1;
             Rules.Add(() => (Voltage >= 0) && (Voltage <= 10), "Voltage must be >= 0 and <= 10", "Voltage");
             Rules.Add(() => (Current >= 0) && (Current <= 20), "Current must be >= 0 and <= 20", "Current");
-            Rules.Add(() => (TargetCellVoltageMargin >= 0) && (TargetCellVoltageMargin <= 1), "TargetCellVoltageMargin must be >= 0 and <= 1", "TargetCellVoltageMargin");
+            Rules.Add(() => (TargetVoltage > Voltage), "Target Voltage must be greater than the voltage.", "TargetCellVoltageMargin");
         }
 
         public override void Run()
@@ -50,11 +50,12 @@ namespace OpenTap.Plugins.Demo.Battery
             base.Run();
             PowerAnalyzer.DisableOutput();
             DischargeTime = sw.Elapsed.TotalSeconds;
+            UpgradeVerdict(Verdict.Pass);
         }
 
         protected override void WhileSampling()
         {
-            while(Math.Abs(PowerAnalyzer.MeasureVoltage() - Voltage) > TargetCellVoltageMargin)
+            while(Dut.Model.Voc > TargetVoltage)
             {
                 TapThread.Sleep(50);
             }
