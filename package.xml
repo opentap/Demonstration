@@ -1,46 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Package Name="Demonstration" xmlns="http://opentap.io/schemas/package" Version="$(GitVersion)" OS="Windows,Linux,Macos">
-  <Description>
-    This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test plans.
-    <Status>Released</Status>
-    <Organisation>OpenTAP</Organisation>
-    <Contacts><Contact Email="support@opentap.io" Name="OpenTAP Support"/></Contacts>
-    <Hardware>Emulated PSU</Hardware>
-  </Description>
+<Package Name="Demonstration" xmlns="http://opentap.io/schemas/package" Version="$(GitVersion)"
+         OS="Windows,Linux,Macos">
+    <Description>
+        This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test
+        plans.
+        <Status>Released</Status>
+        <Organisation>OpenTAP</Organisation>
+        <Contacts>
+            <Contact Email="support@opentap.io" Name="OpenTAP Support"/>
+        </Contacts>
+        <Hardware>Emulated PSU</Hardware>
+    </Description>
     <Owner>Keysight Technologies, Inc.</Owner>
-  <SourceUrl>https://github.com/opentap/Demonstration</SourceUrl>
-  <Files>
-    <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
-    One of those dlls comes from a second project.-->
-    <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.dll">
-      <SetAssemblyInfo Attributes="Version"/>
-    </File>
-    <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.ResultsAndTiming.dll">
-      <SetAssemblyInfo Attributes="Version"/>
-    </File>
-    <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.UI.dll">
-      <SetAssemblyInfo Attributes="Version"/>
-    </File>
-    <File Path="Packages/Demonstration/SampleLog.txt"/>
-    <File Path="Packages/Demonstration/DataGenForResultsViewer.TapPlan"/>
-    <File Path="Packages/Demonstration/DataGenForTimingAnalysis.TapPlan"/>
-    <File Path="Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan"/>
-    <File Path="Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan" SourcePath="Tests/DemonstrationAllSteps.TapPlan"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Connections.xml" SourcePath="Tests/Test Bench Profile/Connections.xml"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/DUTs.xml" SourcePath="Tests/Test Bench Profile/DUTs.xml"/>
-    <File Path="Packages/Demonstration/Tests/Test Bench Profile/Instruments.xml" SourcePath="Tests/Test Bench Profile/Instruments.xml"/>
-
-<!--To pick up the chm file you should:
-1.  Add the file to the project that homes the package definition
-2.  Mark that file as 
-BuildAction = Content
-Copy to Output Directory = Copy if newer-->
-    <File Path="DemonstrationHelp.chm"/>
-  </Files>
-  <PackageActionExtensions>
-  <ActionStep ActionName = "test" ExeFile="tap" Arguments='run Packages/Demonstration/DataGenForResultsViewer.TapPlan' />
-  <ActionStep ActionName = "test" ExeFile="tap" Arguments='run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"' />
-  <ActionStep ActionName = "test" ExeFile="tap" Arguments='run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"' />
-  <ActionStep ActionName = "test" ExeFile="tap" Arguments='run Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"' />
-  </PackageActionExtensions>
+    <SourceUrl>https://github.com/opentap/Demonstration</SourceUrl>
+    <Files>
+        <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
+        One of those dlls comes from a second project.-->
+        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.dll">
+            <SetAssemblyInfo Attributes="Version"/>
+        </File>
+        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.ResultsAndTiming.dll">
+            <SetAssemblyInfo Attributes="Version"/>
+        </File>
+        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.UI.dll">
+            <SetAssemblyInfo Attributes="Version"/>
+        </File>
+        <File Path="Packages/Demonstration/SampleLog.txt"/>
+        <File Path="Packages/Demonstration/DataGenForResultsViewer.TapPlan"/>
+        <File Path="Packages/Demonstration/DataGenForTimingAnalysis.TapPlan"/>
+        <File Path="Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan"/>
+        <File Path="Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan"
+              SourcePath="Tests/DemonstrationAllSteps.TapPlan"/>
+        <File Path="Packages/Demonstration/Tests/Test Bench Profile/Connections.xml"
+              SourcePath="Tests/Test Bench Profile/Connections.xml"/>
+        <File Path="Packages/Demonstration/Tests/Test Bench Profile/DUTs.xml"
+              SourcePath="Tests/Test Bench Profile/DUTs.xml"/>
+        <File Path="Packages/Demonstration/Tests/Test Bench Profile/Instruments.xml"
+              SourcePath="Tests/Test Bench Profile/Instruments.xml"/>
+        <File Path="Packages/Demonstration/battery_demo.TapReport"/>
+        <File Path="Packages/Demonstration/battery_demo_preset.xml"/>
+        <File Path="DemonstrationHelp.chm"/>
+    </Files>
+    <PackageActionExtensions>
+        <ActionStep ActionName="test" ExeFile="tap"
+                    Arguments='run Packages/Demonstration/DataGenForResultsViewer.TapPlan'/>
+        <ActionStep ActionName="test" ExeFile="tap"
+                    Arguments='run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"'/>
+        <ActionStep ActionName="test" ExeFile="tap"
+                    Arguments='run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"'/>
+        <ActionStep ActionName="test" ExeFile="tap"
+                    Arguments='run Packages/Demonstration/Tests/DemonstrationAllSteps.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"'/>
+    </PackageActionExtensions>
 </Package>

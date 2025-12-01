@@ -4,9 +4,7 @@
 //               you find useful, provided that you agree that Keysight Technologies has no
 //               warranty, obligations or liability for any sample application files.
 
-using System;
 using System.Diagnostics;
-using OpenTap.Metrics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
@@ -16,9 +14,6 @@ namespace OpenTap.Plugins.Demo.Battery
     {
         private double idleVoltage = 0.0;
         
-        [Metric] [Unit("V")]
-        [Display("Idle Voltage")]
-        public double? IdleVoltage => Math.Round( lastBattery?.Model?.Voc ?? idleVoltage, 2);
         public PowerAnalyzer()
         {
             Name = "PSU";       
