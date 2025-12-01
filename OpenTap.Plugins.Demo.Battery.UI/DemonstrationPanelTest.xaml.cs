@@ -14,6 +14,26 @@ public partial class DemonstrationPanelTest : UserControl
 {
     private readonly ITapDockContext _context;
 
+    
+    bool CheckAllow(bool isRunningCheck, bool isOpenCheck)
+    {
+        if (_context.Plan.IsRunning && isRunningCheck)
+        {
+            ShowMessage("Error: Test plan is running",
+                "The action cannot be performance while the test plan is running.");
+            return false;
+        }
+        if (_context.Plan.IsOpen && isOpenCheck)
+        {
+            ShowMessage("Error: Test plan is open",
+                "The action cannot be performance while the test plan is in the open state.");
+            return false;
+        }
+
+        return true;
+
+    }
+    
     public DemonstrationPanelTest(ITapDockContext context)
     {
         _context = context;
@@ -47,6 +67,8 @@ public partial class DemonstrationPanelTest : UserControl
     
     private void LoadTestPlan()
     {
+        if (!CheckAllow(true, true))
+            return;
         var plan = new TestPlan();
         _context.Plan = plan;
         
@@ -82,6 +104,8 @@ public partial class DemonstrationPanelTest : UserControl
     
     private void OnRunTestPlan(object sender, RoutedEventArgs e)
     {
+        if (!CheckAllow(true, false))
+            return;
         _context.Run();
         var testPlanGridType = TypeData.GetTypeData("Keysight.OpenTap.Gui.TestPlanPlugin");
         TapPanel.Focus(testPlanGridType);
@@ -106,6 +130,9 @@ public partial class DemonstrationPanelTest : UserControl
     
     private void OnLoadDemo(object sender, RoutedEventArgs e)
     {
+        if (!CheckAllow(true, true))
+            return;
+        
         var response = ShowMessage("Load Demonstration?",
             " Loading the battery test demonstration will cause the following changes:\n" +
             " - New bench profile: a DUT, a power analyzer and a temperature chamber.\n" +
