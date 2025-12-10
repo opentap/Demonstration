@@ -11,13 +11,6 @@
         </Contacts>
         <Hardware>Emulated PSU</Hardware>
     </Description>
-    <!-- TODO: Remove Dependencies section. -->
-    <!-- This was needed for a specific release because 9.31.0 wants to bundle the Demonstration package, -->
-    <!-- but Demonstration needs features from 9.31.0. -->
-    <Dependencies>
-        <PackageDependency Package="Editor" Version="^9.31.0" />
-        <PackageDependency Package="WPF Controls" Version="^9.31.0" />
-    </Dependencies>
     <Owner>Keysight Technologies, Inc.</Owner>
     <SourceUrl>https://github.com/opentap/Demonstration</SourceUrl>
     <Files>
