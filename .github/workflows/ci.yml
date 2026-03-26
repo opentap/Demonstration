@@ -18,15 +18,15 @@ jobs:
           fetch-depth: 0 
 
       - name: Package
-        run: |
-          tap generate-chm "Documentation/Help/Readme.md" --out "ResultsAndTiming/DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
+        run: tap generate-chm "Documentation/Help/Readme.md" --out "DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: package
+          name: chm
           retention-days: 7
-          path: "ResultsAndTiming/*.chm"
+          path: "DemonstrationHelp.chm"
+
   Build:
     runs-on: windows-latest
     env:
@@ -44,6 +44,12 @@ jobs:
       - name: Build
         run: dotnet build -c Release
           
+      - name: Download TapPackage Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: chm
+          path: bin/Release
+
       - name: Create Package
         run: |
           cd bin/Release

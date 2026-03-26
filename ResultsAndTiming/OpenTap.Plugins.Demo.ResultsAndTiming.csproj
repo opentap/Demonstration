@@ -33,9 +33,6 @@
     <None Update="Tests\DemonstrationAllSteps.TapPlan">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="DemonstrationHelp.chm">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Tests\Test Bench Profile\Connections.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
