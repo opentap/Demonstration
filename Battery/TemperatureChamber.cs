@@ -5,6 +5,7 @@
 //               warranty, obligations or liability for any sample application files.
 
 using System;
+using OpenTap.Metrics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
@@ -15,6 +16,10 @@ namespace OpenTap.Plugins.Demo.Battery
         private double temperatureTarget = 50;
         public static double Temperature = 25;
         public static double Humidity = 25;
+        [Metric] 
+        [Unit("°C")]
+        [Display("Temperature")]
+        public double TemperatureMetric => Math.Round(Temperature, 2);
         
         public TemperatureChamber()
         {
