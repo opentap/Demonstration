@@ -6,27 +6,6 @@ defaults:
     shell: bash
 
 jobs:
-  Documentation:
-    runs-on:
-       group: OpenTAP-SpokeVPC
-       labels:  [Linux, X64]
-    container: ghcr.io/opentap/documentationgeneration:1.0.2-beta.47
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 
-
-      - name: Package
-        run: tap generate-chm "Documentation/Help/Readme.md" --out "DemonstrationHelp.chm" --title "TAP Demonstration Plugin Package Help" --startpage "Documentation/Help/Welcome/Readme.md"
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: chm
-          retention-days: 7
-          path: "DemonstrationHelp.chm"
-
   Build:
     runs-on: windows-latest
     env:
@@ -43,12 +22,6 @@ jobs:
         
       - name: Build
         run: dotnet build -c Release
-          
-      - name: Download TapPackage Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: chm
-          path: bin/Release
 
       - name: Create Package
         run: |
@@ -108,7 +81,7 @@ jobs:
         run: |
           cp Demonstration.*.TapPackage DemonstrationTest.TapPackage    
           tap package install DemonstrationTest.TapPackage
-          cd /opt/tap
+          cd $(dirname $(which tap))
           tap run Packages/Demonstration/DataGenForResultsViewer.TapPlan
           tap run Packages/Demonstration/DataGenForTimingAnalysis.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
           tap run Packages/Demonstration/DataGenForTimingAnalysisParallel.TapPlan --settings "../../Packages/Demonstration/Tests/Test Bench Profile"
