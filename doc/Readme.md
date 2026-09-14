@@ -1,4 +1,4 @@
-# Welcome
+# Demonstration
 
 This plugin package contains a number of demonstration test steps, resources and test plans. This package contains:
 

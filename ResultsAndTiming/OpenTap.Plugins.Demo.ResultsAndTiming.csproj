@@ -50,4 +50,12 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\doc\**\*">
+      <Link>Packages\Demonstration\doc\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
 </Project>

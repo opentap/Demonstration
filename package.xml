@@ -39,7 +39,11 @@
               SourcePath="Tests/Test Bench Profile/Instruments.xml"/>
         <File Path="Packages/Demonstration/battery_demo.TapReport"/>
         <File Path="Packages/Demonstration/battery_demo_preset.xml"/>
-        <File Path="DemonstrationHelp.chm"/>
+        <!-- Due to a bug in older versions of opentap, '**' does not expand recursively. 
+        This is fixed in 9.35.0, but we build with something older. -->
+        <File Path="Packages/Demonstration/doc/**"/>
+        <File Path="Packages/Demonstration/doc/*/**"/>
+        <File Path="Packages/Demonstration/doc/*/*/**"/>
     </Files>
     <PackageActionExtensions>
         <ActionStep ActionName="test" ExeFile="tap"
