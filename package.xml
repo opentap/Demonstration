@@ -24,6 +24,9 @@
         <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.dll"/>
         <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.ResultsAndTiming.dll"/>
         <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.UI.dll">
+            <IgnoreDependency>Keysight.OpenTap.Wpf</IgnoreDependency>
+            <IgnoreDependency>Editor</IgnoreDependency>
+            <IgnoreDependency>netstandard</IgnoreDependency>
         </File>
         <File Path="Packages/Demonstration/SampleLog.txt"/>
         <File Path="Packages/Demonstration/DataGenForResultsViewer.TapPlan"/>
