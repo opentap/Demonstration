@@ -21,7 +21,7 @@ jobs:
         run: git fetch -f origin ${{ github.ref }}:${{ github.ref }} # Fixes an issue with actions/checkout@v4. See https://github.com/actions/checkout/issues/290
         
       - name: Build
-        run: dotnet build -c Release
+        run: dotnet build -c Release -v:n
 
       - name: Create Package
         run: |
