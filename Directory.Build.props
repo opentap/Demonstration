@@ -7,4 +7,12 @@
     <OpenTapVersion>9.35.1</OpenTapVersion>
     <OutputPath>$(MSBuildThisFileDirectory)/bin/$(Configuration)</OutputPath>
   </PropertyGroup>
+
+  <!-- Assembly info shared by all projects. Title and Product default to the assembly name. -->
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <OpenTapSetAssemblyVersion>gitversion</OpenTapSetAssemblyVersion>
+    <Company>Keysight Technologies, Inc.</Company>
+    <Copyright>Copyright © Keysight Technologies 2026</Copyright>
+  </PropertyGroup>
 </Project>
