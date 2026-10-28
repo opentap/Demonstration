@@ -109,7 +109,7 @@ jobs:
           uses: opentap/setup-opentap@main
           with:
            version: 9.25.1
-           packages: 'Repository Client:1.0'
+           packages: 'Repository Client'
 
         - name: Publish Packages
           working-directory: ./
