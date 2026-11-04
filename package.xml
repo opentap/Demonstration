@@ -2,8 +2,7 @@
 <Package Name="Demonstration" xmlns="http://opentap.io/schemas/package" Version="$(GitVersion)"
          OS="Windows,Linux,Macos">
     <Description>
-        This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test
-        plans.
+        This plugin package contains a number of demonstration plugins, demonstration test steps, and demonstration test plans.
         <Status>Released</Status>
         <Organisation>OpenTAP</Organisation>
         <Contacts>
@@ -22,14 +21,12 @@
     <Files>
         <!--Note that this package file is homed in ONE of the projects, but actually picks up TWO dlls.
         One of those dlls comes from a second project.-->
-        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.dll">
-            <SetAssemblyInfo Attributes="Version"/>
-        </File>
-        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.ResultsAndTiming.dll">
-            <SetAssemblyInfo Attributes="Version"/>
-        </File>
+        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.dll"/>
+        <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.ResultsAndTiming.dll"/>
         <File Path="Packages/Demonstration/OpenTap.Plugins.Demo.Battery.UI.dll">
-            <SetAssemblyInfo Attributes="Version"/>
+            <IgnoreDependency>Keysight.OpenTap.Wpf</IgnoreDependency>
+            <IgnoreDependency>Editor</IgnoreDependency>
+            <IgnoreDependency>netstandard</IgnoreDependency>
         </File>
         <File Path="Packages/Demonstration/SampleLog.txt"/>
         <File Path="Packages/Demonstration/DataGenForResultsViewer.TapPlan"/>

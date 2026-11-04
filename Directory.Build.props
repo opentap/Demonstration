@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<PropertyGroup >
+  <PropertyGroup >
     <TargetFramework>netstandard2.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-        <OpenTapVersion>9.35.0-rc.3</OpenTapVersion>
-        <OutputPath>$(MSBuildThisFileDirectory)/bin/$(Configuration)</OutputPath>
-    </PropertyGroup>
+    <OpenTapVersion>9.35.1</OpenTapVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)/bin/$(Configuration)</OutputPath>
+  </PropertyGroup>
+
+  <!-- Assembly info shared by all projects. Title and Product default to the assembly name. -->
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <OpenTapSetAssemblyVersion>gitversion</OpenTapSetAssemblyVersion>
+    <Company>Keysight Technologies, Inc.</Company>
+    <Copyright>Copyright © Keysight Technologies 2026</Copyright>
+  </PropertyGroup>
 </Project>
