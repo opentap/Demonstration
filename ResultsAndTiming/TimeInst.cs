@@ -8,6 +8,7 @@ using System.Threading;
 
 namespace OpenTap.Plugins.Demo.ResultsAndTiming
 {
+    [HelpLink("Demonstration/Results and Timing Demo/Readme.md")]
     [Display("Timing Instrument", "Dummy instrument with configurable open, action and close times.\nUseful for demonstrating the Timing Analyzer.",
         Groups: new[] { "Demo", "Results And Timing" } )]
     public class TimeInst : Instrument

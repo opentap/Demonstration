@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 namespace OpenTap.Plugins.Demo.ResultsAndTiming
 {
+    [HelpLink("Demonstration/Results and Timing Demo/Test Step Details.md#sine-result")]
     [Display("Sine Result", Groups: new[] { "Demo", "Results And Timing" },
         Description: "Generates a sine wave with settable amplitude and point count.\nUseful for demonstrating the Results Viewer.")]
     public class SineResultsStep : LimitCheckAndNoiseBaseStep

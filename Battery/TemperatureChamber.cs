@@ -8,6 +8,7 @@ using System;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Readme.md")]
     [Display("Temperature Chamber", "Simulated temperature chamber instrument used for SetTemperature demo step.", Groups: new[] { "Demo", "Battery Test" })]
     public class TemperatureChamber : Instrument
     {

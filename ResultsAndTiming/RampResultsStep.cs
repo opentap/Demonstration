@@ -7,6 +7,7 @@ using System.Collections.Generic;
 
 namespace OpenTap.Plugins.Demo.ResultsAndTiming
 {
+    [HelpLink("Demonstration/Results and Timing Demo/Test Step Details.md#ramp-result")]
     [Display("Ramp Result", Groups: new[] { "Demo", "Results And Timing" },
         Description: "Generates a ramp with configurable number of results.\nUseful for demonstrating the Results Viewer.")]
     public class RampResultsStep : DemoBaseStep

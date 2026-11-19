@@ -10,7 +10,7 @@ The *OpenTap.Plugins.Demo.Battery.dll* contains resources that are useful in lea
 
     ![](../Images/BatteryTestInstruments.png)
 
-See [Test Step Details](BatteryTestDemoDetails.md) for more information on these steps and instruments.
+See [Test Step Details](Test%20Step%20Details.md) for more information on these steps and instruments.
 
 A typical test plan is shown below:
 

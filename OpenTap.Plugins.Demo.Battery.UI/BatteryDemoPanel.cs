@@ -3,6 +3,7 @@ using Keysight.OpenTap.Wpf;
 
 namespace OpenTap.Plugins.Demo.Battery.UI;
 
+[HelpLink("Demonstration/Battery Test Demo/Readme.md")]
 [Display("Battery Demonstration", Group:"Getting Started", Description: "This is a demonstration panel for the battery test.")]
 public class BatteryDemoPanel : IGettingStartedPanel
 {

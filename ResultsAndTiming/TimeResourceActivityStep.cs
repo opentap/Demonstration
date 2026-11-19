@@ -11,6 +11,7 @@ using OpenTap.Plugins.Demo.ResultsAndTiming;
 
 namespace  OpenTap.Plugins.Example.ResultsAndTiming
 {
+    [HelpLink("Demonstration/Results and Timing Demo/Test Step Details.md#time-resource-activity")]
     [Display("Time Resource Activity", "Dummy step using resources (DUT and instrument) with configurable times for PrePlanRun and PostPlanRun.\nUseful for demonstrating the Timing Analyzer.",
         Groups: new[] { "Demo", "Results And Timing" } )]
     public class TimeResourceActivityStep : TestStep
