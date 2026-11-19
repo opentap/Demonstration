@@ -1,5 +1,6 @@
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Readme.md")]
     [Display("Battery", "This DUT represents the battery itself.")]
     public class BatteryDut : Dut
     {

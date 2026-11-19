@@ -7,6 +7,7 @@
 using System.Diagnostics;
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Test Step Details.md#set-temperature-test-step")]
     [Display("Set Temperature", "Configure the temperature chamber.", Groups: new[] {"Demo", "Battery Test" })]
     public class SetTemperatureStep : TestStep
     {

@@ -8,6 +8,7 @@ using System.Diagnostics;  // Use Platform infrastructure/core components (log,T
 
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Test Step Details.md#charge-test-step")]
     [Display("Charge", "Simulates charging of a battery.", Groups: new[] { "Demo", "Battery Test" })]
     public class ChargeStep : SamplingStepBase
     {

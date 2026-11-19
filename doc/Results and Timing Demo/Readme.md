@@ -6,7 +6,7 @@ The *OpenTap.Plugins.Demo.ResultsAndTiming.dll* contains resources that are usef
 
     ![](../Images/ResultsAndTimingTestSteps.PNG)
 
-See the [test step details](ResultsAndTimingDemoDetails.md) for more information on these steps.
+See the [test step details](Test%20Step%20Details.md) for more information on these steps.
 
 - One simulated instruments:
 

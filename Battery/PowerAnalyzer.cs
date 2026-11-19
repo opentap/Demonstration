@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Readme.md")]
     [Display("Power Analyzer", "Simulated power analyzer instrument used for charge/discharge demo steps.",
         Groups: new[] { "Demo", "Battery Test" })]
     public class PowerAnalyzer : Instrument

@@ -8,6 +8,7 @@ using System.Threading;
 
 namespace OpenTap.Plugins.Demo.ResultsAndTiming
 {
+    [HelpLink("Demonstration/Results and Timing Demo/Test Step Details.md#time-activity")]
     [Display("Time Activity", "Dummy step with configurable times for PrePlanRun, Run, and PostPlanRun.\nUseful for demonstrating the Timing Analyzer.",
         Groups: new[] { "Demo", "Results And Timing" })]
     public class TimeActivityStep : TestStep

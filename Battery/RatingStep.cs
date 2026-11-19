@@ -9,6 +9,7 @@ using System.Xml.Serialization;
 namespace OpenTap.Plugins.Demo.Battery
 {
     
+    [HelpLink("Demonstration/Battery Test Demo/Test Step Details.md#rating-test-step")]
     [Display("Rating", "Calculate rating of a battery based on total charge and discharge time.", 
         Groups: new[] { "Demo", "Battery Test" })]
     public class RatingStep : TestStep

@@ -8,6 +8,7 @@ using System.Diagnostics;  // Use Platform infrastructure/core components (log,T
 
 namespace OpenTap.Plugins.Demo.Battery
 {
+    [HelpLink("Demonstration/Battery Test Demo/Test Step Details.md#discharge-test-step")]
     [Display("Discharge", "Simulates discharging of a battery.", Groups: new[] { "Demo", "Battery Test" })]
     public class DischargeStep : SamplingStepBase
     {
